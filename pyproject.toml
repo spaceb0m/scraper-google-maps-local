@@ -1,0 +1,17 @@
+[project]
+name = "gmaps-scraper"
+version = "0.1.0"
+description = "Google Maps scraper MVP"
+requires-python = ">=3.11"
+dependencies = [
+  "playwright>=1.50.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.3.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
