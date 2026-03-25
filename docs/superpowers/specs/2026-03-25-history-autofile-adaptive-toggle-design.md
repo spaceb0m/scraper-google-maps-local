@@ -156,6 +156,9 @@ const isLocal = ['localhost', '127.0.0.1', ''].includes(window.location.hostname
 
 ## Notas de implementación
 
-- El historial **no persiste** entre reinicios del servidor (in-memory). Fuera del alcance de esta versión.
+- El historial **persiste** entre reinicios del servidor en `out/history.json`.
+- Al arrancar el servidor, se carga `out/history.json` si existe y se populan los jobs históricos en memoria (sin `proc`, sin `lines` — solo metadatos).
+- Tras cada cambio de estado de un job (`running` → `done` / `error` / `stopped`) se reescribe `out/history.json` con la lista completa de entradas.
+- Formato de `history.json`: array JSON de objetos con los campos `job_id`, `city`, `category`, `started_at`, `status`, `valid_count`, `output`. Sin `lines` ni `proc` (no serializables ni útiles entre sesiones).
 - La carpeta de salida es siempre `out/` relativa al directorio del servidor. No es configurable por el usuario en esta versión.
 - `POST /open-folder` es un endpoint inocuo en remoto (nadie lo llama desde JS cuando `isLocal` es false), pero podría protegerse con un check adicional en el servidor si se desea.
