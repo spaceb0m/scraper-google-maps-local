@@ -46,6 +46,11 @@ def build_parser() -> argparse.ArgumentParser:
         "--zones", type=str, default=None,
         help="[Avanzado] JSON manual de zonas. Si no se indica, se genera automáticamente via Nominatim.",
     )
+    parser.add_argument(
+        "--adaptive-subdivision", type=parse_bool, default=True,
+        dest="adaptive_subdivision",
+        help="Activar subdivisión adaptativa de sectores (default: true)",
+    )
     return parser
 
 
@@ -182,7 +187,7 @@ async def _process_sector(
             metrics["discovered"], metrics["processed"], csv_writer.total_written, metrics["errors"],
         )
 
-        needs_subdivision = not result.reached_end
+        needs_subdivision = args.adaptive_subdivision and not result.reached_end
 
     except Exception as exc:  # noqa: BLE001
         LOGGER.error("[%s] Sector falló: %s", label, exc)
