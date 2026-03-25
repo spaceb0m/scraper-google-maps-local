@@ -17,6 +17,7 @@ from fastapi.responses import FileResponse, HTMLResponse, StreamingResponse
 app = FastAPI(title="Google Maps Scraper")
 
 BASE_DIR = Path(__file__).parent
+HISTORY_PATH = BASE_DIR / "out" / "history.json"
 
 
 def _slugify(text: str) -> str:
@@ -39,6 +40,51 @@ def _make_output_path(city: str, category: str) -> str:
 jobs: dict[str, dict] = {}
 
 
+def _load_history() -> None:
+    """Carga el historial de ejecuciones desde disco al arrancar el servidor."""
+    if not HISTORY_PATH.exists():
+        return
+    try:
+        entries = json.loads(HISTORY_PATH.read_text(encoding="utf-8"))
+        for entry in entries:
+            jobs[entry["job_id"]] = {
+                "city": entry.get("city", ""),
+                "category": entry.get("category", ""),
+                "started_at": entry.get("started_at", ""),
+                "status": entry.get("status", "done"),
+                "valid_count": entry.get("valid_count", 0),
+                "output": entry.get("output", ""),
+                "lines": [],
+                "proc": None,
+            }
+    except Exception:
+        pass  # fichero corrupto — arrancar sin historial
+
+
+def _save_history() -> None:
+    """Persiste el historial de ejecuciones a disco."""
+    HISTORY_PATH.parent.mkdir(parents=True, exist_ok=True)
+    entries = [
+        {
+            "job_id": jid,
+            "city": j.get("city", ""),
+            "category": j.get("category", ""),
+            "started_at": j.get("started_at", ""),
+            "status": j["status"],
+            "valid_count": j.get("valid_count", 0),
+            "output": j.get("output", ""),
+        }
+        for jid, j in jobs.items()
+        if j.get("started_at")
+    ]
+    HISTORY_PATH.write_text(
+        json.dumps(entries, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+
+
+_load_history()
+
+
 @app.get("/", response_class=HTMLResponse)
 async def index() -> HTMLResponse:
     return HTMLResponse((BASE_DIR / "static" / "index.html").read_text(encoding="utf-8"))
@@ -48,15 +94,25 @@ async def index() -> HTMLResponse:
 async def run_scraper(
     city: str = Form(...),
     category: str = Form(...),
-    output: str = Form(...),
     headless: str = Form("true"),
     max_results: int = Form(0),
     slow_ms: int = Form(250),
     timeout_ms: int = Form(15000),
     concurrency: int = Form(3),
+    adaptive_subdivision: str = Form("false"),
 ) -> dict:
     job_id = str(uuid.uuid4())
-    jobs[job_id] = {"lines": [], "status": "running", "output": output, "proc": None}
+    output = _make_output_path(city, category)
+    jobs[job_id] = {
+        "city": city,
+        "category": category,
+        "started_at": datetime.now(timezone.utc).isoformat(),
+        "status": "running",
+        "valid_count": 0,
+        "output": output,
+        "lines": [],
+        "proc": None,
+    }
 
     cmd = [
         sys.executable, "-u", "-m", "src.cli",
@@ -68,6 +124,7 @@ async def run_scraper(
         "--slow-ms", str(slow_ms),
         "--timeout-ms", str(timeout_ms),
         "--concurrency", str(concurrency),
+        "--adaptive-subdivision", adaptive_subdivision,
     ]
 
     async def run() -> None:
@@ -82,12 +139,16 @@ async def run_scraper(
         async for raw_line in proc.stdout:
             line = raw_line.decode("utf-8", errors="replace").rstrip()
             jobs[job_id]["lines"].append(line)
+            m = re.search(r"valid=(\d+)", line)
+            if m:
+                jobs[job_id]["valid_count"] = int(m.group(1))
         await proc.wait()
         if jobs[job_id]["status"] != "stopped":
             jobs[job_id]["status"] = "done" if proc.returncode == 0 else "error"
+        _save_history()
 
     asyncio.create_task(run())
-    return {"job_id": job_id}
+    return {"job_id": job_id, "output": output}
 
 
 @app.get("/stream/{job_id}")
@@ -130,6 +191,7 @@ async def stop_job(job_id: str) -> dict:
     proc = job.get("proc")
     if proc and proc.returncode is None:
         proc.terminate()
+    _save_history()
     return {"status": "stopped"}
 
 
