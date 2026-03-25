@@ -1,8 +1,14 @@
 from __future__ import annotations
 
 import asyncio
+import json
+import platform
+import re
+import subprocess
 import sys
+import unicodedata
 import uuid
+from datetime import datetime, timezone
 from pathlib import Path
 
 from fastapi import FastAPI, Form
@@ -11,6 +17,23 @@ from fastapi.responses import FileResponse, HTMLResponse, StreamingResponse
 app = FastAPI(title="Google Maps Scraper")
 
 BASE_DIR = Path(__file__).parent
+
+
+def _slugify(text: str) -> str:
+    """Convierte texto a slug ASCII seguro para nombres de fichero."""
+    normalized = unicodedata.normalize("NFD", text)
+    ascii_text = normalized.encode("ascii", "ignore").decode("ascii")
+    lower = ascii_text.lower()
+    slug = re.sub(r"[^a-z0-9]+", "_", lower)
+    slug = slug.strip("_")
+    return slug[:40]
+
+
+def _make_output_path(city: str, category: str) -> str:
+    """Genera una ruta única para el CSV basada en ciudad, categoría y timestamp."""
+    ts = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
+    return f"out/{_slugify(city)}_{_slugify(category)}_{ts}.csv"
+
 
 # job_id -> {"lines": [...], "status": "running"|"done"|"error"|"stopped", "output": str, "proc": Process|None}
 jobs: dict[str, dict] = {}
