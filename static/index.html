@@ -204,10 +204,6 @@
           Categoría
           <input type="text" name="category" value="tiendas de ropa" required />
         </label>
-        <label class="full">
-          Archivo de salida
-          <input type="text" name="output" value="./out/resultado.csv" required />
-        </label>
         <label>
           Máx. resultados <small style="text-transform:none;font-size:0.7rem">(0 = todos)</small>
           <input type="number" name="max_results" value="0" min="0" />
@@ -230,6 +226,14 @@
         <label>
           Concurrencia
           <input type="number" name="concurrency" value="3" min="1" max="10" />
+        </label>
+        <label class="full" style="flex-direction:row; align-items:center; gap:0.6rem; cursor:pointer;">
+          <input type="checkbox" name="adaptive_subdivision" value="true" checked
+                 style="width:auto; accent-color:#6366f1; width:1rem; height:1rem;" />
+          <span>Subdivisión adaptativa</span>
+          <small style="color:#4b5563; text-transform:none; font-weight:400; font-size:0.75rem; margin-left:0.25rem">
+            (subdivide sectores con alta densidad recursivamente)
+          </small>
         </label>
       </div>
 
@@ -271,6 +275,22 @@
     </div>
   </div>
 
+  <div class="card" id="history-card" style="display:none; margin-top:1.5rem; max-width:720px; width:100%;">
+    <div class="section-title">Historial de ejecuciones</div>
+    <table style="width:100%; border-collapse:collapse; font-size:0.85rem;">
+      <thead>
+        <tr style="color:#4b5563; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.05em;">
+          <th style="text-align:left; padding:0.4rem 0.5rem; font-weight:600;">Hora</th>
+          <th style="text-align:left; padding:0.4rem 0.5rem; font-weight:600;">Ciudad</th>
+          <th style="text-align:left; padding:0.4rem 0.5rem; font-weight:600;">Categoría</th>
+          <th style="text-align:left; padding:0.4rem 0.5rem; font-weight:600;">Estado</th>
+          <th style="text-align:right; padding:0.4rem 0.5rem; font-weight:600;">Válidos</th>
+        </tr>
+      </thead>
+      <tbody id="history-body"></tbody>
+    </table>
+  </div>
+
   <script>
     // ── Form & log ──
     const form      = document.getElementById('form');
@@ -293,6 +313,11 @@
     let es = null;
     let currentJobId = null;
 
+    const historyCard = document.getElementById('history-card');
+    const historyBody = document.getElementById('history-body');
+    const isLocal = ['localhost', '127.0.0.1', ''].includes(window.location.hostname);
+    let currentHistoryRow = null;
+
     function levelOf(text) {
       if (text.includes('| ERROR |'))   return 'ERROR';
       if (text.includes('| WARNING |')) return 'WARNING';
@@ -311,6 +336,7 @@
         statProcessed.textContent  = s[2];
         statValid.textContent      = s[3];
         statErrors.textContent     = s[4];
+        updateCurrentHistoryRow(s[3], null);
         return;
       }
       // Resumen final: "discover=X processed=Y valid=Z ... errors=W"
@@ -350,6 +376,62 @@
       statsBar.classList.add('visible');
     }
 
+    const STATUS_LABELS = {
+      done:    '<span style="color:#34d399">✓ Completado</span>',
+      stopped: '<span style="color:#fdba74">■ Detenido</span>',
+      error:   '<span style="color:#f87171">✗ Error</span>',
+      running: '<span style="color:#60a5fa">● Ejecutando…</span>',
+    };
+
+    function formatTime(isoString) {
+      if (!isoString) return '—';
+      return isoString.substring(11, 19);
+    }
+
+    function makeHistoryRow(entry) {
+      const tr = document.createElement('tr');
+      tr.style.cursor = 'pointer';
+      tr.style.borderTop = '1px solid #2d3148';
+      tr.dataset.jobId = entry.job_id;
+      tr.addEventListener('mouseenter', () => tr.style.background = '#161926');
+      tr.addEventListener('mouseleave', () => tr.style.background = '');
+      tr.addEventListener('click', () => {
+        if (isLocal) {
+          fetch(`/open-folder/${entry.job_id}`, { method: 'POST' });
+        } else {
+          window.location = `/download/${entry.job_id}`;
+        }
+      });
+      tr.innerHTML = `
+        <td style="padding:0.45rem 0.5rem; color:#64748b">${formatTime(entry.started_at)}</td>
+        <td style="padding:0.45rem 0.5rem">${entry.city}</td>
+        <td style="padding:0.45rem 0.5rem">${entry.category}</td>
+        <td class="status-cell" style="padding:0.45rem 0.5rem">${STATUS_LABELS[entry.status] || entry.status}</td>
+        <td class="valid-cell" style="padding:0.45rem 0.5rem; text-align:right; color:#f8fafc; font-weight:600">${entry.valid_count ?? '—'}</td>
+      `;
+      return tr;
+    }
+
+    async function loadHistory() {
+      const res = await fetch('/history');
+      const entries = await res.json();
+      historyBody.innerHTML = '';
+      for (const entry of entries) {
+        historyBody.appendChild(makeHistoryRow(entry));
+      }
+      historyCard.style.display = entries.length > 0 ? 'block' : 'none';
+    }
+
+    function updateCurrentHistoryRow(validCount, status) {
+      if (!currentHistoryRow) return;
+      const validCell = currentHistoryRow.querySelector('.valid-cell');
+      const statusCell = currentHistoryRow.querySelector('.status-cell');
+      if (validCell) validCell.textContent = validCount;
+      if (statusCell && status) statusCell.innerHTML = STATUS_LABELS[status] || status;
+    }
+
+    loadHistory();
+
     btnClear.addEventListener('click', () => {
       logEl.innerHTML = '';
       lineNum = 0;
@@ -375,8 +457,22 @@
       const data = new FormData(form);
 
       const res  = await fetch('/run', { method: 'POST', body: data });
-      const { job_id } = await res.json();
+      const { job_id, output } = await res.json();
       currentJobId = job_id;
+
+      // Añadir fila al historial inmediatamente
+      const newEntry = {
+        job_id,
+        city: data.get('city'),
+        category: data.get('category'),
+        started_at: new Date().toISOString(),
+        status: 'running',
+        valid_count: 0,
+        output,
+      };
+      currentHistoryRow = makeHistoryRow(newEntry);
+      historyBody.prepend(currentHistoryRow);
+      historyCard.style.display = 'block';
 
       es = new EventSource(`/stream/${job_id}`);
       es.onmessage = (ev) => appendLine(ev.data);
@@ -385,6 +481,7 @@
         es.close();
         const status = ev.data;
         setStatus(status);
+        updateCurrentHistoryRow(statValid.textContent, status);
         btnRun.disabled = false;
         if (status === 'done' || status === 'stopped') {
           btnDl.style.display = 'inline-block';
