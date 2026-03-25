@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Google Maps Scraper</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #0f1117;
+      color: #e2e8f0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1.75rem;
+      color: #f8fafc;
+      letter-spacing: -0.02em;
+    }
+
+    .card {
+      background: #1e2130;
+      border: 1px solid #2d3148;
+      border-radius: 12px;
+      padding: 1.75rem;
+      width: 100%;
+      max-width: 720px;
+    }
+
+    .section-title {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: #4b5563;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid #1e293b;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    .grid .full { grid-column: 1 / -1; }
+
+    label {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: #94a3b8;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    input, select, textarea {
+      background: #0f1117;
+      border: 1px solid #2d3148;
+      border-radius: 8px;
+      color: #e2e8f0;
+      font-size: 0.95rem;
+      padding: 0.55rem 0.75rem;
+      outline: none;
+      transition: border-color 0.15s;
+      width: 100%;
+    }
+    input:focus, select:focus, textarea:focus { border-color: #6366f1; }
+    textarea { font-family: "SF Mono", "Fira Code", monospace; font-size: 0.8rem; resize: vertical; }
+
+    /* Zones collapsible section */
+    .zones-toggle {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+      user-select: none;
+      margin-top: 1.25rem;
+      margin-bottom: 0;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: #6366f1;
+    }
+    .zones-toggle .arrow { transition: transform 0.2s; font-size: 0.65rem; }
+    .zones-toggle.open .arrow { transform: rotate(90deg); }
+    .zones-panel {
+      display: none;
+      margin-top: 0.75rem;
+      background: #161926;
+      border: 1px solid #2d3148;
+      border-radius: 10px;
+      padding: 1rem;
+    }
+    .zones-panel.open { display: block; }
+    .zones-hint {
+      font-size: 0.72rem;
+      color: #4b5563;
+      margin-bottom: 0.6rem;
+      line-height: 1.5;
+    }
+
+    .actions {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: 1.25rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    button {
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 0.6rem 1.4rem;
+      transition: opacity 0.15s, background 0.15s;
+    }
+    button:disabled { opacity: 0.45; cursor: not-allowed; }
+
+    #btn-run   { background: #6366f1; color: #fff; }
+    #btn-run:not(:disabled):hover   { background: #4f46e5; }
+    #btn-clear { background: #2d3148; color: #94a3b8; }
+    #btn-clear:hover { background: #374162; }
+    #btn-dl    { background: #10b981; color: #fff; display: none; }
+    #btn-dl:hover { background: #059669; }
+
+    .status-badge {
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.25rem 0.65rem;
+      border-radius: 99px;
+      display: none;
+    }
+    .status-badge.running  { background: #1e3a5f; color: #60a5fa; display: inline-block; }
+    .status-badge.done     { background: #064e3b; color: #34d399; display: inline-block; }
+    .status-badge.error    { background: #4c1d1d; color: #f87171; display: inline-block; }
+
+    /* Stats bar */
+    .stats-bar {
+      display: none;
+      margin-top: 1.1rem;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.5rem;
+    }
+    .stats-bar.visible { display: grid; }
+    .stat {
+      background: #161926;
+      border: 1px solid #2d3148;
+      border-radius: 8px;
+      padding: 0.55rem 0.75rem;
+      text-align: center;
+    }
+    .stat-value {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #f8fafc;
+      display: block;
+    }
+    .stat-label {
+      font-size: 0.65rem;
+      color: #4b5563;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .log-wrapper {
+      margin-top: 1.25rem;
+      background: #0a0c12;
+      border: 1px solid #1e2130;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .log-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 0.85rem;
+      background: #111827;
+      border-bottom: 1px solid #1e2130;
+      font-size: 0.75rem;
+      color: #6b7280;
+    }
+
+    #log {
+      font-family: "SF Mono", "Fira Code", "Cascadia Code", monospace;
+      font-size: 0.78rem;
+      line-height: 1.6;
+      padding: 0.85rem 1rem;
+      height: 380px;
+      overflow-y: auto;
+      white-space: pre-wrap;
+      word-break: break-all;
+    }
+
+    .line { padding: 1px 0; }
+    .line.INFO    { color: #94a3b8; }
+    .line.WARNING { color: #f59e0b; }
+    .line.ERROR   { color: #f87171; }
+    .line.DEBUG   { color: #64748b; }
+    .line.ZONE    { color: #818cf8; font-weight: 600; }
+    .line.SUCCESS { color: #34d399; font-weight: 600; }
+
+    #log::-webkit-scrollbar { width: 6px; }
+    #log::-webkit-scrollbar-track { background: transparent; }
+    #log::-webkit-scrollbar-thumb { background: #2d3148; border-radius: 3px; }
+  </style>
+</head>
+<body>
+  <h1>Google Maps Scraper</h1>
+
+  <div class="card">
+    <form id="form">
+      <div class="section-title">Búsqueda</div>
+      <div class="grid">
+        <label class="full">
+          Ciudad
+          <input type="text" name="city" value="Santiago de Compostela, España" required />
+        </label>
+        <label class="full">
+          Categoría
+          <input type="text" name="category" value="tiendas de ropa" required />
+        </label>
+        <label class="full">
+          Archivo de salida
+          <input type="text" name="output" value="./out/resultado.csv" required />
+        </label>
+        <label>
+          Máx. resultados <small style="text-transform:none;font-size:0.7rem">(0 = todos)</small>
+          <input type="number" name="max_results" value="0" min="0" />
+        </label>
+        <label>
+          Headless
+          <select name="headless">
+            <option value="true" selected>Sí</option>
+            <option value="false">No (visible)</option>
+          </select>
+        </label>
+        <label>
+          Delay scroll (ms)
+          <input type="number" name="slow_ms" value="250" min="0" />
+        </label>
+        <label>
+          Timeout página (ms)
+          <input type="number" name="timeout_ms" value="15000" min="1000" />
+        </label>
+      </div>
+
+      <!-- Zonas multi-zona -->
+      <div class="zones-toggle" id="zones-toggle">
+        <span class="arrow">▶</span>
+        Cobertura multi-zona (opcional)
+      </div>
+      <div class="zones-panel" id="zones-panel">
+        <p class="zones-hint">
+          Por defecto el scraper captura ~120 resultados del viewport inicial de Google Maps,
+          lo que cubre principalmente el centro de la ciudad. Define una cuadrícula de zonas
+          geográficas para garantizar cobertura completa. Los duplicados entre zonas se eliminan
+          automáticamente.<br><br>
+          Formato: <code>[{"lat": 42.879, "lon": -8.544, "zoom": 14}, …]</code><br>
+          Zoom recomendado: 14–15 (~1–2 km de radio por celda).
+        </p>
+        <label>
+          Zonas (JSON)
+          <textarea name="zones" rows="5" placeholder='[
+  {"lat": 42.879, "lon": -8.544, "zoom": 14},
+  {"lat": 42.870, "lon": -8.540, "zoom": 14}
+]'></textarea>
+        </label>
+      </div>
+
+      <div class="actions">
+        <button type="submit" id="btn-run">▶ Ejecutar</button>
+        <button type="button" id="btn-clear">Limpiar log</button>
+        <button type="button" id="btn-dl">↓ Descargar CSV</button>
+        <span class="status-badge" id="badge"></span>
+      </div>
+    </form>
+
+    <!-- Métricas en tiempo real -->
+    <div class="stats-bar" id="stats-bar">
+      <div class="stat">
+        <span class="stat-value" id="stat-discovered">–</span>
+        <span class="stat-label">Descubiertos</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" id="stat-processed">–</span>
+        <span class="stat-label">Procesados</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" id="stat-valid">–</span>
+        <span class="stat-label">Válidos</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" id="stat-errors">–</span>
+        <span class="stat-label">Errores</span>
+      </div>
+    </div>
+
+    <div class="log-wrapper">
+      <div class="log-header">
+        <span>Salida</span>
+        <span id="line-count">0 líneas</span>
+      </div>
+      <div id="log"></div>
+    </div>
+  </div>
+
+  <script>
+    // ── Collapsible zones panel ──
+    const zonesToggle = document.getElementById('zones-toggle');
+    const zonesPanel  = document.getElementById('zones-panel');
+    zonesToggle.addEventListener('click', () => {
+      const open = zonesPanel.classList.toggle('open');
+      zonesToggle.classList.toggle('open', open);
+    });
+
+    // ── Form & log ──
+    const form      = document.getElementById('form');
+    const btnRun    = document.getElementById('btn-run');
+    const btnClear  = document.getElementById('btn-clear');
+    const btnDl     = document.getElementById('btn-dl');
+    const badge     = document.getElementById('badge');
+    const logEl     = document.getElementById('log');
+    const lineCount = document.getElementById('line-count');
+    const statsBar  = document.getElementById('stats-bar');
+
+    // Stat cells
+    const statDiscovered = document.getElementById('stat-discovered');
+    const statProcessed  = document.getElementById('stat-processed');
+    const statValid      = document.getElementById('stat-valid');
+    const statErrors     = document.getElementById('stat-errors');
+
+    let lineNum = 0;
+    let es = null;
+
+    function levelOf(text) {
+      if (text.includes('| ERROR |'))   return 'ERROR';
+      if (text.includes('| WARNING |')) return 'WARNING';
+      if (text.includes('| DEBUG |'))   return 'DEBUG';
+      if (text.startsWith('──') || text.includes('── Zona') || text.includes('── Resumen')) return 'ZONE';
+      if (text.includes('✓ '))          return 'SUCCESS';
+      return 'INFO';
+    }
+
+    // Parse progress line: "Progreso: X/Y procesados | Z válidos | W errores"
+    function tryParseProgress(text) {
+      const m = text.match(/Progreso:\s*(\d+)\/(\d+)\s+procesados\s*\|\s*(\d+)\s+válidos\s*\|\s*(\d+)\s+errores/);
+      if (m) {
+        statProcessed.textContent  = m[1];
+        statDiscovered.textContent = m[2];
+        statValid.textContent      = m[3];
+        statErrors.textContent     = m[4];
+      }
+      // Discovery line: "Descubriendo resultados: X encontrados…"
+      const d = text.match(/Descubriendo resultados:\s*(\d+)/);
+      if (d) statDiscovered.textContent = d[1];
+      // Final summary: "discover=X processed=Y valid=Z duplicates=W errors=V"
+      const s = text.match(/discover=(\d+)\s+processed=(\d+)\s+valid=(\d+).*errors=(\d+)/);
+      if (s) {
+        statDiscovered.textContent = s[1];
+        statProcessed.textContent  = s[2];
+        statValid.textContent      = s[3];
+        statErrors.textContent     = s[4];
+      }
+    }
+
+    function appendLine(text) {
+      const div = document.createElement('div');
+      div.className = 'line ' + levelOf(text);
+      div.textContent = text;
+      logEl.appendChild(div);
+      lineNum++;
+      lineCount.textContent = `${lineNum} línea${lineNum !== 1 ? 's' : ''}`;
+      logEl.scrollTop = logEl.scrollHeight;
+      tryParseProgress(text);
+    }
+
+    function setStatus(status) {
+      badge.className = 'status-badge ' + status;
+      badge.textContent =
+        status === 'running' ? '● Ejecutando…' :
+        status === 'done'    ? '✓ Completado'  : '✗ Error';
+      badge.style.display = 'inline-block';
+    }
+
+    function resetStats() {
+      [statDiscovered, statProcessed, statValid, statErrors].forEach(el => el.textContent = '–');
+      statsBar.classList.add('visible');
+    }
+
+    btnClear.addEventListener('click', () => {
+      logEl.innerHTML = '';
+      lineNum = 0;
+      lineCount.textContent = '0 líneas';
+    });
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (es) { es.close(); es = null; }
+
+      btnRun.disabled = true;
+      btnDl.style.display = 'none';
+      setStatus('running');
+      resetStats();
+
+      const data = new FormData(form);
+
+      // Remove zones field if empty to avoid sending blank string
+      const zonesVal = data.get('zones')?.trim();
+      if (!zonesVal) data.delete('zones');
+
+      const res  = await fetch('/run', { method: 'POST', body: data });
+      const { job_id } = await res.json();
+
+      es = new EventSource(`/stream/${job_id}`);
+      es.onmessage = (ev) => appendLine(ev.data);
+
+      es.addEventListener('done', (ev) => {
+        es.close();
+        const status = ev.data;
+        setStatus(status);
+        btnRun.disabled = false;
+        if (status === 'done') {
+          btnDl.style.display = 'inline-block';
+          btnDl.onclick = () => { window.location = `/download/${job_id}`; };
+        }
+      });
+
+      es.onerror = () => {
+        if (es.readyState === EventSource.CLOSED) return;
+        appendLine('[error de conexión con el servidor]');
+        es.close();
+        btnRun.disabled = false;
+        setStatus('error');
+      };
+    });
+  </script>
+</body>
+</html>
