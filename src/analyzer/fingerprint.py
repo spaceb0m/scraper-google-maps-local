@@ -64,6 +64,8 @@ async def fetch_page(url: str, timeout_s: int = 10) -> Optional[str]:
     try:
         timeout = aiohttp.ClientTimeout(total=timeout_s)
         async with aiohttp.ClientSession(headers=headers, timeout=timeout) as session:
+            # ssl=False: many small business sites have expired/self-signed certs;
+            # fingerprinting does not transmit sensitive data so the risk is acceptable.
             async with session.get(url, allow_redirects=True, ssl=False) as resp:
                 if resp.status >= 400:
                     LOGGER.warning("HTTP %d para %s", resp.status, url)
