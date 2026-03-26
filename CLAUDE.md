@@ -2,7 +2,7 @@
 
 Este fichero proporciona contexto completo del proyecto para nuevas sesiones de trabajo.
 
-## Versión actual: 0.3
+## Versión actual: 0.4
 
 ## Qué es este proyecto
 
@@ -30,6 +30,20 @@ uvicorn server:app --reload   # http://localhost:8000
 
 `_get_scroll_container` en `maps_search.py` usa `wait_for_selector(..., timeout=10000)` en lugar de comprobar si el elemento ya existe. Sin esta espera, Google Maps no ha terminado de cargar la lista y el scraper descubre 0 resultados.
 
+### Analizador
+
+```bash
+# Se lanza automáticamente desde la UI — /analyze/<job_id>
+# También ejecutable directamente:
+python -m src.analyzer.cli --csv-path out/fichero.csv
+```
+
+`src/analyzer/cli.py` lee un CSV del scraper, filtra marcas (case-insensitive, subcadena), detecta tecnologías ecommerce mediante fingerprinting HTML con `aiohttp`, y genera un `.xlsx` con dos pestañas:
+- **Sheet 1** (`Datos originales`): copia fiel del CSV
+- **Sheet 2** (`Análisis`): registros no filtrados + columnas `es_tienda` (Sí/No/-) y `tecnologia`
+
+Clasificación de estados de job: `done` (completado), `stopped` (detenido), `partial` (error pero con registros válidos), `error` (sin registros válidos).
+
 ## Estructura de ficheros
 
 ```
@@ -50,6 +64,13 @@ src/
 
 server.py               # FastAPI: GET / → index.html | POST /run → lanza CLI | GET /stream/{id} → SSE
 static/index.html       # UI: formulario, log, stats bar, badge de estado, botón descarga CSV
+static/analyze.html     # UI del analizador: editor de marcas, log SSE, descarga XLSX
+src/analyzer/
+├── cli.py              # Punto de entrada del analizador (subproceso)
+├── brand_filter.py     # load_brands(), is_excluded() — filtrado de marcas
+└── fingerprint.py      # fetch_page(), detect_platform() — detección ecommerce
+config/
+└── excluded_brands.json  # Lista de marcas a excluir (editable desde UI)
 .claude/
 ├── launch.json         # Config del servidor para preview_start
 └── TODO.md             # Roadmap de mejoras pendientes (geo automático + concurrencia + CSV streaming)
@@ -102,6 +123,8 @@ playwright>=1.50.0       # scraping (no sustituible por aiohttp — Google Maps 
 fastapi>=0.115.0         # servidor web
 uvicorn[standard]>=0.32.0
 python-multipart>=0.0.12 # Form() en FastAPI
+openpyxl>=3.1.0          # Generación de XLSX multi-hoja
+aiohttp>=3.9.0           # Fetch de páginas web para fingerprinting
 ```
 
 **Python 3.9**: usar `Optional[str]` de `typing`, NO `str | None` (FastAPI/Pydantic evalúa anotaciones en runtime).

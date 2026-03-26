@@ -119,3 +119,24 @@ Señales de éxito:
 - CSV se rellena durante la ejecución (no solo al final)
 - RAM estable con `htop` durante ejecución larga
 - Log final: `"✓ Cobertura completa"` si todas las zonas confirmaron fin de lista
+
+---
+
+## Fase 6 — Valoraciones de Google Business (pendiente)
+
+Para cada negocio en el CSV, scrapear sus reseñas individuales desde la ficha de Google Maps.
+
+- Requiere navegar con Playwright a la sección de reseñas de cada negocio
+- Paginar reseñas (click "Más reseñas")
+- Extraer: autor, rating, fecha, texto, respuesta del negocio
+- Guardar en una tercera hoja del XLSX o fichero separado
+
+---
+
+## Fase 7 — Consulta al Catastro (pendiente)
+
+Para cada negocio con dirección física en España, consultar la Sede Electrónica del Catastro para obtener los metros cuadrados del inmueble.
+
+- API pública del Catastro: `https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCallejero.svc/`
+- Geocodificar dirección → referencia catastral → datos del inmueble
+- Columna adicional en Sheet 2: `metros_cuadrados`
