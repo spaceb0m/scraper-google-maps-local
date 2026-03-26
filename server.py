@@ -11,7 +11,9 @@ import uuid
 from datetime import datetime, timezone
 from pathlib import Path
 
-from fastapi import FastAPI, Form
+from typing import Any
+
+from fastapi import Body, FastAPI, Form
 from fastapi.responses import FileResponse, HTMLResponse, StreamingResponse
 
 app = FastAPI(title="Google Maps Scraper")
@@ -38,6 +40,11 @@ def _make_output_path(city: str, category: str) -> str:
 
 # job_id -> {"lines": [...], "status": "running"|"done"|"error"|"stopped", "output": str, "proc": Process|None}
 jobs: dict[str, dict] = {}
+
+# analyze_job_id (== scraping job_id) -> {"lines": [...], "status": "running"|"done"|"error", "proc": Process|None, "xlsx_output": str}
+analyze_jobs: dict[str, dict] = {}
+
+BRANDS_PATH = BASE_DIR / "config" / "excluded_brands.json"
 
 
 def _load_history() -> None:
@@ -88,6 +95,112 @@ _load_history()
 @app.get("/", response_class=HTMLResponse)
 async def index() -> HTMLResponse:
     return HTMLResponse((BASE_DIR / "static" / "index.html").read_text(encoding="utf-8"))
+
+
+@app.get("/analyze/{job_id}", response_class=HTMLResponse)
+async def analyze_page(job_id: str) -> HTMLResponse:
+    return HTMLResponse((BASE_DIR / "static" / "analyze.html").read_text(encoding="utf-8"))
+
+
+@app.post("/run-analyze/{job_id}")
+async def run_analyze(job_id: str) -> dict:
+    job = jobs.get(job_id)
+    if not job:
+        return {"error": "job not found"}
+
+    csv_output = job.get("output", "")
+    if not csv_output:
+        return {"error": "no output path"}
+
+    xlsx_output = csv_output.replace(".csv", ".xlsx")
+    analyze_jobs[job_id] = {
+        "status": "running",
+        "lines": [],
+        "proc": None,
+        "xlsx_output": xlsx_output,
+    }
+
+    cmd = [
+        sys.executable, "-u", "-m", "src.analyzer.cli",
+        "--csv-path", csv_output,
+        "--brands-path", "config/excluded_brands.json",
+    ]
+
+    async def run() -> None:
+        proc = await asyncio.create_subprocess_exec(
+            *cmd,
+            stdout=asyncio.subprocess.PIPE,
+            stderr=asyncio.subprocess.STDOUT,
+            cwd=str(BASE_DIR),
+        )
+        analyze_jobs[job_id]["proc"] = proc
+        assert proc.stdout is not None
+        async for raw_line in proc.stdout:
+            line = raw_line.decode("utf-8", errors="replace").rstrip()
+            analyze_jobs[job_id]["lines"].append(line)
+        await proc.wait()
+        if analyze_jobs[job_id]["status"] != "stopped":
+            analyze_jobs[job_id]["status"] = "done" if proc.returncode == 0 else "error"
+
+    asyncio.create_task(run())
+    return {"job_id": job_id, "xlsx_output": xlsx_output}
+
+
+@app.get("/analyze-stream/{job_id}")
+async def analyze_stream(job_id: str) -> StreamingResponse:
+    if job_id not in analyze_jobs:
+        async def not_found():
+            yield "data: Job de análisis no encontrado\n\nevent: done\ndata: error\n\n"
+        return StreamingResponse(not_found(), media_type="text/event-stream")
+
+    async def event_generator():
+        sent = 0
+        while True:
+            aj = analyze_jobs[job_id]
+            lines = aj["lines"]
+            while sent < len(lines):
+                safe = lines[sent].replace("\n", " ")
+                yield f"data: {safe}\n\n"
+                sent += 1
+            if aj["status"] != "running":
+                yield f"event: done\ndata: {aj['status']}\n\n"
+                break
+            await asyncio.sleep(0.15)
+
+    return StreamingResponse(
+        event_generator(),
+        media_type="text/event-stream",
+        headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"},
+    )
+
+
+@app.get("/brands")
+async def get_brands() -> dict:
+    if not BRANDS_PATH.exists():
+        return {"brands": []}
+    return json.loads(BRANDS_PATH.read_text(encoding="utf-8"))
+
+
+@app.post("/brands")
+async def save_brands(payload: Any = Body(...)) -> dict:
+    BRANDS_PATH.parent.mkdir(parents=True, exist_ok=True)
+    BRANDS_PATH.write_text(
+        json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+    return {"status": "ok"}
+
+
+@app.get("/download-xlsx/{job_id}")
+async def download_xlsx(job_id: str) -> FileResponse:
+    aj = analyze_jobs.get(job_id)
+    if not aj:
+        return FileResponse("/dev/null")
+    xlsx_path = BASE_DIR / aj["xlsx_output"]
+    return FileResponse(
+        str(xlsx_path),
+        filename=xlsx_path.name,
+        media_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    )
 
 
 @app.post("/run")
