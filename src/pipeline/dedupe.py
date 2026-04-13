@@ -22,12 +22,12 @@ def dedupe_records(records: list[BusinessRecord]) -> list[BusinessRecord]:
     seen: set[str] = set()
     out: list[BusinessRecord] = []
     for record in records:
-        if record.maps_url:
-            key = f"url:{normalize_maps_url(record.maps_url)}"
-        else:
-            key = f"fallback:{make_fallback_key(record)}"
-        if key in seen:
+        url_key = f"url:{normalize_maps_url(record.maps_url)}" if record.maps_url else None
+        fallback_key = f"fallback:{make_fallback_key(record)}"
+        if (url_key and url_key in seen) or fallback_key in seen:
             continue
-        seen.add(key)
+        if url_key:
+            seen.add(url_key)
+        seen.add(fallback_key)
         out.append(record)
     return out

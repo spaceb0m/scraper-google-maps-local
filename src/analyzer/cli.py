@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import asyncio
 import csv
+import hashlib
 import logging
 import time
 from pathlib import Path
@@ -47,6 +48,23 @@ def _read_csv(csv_path: str) -> List[dict]:
     return rows
 
 
+def _dedup_rows(rows: List[dict]) -> List[dict]:
+    seen: set = set()
+    out: List[dict] = []
+    for row in rows:
+        raw = "|".join([
+            row.get("nombre", "").lower().strip(),
+            row.get("direccion", "").lower().strip(),
+            row.get("telefono", "").lower().strip(),
+        ])
+        key = hashlib.sha1(raw.encode("utf-8")).hexdigest()
+        if key in seen:
+            continue
+        seen.add(key)
+        out.append(row)
+    return out
+
+
 async def _run(args: argparse.Namespace) -> None:
     start_ts = time.perf_counter()
 
@@ -54,6 +72,7 @@ async def _run(args: argparse.Namespace) -> None:
     LOGGER.info("Marcas excluidas cargadas: %d", len(brands))
 
     rows = _read_csv(args.csv_path)
+    rows = _dedup_rows(rows)
     LOGGER.info("Registros en CSV: %d", len(rows))
 
     xlsx_path = _derive_xlsx_path(args.csv_path)

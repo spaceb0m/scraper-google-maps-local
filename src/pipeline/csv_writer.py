@@ -51,14 +51,13 @@ class StreamingCsvWriter:
             with self._path.open("a", newline="", encoding="utf-8") as fh:
                 writer = csv.DictWriter(fh, fieldnames=FIELDNAMES)
                 for record in records:
-                    key = (
-                        f"url:{normalize_maps_url(record.maps_url)}"
-                        if record.maps_url
-                        else f"fallback:{make_fallback_key(record)}"
-                    )
-                    if key in self._seen:
+                    url_key = f"url:{normalize_maps_url(record.maps_url)}" if record.maps_url else None
+                    fallback_key = f"fallback:{make_fallback_key(record)}"
+                    if (url_key and url_key in self._seen) or fallback_key in self._seen:
                         continue
-                    self._seen.add(key)
+                    if url_key:
+                        self._seen.add(url_key)
+                    self._seen.add(fallback_key)
                     writer.writerow(asdict(record))
                     written += 1
 
@@ -80,15 +79,14 @@ class StreamingCsvWriter:
         Devuelve True si fue escrito, False si era duplicado.
         Permite parar la ejecución en cualquier momento sin perder datos.
         """
-        key = (
-            f"url:{normalize_maps_url(record.maps_url)}"
-            if record.maps_url
-            else f"fallback:{make_fallback_key(record)}"
-        )
+        url_key = f"url:{normalize_maps_url(record.maps_url)}" if record.maps_url else None
+        fallback_key = f"fallback:{make_fallback_key(record)}"
         async with self._lock:
-            if key in self._seen:
+            if (url_key and url_key in self._seen) or fallback_key in self._seen:
                 return False
-            self._seen.add(key)
+            if url_key:
+                self._seen.add(url_key)
+            self._seen.add(fallback_key)
             with self._path.open("a", newline="", encoding="utf-8") as fh:
                 writer = csv.DictWriter(fh, fieldnames=FIELDNAMES)
                 writer.writerow(asdict(record))
