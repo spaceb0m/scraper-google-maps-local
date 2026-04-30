@@ -122,13 +122,42 @@ python -m src.analyzer.cli --csv-path out/fichero.csv
 
 1. **Filtra marcas** — excluye cadenas configuradas en `config/excluded_brands.json` (coincidencia de subcadena, sin distinguir mayúsculas)
 2. **Detecta tecnología** — descarga el HTML de cada web y busca firmas de plataformas conocidas
-3. **Genera XLSX** — fichero con dos pestañas:
+3. **Calcula scoring de prioridad comercial** — puntúa 0–100 cada negocio sobre 5 criterios y lo agrupa en tramos P1–P4 (ver más abajo)
+4. **Genera XLSX** — fichero con dos pestañas:
    - `Datos originales`: copia fiel del CSV
-   - `Análisis`: registros no filtrados con columnas `es_tienda` (Sí/No/–) y `tecnologia`
+   - `Análisis`: registros no filtrados con columnas `es_tienda` (Sí/No/–), `tecnologia`, `prioridad` (P1–P4), `puntuacion` (0–100) y `justificacion` (desglose legible)
 
 ### Plataformas detectadas
 
 Shopify, WooCommerce, PrestaShop, Velfix, Magento, Squarespace, Wix, Webflow y "Desconocida" (indicadores genéricos de carrito/checkout).
+
+### Sistema de scoring
+
+Cada negocio recibe una puntuación 0–100 sumando hasta 5 criterios independientes. **Los pesos y bandas son totalmente parametrizables** editando los JSON en `config/` — no hay que tocar código.
+
+| Criterio | Peso máx | Datos que necesita | Configuración |
+|---|---|---|---|
+| Distancia al ECI más cercano | 25 pts | `maps_url` (lat/lon) y `eci_locations.json` | bandas de km configurables |
+| Población del municipio | 15 pts | `municipio_origen` (CSV) → `municipios_es.json` | bandas de hab. configurables |
+| Nº de tiendas de la marca | 25 pts | conteo de duplicados de marca en el CSV | bandas de nº de locales |
+| Madurez digital / e-commerce | 20 pts | resultado del fingerprint | 3 valores discretos |
+| Encaje con avatar comercial | 15 pts | combinación de los anteriores + `scoring_avatars.json` | claro / parcial / no encaja |
+
+Ficheros de configuración:
+
+- **`config/scoring_weights.json`** — pesos, bandas por criterio y umbrales de los tramos P1–P4 (default P1≥75, P2≥55, P3≥35, P4<35).
+- **`config/scoring_avatars.json`** — los 3 arquetipos de cliente (Señorío Comarcal, Hegemonía Interior, Aguja Urbana) con sus rangos de población, distancia ECI, nº de tiendas y requisito de e-commerce.
+- **`config/eci_locations.json`** — ~60 centros ECI con coordenadas. Editable a mano para añadir/eliminar centros.
+
+Para reordenar prioridades, sólo hay que editar el peso o las bandas del JSON correspondiente y volver a ejecutar el analizador. Por ejemplo, para dar más peso a la madurez digital: cambia `madurez_digital.peso_max` de 20 a 30 y ajusta el resto. La justificación generada en cada fila explica de dónde viene cada puntuación.
+
+### Avatares comerciales por defecto
+
+| ID | Nombre | Población | Distancia ECI | Nº tiendas | Ecommerce |
+|---|---|---|---|---|---|
+| 1 | El Señorío Comarcal | 15.000–40.000 | 45–85 km | 3–6 locales | Requerido |
+| 2 | La Hegemonía Interior | 60.000–110.000 | >90 km | 2–5 locales | Opcional |
+| 3 | La Aguja Urbana | >200.000 | <15 km | 1–2 locales | Opcional |
 
 ### Métricas en tiempo real
 
