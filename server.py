@@ -11,10 +11,12 @@ import uuid
 from datetime import datetime, timezone
 from pathlib import Path
 
-from typing import Any
+from typing import Any, Optional
 
 from fastapi import Body, FastAPI, Form
 from fastapi.responses import FileResponse, HTMLResponse, StreamingResponse
+
+from src.comunidad.dataset import list_comunidades
 
 app = FastAPI(title="Google Maps Scraper")
 
@@ -95,6 +97,14 @@ _load_history()
 @app.get("/", response_class=HTMLResponse)
 async def index() -> HTMLResponse:
     return HTMLResponse((BASE_DIR / "static" / "index.html").read_text(encoding="utf-8"))
+
+
+@app.get("/comunidades")
+async def get_comunidades() -> dict:
+    try:
+        return {"comunidades": list_comunidades()}
+    except Exception as exc:  # noqa: BLE001
+        return {"comunidades": [], "error": str(exc)}
 
 
 @app.get("/analyze/{job_id}", response_class=HTMLResponse)
@@ -205,7 +215,7 @@ async def download_xlsx(job_id: str) -> FileResponse:
 
 @app.post("/run")
 async def run_scraper(
-    city: str = Form(...),
+    city: Optional[str] = Form(None),
     category: str = Form(...),
     headless: str = Form("true"),
     max_results: int = Form(0),
@@ -213,11 +223,19 @@ async def run_scraper(
     timeout_ms: int = Form(15000),
     concurrency: int = Form(3),
     adaptive_subdivision: str = Form("false"),
+    comunidad: Optional[str] = Form(None),
+    min_poblacion: int = Form(5000),
 ) -> dict:
+    comunidad = (comunidad or "").strip() or None
+    city = (city or "").strip() or None
+    if not comunidad and not city:
+        return {"error": "Debes indicar comunidad o ciudad"}
+
     job_id = str(uuid.uuid4())
-    output = _make_output_path(city, category)
+    label_for_output = comunidad if comunidad else city
+    output = _make_output_path(label_for_output, category)
     jobs[job_id] = {
-        "city": city,
+        "city": comunidad if comunidad else city,
         "category": category,
         "started_at": datetime.now(timezone.utc).isoformat(),
         "status": "running",
@@ -229,7 +247,6 @@ async def run_scraper(
 
     cmd = [
         sys.executable, "-u", "-m", "src.cli",
-        "--city", city,
         "--category", category,
         "--output", output,
         "--headless", headless,
@@ -239,6 +256,10 @@ async def run_scraper(
         "--concurrency", str(concurrency),
         "--adaptive-subdivision", adaptive_subdivision,
     ]
+    if comunidad:
+        cmd += ["--comunidad", comunidad, "--min-poblacion", str(min_poblacion)]
+    else:
+        cmd += ["--city", city]
 
     async def run() -> None:
         proc = await asyncio.create_subprocess_exec(

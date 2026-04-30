@@ -197,9 +197,19 @@
     <form id="form">
       <div class="section-title">Búsqueda</div>
       <div class="grid">
-        <label class="full">
+        <label>
+          Comunidad autónoma
+          <select name="comunidad" id="comunidad">
+            <option value="">— Buscar por ciudad —</option>
+          </select>
+        </label>
+        <label>
+          Población mínima municipio
+          <input type="number" name="min_poblacion" id="min_poblacion" value="5000" min="0" step="1000" disabled />
+        </label>
+        <label class="full" id="label-city">
           Ciudad
-          <input type="text" name="city" value="Santiago de Compostela, España" required />
+          <input type="text" name="city" id="city" value="Santiago de Compostela, España" required />
         </label>
         <label class="full">
           Categoría
@@ -314,6 +324,39 @@
     let lineNum = 0;
     let es = null;
     let currentJobId = null;
+
+    // ── Selector de comunidad ──
+    const comunidadSel = document.getElementById('comunidad');
+    const minPobInput  = document.getElementById('min_poblacion');
+    const cityInput    = document.getElementById('city');
+    const cityLabel    = document.getElementById('label-city');
+
+    fetch('/comunidades')
+      .then(r => r.json())
+      .then(d => {
+        for (const c of (d.comunidades || [])) {
+          const opt = document.createElement('option');
+          opt.value = c; opt.textContent = c;
+          comunidadSel.appendChild(opt);
+        }
+      })
+      .catch(() => { /* endpoint puede no existir aún */ });
+
+    function applyComunidadMode() {
+      const isComunidad = comunidadSel.value !== '';
+      minPobInput.disabled = !isComunidad;
+      cityInput.disabled   = isComunidad;
+      cityInput.required   = !isComunidad;
+      cityLabel.style.opacity = isComunidad ? '0.4' : '1';
+      if (isComunidad) {
+        cityInput.dataset.prev = cityInput.value;
+        cityInput.value = '';
+      } else if (cityInput.dataset.prev) {
+        cityInput.value = cityInput.dataset.prev;
+      }
+    }
+
+    comunidadSel.addEventListener('change', applyComunidadMode);
 
     const historyCard = document.getElementById('history-card');
     const historyBody = document.getElementById('history-body');
