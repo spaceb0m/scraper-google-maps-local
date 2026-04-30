@@ -1,4 +1,4 @@
-# Google Maps Scraper `v0.7`
+# Google Maps Scraper `v0.8`
 
 Scraper de negocios de Google Maps con interfaz web integrada. Extrae nombre, teléfono, dirección, web, valoración y categoría de los resultados de búsqueda y los exporta a CSV.
 
@@ -61,6 +61,24 @@ python -m src.cli \
   --category "restaurantes" \
   --output ./out/sc_restaurantes.csv \
   --concurrency 3
+```
+
+### Búsqueda por comunidad autónoma
+
+Para cubrir una comunidad completa, indica `--comunidad` en lugar de `--city`. El scraper recorrerá secuencialmente todos los municipios con población ≥ `--min-poblacion` (default 5.000) usando el dataset estático en `config/municipios_es.json` (1.313 municipios de las 17 CCAA, fuente Wikipedia/INE). El CSV resultante incluye la columna `municipio_origen` con el nombre del municipio que originó cada registro, y la deduplicación es global.
+
+```bash
+python -m src.cli \
+  --comunidad "Galicia" \
+  --min-poblacion 50000 \
+  --category "tiendas de ropa" \
+  --output ./out/galicia_ropa.csv
+```
+
+Para regenerar el dataset desde cero:
+
+```bash
+python scripts/build_municipios_dataset.py --output config/municipios_es.json
 ```
 
 ### Override manual de zonas (avanzado)
