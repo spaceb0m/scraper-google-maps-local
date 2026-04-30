@@ -33,7 +33,7 @@ def parse_bool(value: str) -> bool:
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Google Maps Scraper")
-    parser.add_argument("--city", required=True)
+    parser.add_argument("--city", required=False, default=None)
     parser.add_argument("--category", required=True)
     parser.add_argument("--output", required=True)
     parser.add_argument("--headless", type=parse_bool, default=True)
@@ -51,6 +51,14 @@ def build_parser() -> argparse.ArgumentParser:
         dest="adaptive_subdivision",
         help="Activar subdivisión adaptativa de sectores (default: true)",
     )
+    parser.add_argument(
+        "--comunidad", type=str, default=None,
+        help="Nombre de la comunidad autónoma (ej: 'Galicia'). Encadena el scraping por sus municipios. Mutuamente excluyente con --zones.",
+    )
+    parser.add_argument(
+        "--min-poblacion", type=int, default=5000, dest="min_poblacion",
+        help="Población mínima de los municipios a incluir (default: 5000). Sólo aplica con --comunidad.",
+    )
     return parser
 
 
@@ -62,6 +70,7 @@ async def _process_refs(
     sector_label: str,
     csv_writer: StreamingCsvWriter,
     metrics: dict,
+    municipio_origen: str = "",
 ) -> None:
     """Procesa una lista de refs escribiendo cada registro al CSV inmediatamente.
     Actualiza metrics en tiempo real y emite STATS cada 10 registros.
@@ -87,6 +96,9 @@ async def _process_refs(
                 metrics["errors"] += 1
                 LOGGER.warning("[%s] Sin nombre (omitido): %s", sector_label, url)
                 continue
+
+            if municipio_origen:
+                record.municipio_origen = municipio_origen
 
             await csv_writer.write_record(record)
             local_processed += 1
@@ -132,6 +144,7 @@ async def _process_sector(
     csv_writer: StreamingCsvWriter,
     args: argparse.Namespace,
     metrics: dict,
+    municipio_origen: str = "",
 ) -> None:
     """Procesa un sector geográfico: search → collect → extract → write CSV.
 
@@ -178,6 +191,7 @@ async def _process_sector(
             sector_label=label,
             csv_writer=csv_writer,
             metrics=metrics,
+            municipio_origen=municipio_origen,
         )
 
         LOGGER.info("[%s] Sector completado: %d válidos en CSV", label, csv_writer.total_written)
@@ -205,7 +219,10 @@ async def _process_sector(
                 label, len(sub_sectors), sector.cell_deg, sector.cell_deg / 2,
             )
             sub_tasks = [
-                _process_sector(f"{label}.{i + 1}", sub, pool, query, csv_writer, args, metrics)
+                _process_sector(
+                    f"{label}.{i + 1}", sub, pool, query, csv_writer, args, metrics,
+                    municipio_origen=municipio_origen,
+                )
                 for i, sub in enumerate(sub_sectors)
             ]
             await asyncio.gather(*sub_tasks)
@@ -217,11 +234,8 @@ async def _process_sector(
             metrics["heuristic_stops"] += 1
 
 
-async def _run(args: argparse.Namespace) -> None:
-    query = f"{args.category} en {args.city}"
-    start_ts = time.perf_counter()
-
-    # ── 1. Construir lista de sectores ──────────────────────────────────────
+async def _build_sectors_for_city(args: argparse.Namespace, city: str) -> list:
+    """Construye la lista de sectores para una ciudad, ya sea desde --zones o vía Nominatim."""
     if args.zones:
         LOGGER.info("Modo manual: leyendo zonas desde --zones")
         try:
@@ -233,47 +247,94 @@ async def _run(args: argparse.Namespace) -> None:
             for z in zones_data
         ]
         LOGGER.info("Zonas manuales: %d sectores", len(sectors))
-    else:
-        LOGGER.info("Consultando Nominatim para: %s", args.city)
-        geodata = await fetch_city_geodata(args.city)
-        raw_sectors = build_sector_grid(geodata.bbox, cell_deg=0.01, zoom=14)
-        sectors = filter_by_polygon(raw_sectors, geodata.polygon_geojson)
-        LOGGER.info(
-            "Grid generado: %d sectores (de %d en bbox) para %s",
-            len(sectors), len(raw_sectors), geodata.display_name,
-        )
+        return sectors
+
+    LOGGER.info("Consultando Nominatim para: %s", city)
+    geodata = await fetch_city_geodata(city)
+    raw_sectors = build_sector_grid(geodata.bbox, cell_deg=0.01, zoom=14)
+    sectors = filter_by_polygon(raw_sectors, geodata.polygon_geojson)
+    LOGGER.info(
+        "Grid generado: %d sectores (de %d en bbox) para %s",
+        len(sectors), len(raw_sectors), geodata.display_name,
+    )
+    return sectors
+
+
+async def _process_city_with_pool(
+    args: argparse.Namespace,
+    city: str,
+    csv_writer: StreamingCsvWriter,
+    pool: ContextPool,
+    metrics: dict,
+    municipio_origen: str = "",
+) -> int:
+    """Procesa una sola ciudad usando el pool/CSV ya inicializados.
+
+    Devuelve el incremento de registros válidos en el CSV durante esta ciudad.
+    """
+    query = f"{args.category} en {city}"
+    try:
+        sectors = await _build_sectors_for_city(args, city)
+    except Exception as exc:  # noqa: BLE001
+        LOGGER.error("No se pudieron construir sectores para %s: %s", city, exc)
+        return 0
 
     if not sectors:
-        LOGGER.error("No hay sectores que procesar. Revisa el nombre de la ciudad.")
-        return
+        LOGGER.warning("Sin sectores para %s — saltando.", city)
+        return 0
 
-    # ── 2. Inicializar CSV streaming ────────────────────────────────────────
+    LOGGER.info(
+        "Procesando ciudad: %s | %d sectores | query='%s'",
+        city, len(sectors), query,
+    )
+
+    before = csv_writer.total_written
+    tasks = [
+        _process_sector(
+            f"{city}|{i + 1}/{len(sectors)}", s, pool, query, csv_writer, args, metrics,
+            municipio_origen=municipio_origen,
+        )
+        for i, s in enumerate(sectors)
+    ]
+    await asyncio.gather(*tasks)
+    return csv_writer.total_written - before
+
+
+async def _run(args: argparse.Namespace) -> None:
+    # Validación: comunidad y zones son mutuamente excluyentes
+    if args.comunidad and args.zones:
+        raise ValueError("--comunidad y --zones son mutuamente excluyentes")
+    if not args.comunidad and not args.city:
+        raise ValueError("Debes indicar --city o --comunidad")
+
+    start_ts = time.perf_counter()
+
+    # CSV compartido entre todas las ciudades (dedup global automático)
     csv_writer = StreamingCsvWriter(args.output)
     LOGGER.info("CSV: %s", args.output)
 
-    # ── 3. Lanzar browser + pool ────────────────────────────────────────────
     metrics = {"discovered": 0, "processed": 0, "errors": 0, "heuristic_stops": 0}
 
     pw = await async_playwright().start()
     browser = await pw.chromium.launch(headless=args.headless)
     pool = ContextPool(browser=browser, n=args.concurrency, timeout_ms=args.timeout_ms)
 
-    LOGGER.info(
-        "Iniciando: %d sectores | concurrencia=%d | query='%s'",
-        len(sectors), args.concurrency, query,
-    )
-
     try:
-        tasks = [
-            _process_sector(f"{i + 1}/{len(sectors)}", s, pool, query, csv_writer, args, metrics)
-            for i, s in enumerate(sectors)
-        ]
-        await asyncio.gather(*tasks)
+        if args.comunidad:
+            from src.comunidad.runner import run_comunidad
+
+            async def process_city_fn(city_str: str, municipio_origen: str) -> int:
+                return await _process_city_with_pool(
+                    args, city_str, csv_writer, pool, metrics, municipio_origen,
+                )
+
+            await run_comunidad(args.comunidad, args.min_poblacion, process_city_fn)
+        else:
+            await _process_city_with_pool(args, args.city, csv_writer, pool, metrics)
     finally:
         await browser.close()
         await pw.stop()
 
-    # ── 4. Resumen ──────────────────────────────────────────────────────────
     elapsed = time.perf_counter() - start_ts
     LOGGER.info("── Resumen final ──")
     LOGGER.info(
