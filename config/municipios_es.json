@@ -1,0 +1,6719 @@
+{
+  "Comunidad de Madrid": {
+    "provincias": [
+      "Madrid"
+    ],
+    "municipios": [
+      {
+        "nombre": "Madrid",
+        "provincia": "Madrid",
+        "poblacion": 3506730
+      },
+      {
+        "nombre": "Móstoles",
+        "provincia": "Madrid",
+        "poblacion": 214817
+      },
+      {
+        "nombre": "Alcalá de Henares",
+        "provincia": "Madrid",
+        "poblacion": 203208
+      },
+      {
+        "nombre": "Leganés",
+        "provincia": "Madrid",
+        "poblacion": 195734
+      },
+      {
+        "nombre": "Getafe",
+        "provincia": "Madrid",
+        "poblacion": 193238
+      },
+      {
+        "nombre": "Fuenlabrada",
+        "provincia": "Madrid",
+        "poblacion": 190076
+      },
+      {
+        "nombre": "Alcorcón",
+        "provincia": "Madrid",
+        "poblacion": 175719
+      },
+      {
+        "nombre": "Torrejón de Ardoz",
+        "provincia": "Madrid",
+        "poblacion": 143526
+      },
+      {
+        "nombre": "Parla",
+        "provincia": "Madrid",
+        "poblacion": 137471
+      },
+      {
+        "nombre": "Alcobendas",
+        "provincia": "Madrid",
+        "poblacion": 123342
+      },
+      {
+        "nombre": "Rivas-Vaciamadrid",
+        "provincia": "Madrid",
+        "poblacion": 103148
+      },
+      {
+        "nombre": "Las Rozas de Madrid",
+        "provincia": "Madrid",
+        "poblacion": 99037
+      },
+      {
+        "nombre": "San Sebastián de los Reyes",
+        "provincia": "Madrid",
+        "poblacion": 96992
+      },
+      {
+        "nombre": "Pozuelo de Alarcón",
+        "provincia": "Madrid",
+        "poblacion": 89770
+      },
+      {
+        "nombre": "Valdemoro",
+        "provincia": "Madrid",
+        "poblacion": 85972
+      },
+      {
+        "nombre": "Coslada",
+        "provincia": "Madrid",
+        "poblacion": 80512
+      },
+      {
+        "nombre": "Majadahonda",
+        "provincia": "Madrid",
+        "poblacion": 73625
+      },
+      {
+        "nombre": "Collado Villalba",
+        "provincia": "Madrid",
+        "poblacion": 67274
+      },
+      {
+        "nombre": "Boadilla del Monte",
+        "provincia": "Madrid",
+        "poblacion": 66349
+      },
+      {
+        "nombre": "Aranjuez",
+        "provincia": "Madrid",
+        "poblacion": 63040
+      },
+      {
+        "nombre": "Arganda del Rey",
+        "provincia": "Madrid",
+        "poblacion": 60419
+      },
+      {
+        "nombre": "Colmenar Viejo",
+        "provincia": "Madrid",
+        "poblacion": 58730
+      },
+      {
+        "nombre": "Pinto",
+        "provincia": "Madrid",
+        "poblacion": 56651
+      },
+      {
+        "nombre": "Tres Cantos",
+        "provincia": "Madrid",
+        "poblacion": 54592
+      },
+      {
+        "nombre": "San Fernando de Henares",
+        "provincia": "Madrid",
+        "poblacion": 39059
+      },
+      {
+        "nombre": "Arroyomolinos",
+        "provincia": "Madrid",
+        "poblacion": 38075
+      },
+      {
+        "nombre": "Galapagar",
+        "provincia": "Madrid",
+        "poblacion": 36758
+      },
+      {
+        "nombre": "Navalcarnero",
+        "provincia": "Madrid",
+        "poblacion": 33331
+      },
+      {
+        "nombre": "Villaviciosa de Odón",
+        "provincia": "Madrid",
+        "poblacion": 30127
+      },
+      {
+        "nombre": "Paracuellos de Jarama",
+        "provincia": "Madrid",
+        "poblacion": 27650
+      },
+      {
+        "nombre": "Ciempozuelos",
+        "provincia": "Madrid",
+        "poblacion": 26350
+      },
+      {
+        "nombre": "Torrelodones",
+        "provincia": "Madrid",
+        "poblacion": 25433
+      },
+      {
+        "nombre": "Mejorada del Campo",
+        "provincia": "Madrid",
+        "poblacion": 25049
+      },
+      {
+        "nombre": "Villanueva de la Cañada",
+        "provincia": "Madrid",
+        "poblacion": 24028
+      },
+      {
+        "nombre": "Algete",
+        "provincia": "Madrid",
+        "poblacion": 20991
+      },
+      {
+        "nombre": "San Martín de la Vega",
+        "provincia": "Madrid",
+        "poblacion": 20304
+      },
+      {
+        "nombre": "Humanes de Madrid",
+        "provincia": "Madrid",
+        "poblacion": 19902
+      },
+      {
+        "nombre": "San Lorenzo de El Escorial",
+        "provincia": "Madrid",
+        "poblacion": 18489
+      },
+      {
+        "nombre": "Villanueva del Pardillo",
+        "provincia": "Madrid",
+        "poblacion": 17731
+      },
+      {
+        "nombre": "Guadarrama",
+        "provincia": "Madrid",
+        "poblacion": 17063
+      },
+      {
+        "nombre": "El Escorial",
+        "provincia": "Madrid",
+        "poblacion": 16873
+      },
+      {
+        "nombre": "Villalbilla",
+        "provincia": "Madrid",
+        "poblacion": 16823
+      },
+      {
+        "nombre": "Meco",
+        "provincia": "Madrid",
+        "poblacion": 15404
+      },
+      {
+        "nombre": "Alpedrete",
+        "provincia": "Madrid",
+        "poblacion": 15312
+      },
+      {
+        "nombre": "Moralzarzal",
+        "provincia": "Madrid",
+        "poblacion": 14124
+      },
+      {
+        "nombre": "Valdemorillo",
+        "provincia": "Madrid",
+        "poblacion": 13651
+      },
+      {
+        "nombre": "San Agustín del Guadalix",
+        "provincia": "Madrid",
+        "poblacion": 13650
+      },
+      {
+        "nombre": "Velilla de San Antonio",
+        "provincia": "Madrid",
+        "poblacion": 13376
+      },
+      {
+        "nombre": "Brunete",
+        "provincia": "Madrid",
+        "poblacion": 11014
+      },
+      {
+        "nombre": "Daganzo de Arriba",
+        "provincia": "Madrid",
+        "poblacion": 10611
+      },
+      {
+        "nombre": "El Álamo",
+        "provincia": "Madrid",
+        "poblacion": 10322
+      },
+      {
+        "nombre": "Torrejón de la Calzada",
+        "provincia": "Madrid",
+        "poblacion": 10222
+      },
+      {
+        "nombre": "Griñón",
+        "provincia": "Madrid",
+        "poblacion": 10087
+      },
+      {
+        "nombre": "El Molar",
+        "provincia": "Madrid",
+        "poblacion": 9759
+      },
+      {
+        "nombre": "Sevilla la Nueva",
+        "provincia": "Madrid",
+        "poblacion": 9551
+      },
+      {
+        "nombre": "Colmenarejo",
+        "provincia": "Madrid",
+        "poblacion": 9534
+      },
+      {
+        "nombre": "Soto del Real",
+        "provincia": "Madrid",
+        "poblacion": 9399
+      },
+      {
+        "nombre": "Manzanares el Real",
+        "provincia": "Madrid",
+        "poblacion": 9386
+      },
+      {
+        "nombre": "Loeches",
+        "provincia": "Madrid",
+        "poblacion": 9108
+      },
+      {
+        "nombre": "San Martín de Valdeiglesias",
+        "provincia": "Madrid",
+        "poblacion": 9003
+      },
+      {
+        "nombre": "Hoyo de Manzanares",
+        "provincia": "Madrid",
+        "poblacion": 8973
+      },
+      {
+        "nombre": "Colmenar de Oreja",
+        "provincia": "Madrid",
+        "poblacion": 8649
+      },
+      {
+        "nombre": "El Boalo",
+        "provincia": "Madrid",
+        "poblacion": 8424
+      },
+      {
+        "nombre": "Morata de Tajuña",
+        "provincia": "Madrid",
+        "poblacion": 8115
+      },
+      {
+        "nombre": "Camarma de Esteruelas",
+        "provincia": "Madrid",
+        "poblacion": 7792
+      },
+      {
+        "nombre": "Villarejo de Salvanés",
+        "provincia": "Madrid",
+        "poblacion": 7746
+      },
+      {
+        "nombre": "Torres de la Alameda",
+        "provincia": "Madrid",
+        "poblacion": 7737
+      },
+      {
+        "nombre": "Cobeña",
+        "provincia": "Madrid",
+        "poblacion": 7698
+      },
+      {
+        "nombre": "Cercedilla",
+        "provincia": "Madrid",
+        "poblacion": 7648
+      },
+      {
+        "nombre": "Collado Mediano",
+        "provincia": "Madrid",
+        "poblacion": 7490
+      },
+      {
+        "nombre": "Villa del Prado",
+        "provincia": "Madrid",
+        "poblacion": 7273
+      },
+      {
+        "nombre": "Fuente el Saz de Jarama",
+        "provincia": "Madrid",
+        "poblacion": 7182
+      },
+      {
+        "nombre": "Nuevo Baztán",
+        "provincia": "Madrid",
+        "poblacion": 7050
+      },
+      {
+        "nombre": "Miraflores de la Sierra",
+        "provincia": "Madrid",
+        "poblacion": 6945
+      },
+      {
+        "nombre": "Cubas de la Sagra",
+        "provincia": "Madrid",
+        "poblacion": 6817
+      },
+      {
+        "nombre": "Guadalix de la Sierra",
+        "provincia": "Madrid",
+        "poblacion": 6814
+      },
+      {
+        "nombre": "Campo Real",
+        "provincia": "Madrid",
+        "poblacion": 6781
+      },
+      {
+        "nombre": "Pedrezuela",
+        "provincia": "Madrid",
+        "poblacion": 6400
+      },
+      {
+        "nombre": "Becerril de la Sierra",
+        "provincia": "Madrid",
+        "poblacion": 6277
+      },
+      {
+        "nombre": "Chinchón",
+        "provincia": "Madrid",
+        "poblacion": 5664
+      },
+      {
+        "nombre": "Moraleja de Enmedio",
+        "provincia": "Madrid",
+        "poblacion": 5453
+      }
+    ]
+  },
+  "Cataluña": {
+    "provincias": [
+      "Barcelona",
+      "Gerona",
+      "Lérida",
+      "Tarragona"
+    ],
+    "municipios": [
+      {
+        "nombre": "Barcelona",
+        "provincia": "Barcelona",
+        "poblacion": 1731649
+      },
+      {
+        "nombre": "Hospitalet de Llobregat",
+        "provincia": "Barcelona",
+        "poblacion": 289510
+      },
+      {
+        "nombre": "Tarrasa",
+        "provincia": "Barcelona",
+        "poblacion": 233270
+      },
+      {
+        "nombre": "Badalona",
+        "provincia": "Barcelona",
+        "poblacion": 231542
+      },
+      {
+        "nombre": "Sabadell",
+        "provincia": "Barcelona",
+        "poblacion": 225368
+      },
+      {
+        "nombre": "Lérida",
+        "provincia": "Lérida",
+        "poblacion": 146266
+      },
+      {
+        "nombre": "Tarragona",
+        "provincia": "Tarragona",
+        "poblacion": 143649
+      },
+      {
+        "nombre": "Mataró",
+        "provincia": "Barcelona",
+        "poblacion": 131683
+      },
+      {
+        "nombre": "Santa Coloma de Gramanet",
+        "provincia": "Barcelona",
+        "poblacion": 123981
+      },
+      {
+        "nombre": "Reus",
+        "provincia": "Tarragona",
+        "poblacion": 111601
+      },
+      {
+        "nombre": "Gerona",
+        "provincia": "Gerona",
+        "poblacion": 108666
+      },
+      {
+        "nombre": "San Cugat del Vallés",
+        "provincia": "Barcelona",
+        "poblacion": 97983
+      },
+      {
+        "nombre": "Cornellá de Llobregat",
+        "provincia": "Barcelona",
+        "poblacion": 92237
+      },
+      {
+        "nombre": "San Baudilio de Llobregat",
+        "provincia": "Barcelona",
+        "poblacion": 85610
+      },
+      {
+        "nombre": "Rubí",
+        "provincia": "Barcelona",
+        "poblacion": 82823
+      },
+      {
+        "nombre": "Manresa",
+        "provincia": "Barcelona",
+        "poblacion": 80974
+      },
+      {
+        "nombre": "Villanueva y Geltrú",
+        "provincia": "Barcelona",
+        "poblacion": 71641
+      },
+      {
+        "nombre": "Castelldefels",
+        "provincia": "Barcelona",
+        "poblacion": 70057
+      },
+      {
+        "nombre": "Viladecans",
+        "provincia": "Barcelona",
+        "poblacion": 67587
+      },
+      {
+        "nombre": "El Prat de Llobregat",
+        "provincia": "Barcelona",
+        "poblacion": 66338
+      },
+      {
+        "nombre": "Granollers",
+        "provincia": "Barcelona",
+        "poblacion": 65341
+      },
+      {
+        "nombre": "Sardañola del Vallés",
+        "provincia": "Barcelona",
+        "poblacion": 58528
+      },
+      {
+        "nombre": "Mollet del Vallés",
+        "provincia": "Barcelona",
+        "poblacion": 52990
+      },
+      {
+        "nombre": "Vic",
+        "provincia": "Barcelona",
+        "poblacion": 50796
+      },
+      {
+        "nombre": "Figueras",
+        "provincia": "Gerona",
+        "poblacion": 49689
+      },
+      {
+        "nombre": "Gavá",
+        "provincia": "Barcelona",
+        "poblacion": 48243
+      },
+      {
+        "nombre": "Esplugas de Llobregat",
+        "provincia": "Barcelona",
+        "poblacion": 48221
+      },
+      {
+        "nombre": "San Feliú de Llobregat",
+        "provincia": "Barcelona",
+        "poblacion": 46781
+      },
+      {
+        "nombre": "Lloret de Mar",
+        "provincia": "Gerona",
+        "poblacion": 43000
+      },
+      {
+        "nombre": "Blanes",
+        "provincia": "Gerona",
+        "poblacion": 42699
+      },
+      {
+        "nombre": "Villafranca del Panadés",
+        "provincia": "Barcelona",
+        "poblacion": 42607
+      },
+      {
+        "nombre": "Igualada",
+        "provincia": "Barcelona",
+        "poblacion": 42085
+      },
+      {
+        "nombre": "Vendrell",
+        "provincia": "Tarragona",
+        "poblacion": 41133
+      },
+      {
+        "nombre": "Ripollet",
+        "provincia": "Barcelona",
+        "poblacion": 39897
+      },
+      {
+        "nombre": "Olot",
+        "provincia": "Gerona",
+        "poblacion": 39519
+      },
+      {
+        "nombre": "San Adrián de Besós",
+        "provincia": "Barcelona",
+        "poblacion": 39323
+      },
+      {
+        "nombre": "Moncada y Reixach",
+        "provincia": "Barcelona",
+        "poblacion": 37460
+      },
+      {
+        "nombre": "Cambrils",
+        "provincia": "Tarragona",
+        "poblacion": 37042
+      },
+      {
+        "nombre": "Tortosa",
+        "provincia": "Tarragona",
+        "poblacion": 35997
+      },
+      {
+        "nombre": "San Juan Despí",
+        "provincia": "Barcelona",
+        "poblacion": 35926
+      },
+      {
+        "nombre": "Salt",
+        "provincia": "Gerona",
+        "poblacion": 34491
+      },
+      {
+        "nombre": "Barberá del Vallés",
+        "provincia": "Barcelona",
+        "poblacion": 33987
+      },
+      {
+        "nombre": "San Pedro de Ribas",
+        "provincia": "Barcelona",
+        "poblacion": 32705
+      },
+      {
+        "nombre": "Calafell",
+        "provincia": "Tarragona",
+        "poblacion": 32624
+      },
+      {
+        "nombre": "Sitges",
+        "provincia": "Barcelona",
+        "poblacion": 32609
+      },
+      {
+        "nombre": "Salou",
+        "provincia": "Tarragona",
+        "poblacion": 31491
+      },
+      {
+        "nombre": "Pineda de Mar",
+        "provincia": "Barcelona",
+        "poblacion": 30108
+      },
+      {
+        "nombre": "Premiá de Mar",
+        "provincia": "Barcelona",
+        "poblacion": 29431
+      },
+      {
+        "nombre": "Martorell",
+        "provincia": "Barcelona",
+        "poblacion": 29175
+      },
+      {
+        "nombre": "San Vicente dels Horts",
+        "provincia": "Barcelona",
+        "poblacion": 28746
+      },
+      {
+        "nombre": "Molins de Rey",
+        "provincia": "Barcelona",
+        "poblacion": 27300
+      },
+      {
+        "nombre": "San Andrés de la Barca",
+        "provincia": "Barcelona",
+        "poblacion": 27094
+      },
+      {
+        "nombre": "Santa Perpetua de Moguda",
+        "provincia": "Barcelona",
+        "poblacion": 26130
+      },
+      {
+        "nombre": "Valls",
+        "provincia": "Tarragona",
+        "poblacion": 25518
+      },
+      {
+        "nombre": "Castellar del Vallés",
+        "provincia": "Barcelona",
+        "poblacion": 25422
+      },
+      {
+        "nombre": "Olesa de Montserrat",
+        "provincia": "Barcelona",
+        "poblacion": 24966
+      },
+      {
+        "nombre": "El Masnou",
+        "provincia": "Barcelona",
+        "poblacion": 24761
+      },
+      {
+        "nombre": "Palafrugell",
+        "provincia": "Gerona",
+        "poblacion": 24543
+      },
+      {
+        "nombre": "Vilaseca",
+        "provincia": "Tarragona",
+        "poblacion": 23917
+      },
+      {
+        "nombre": "San Felíu de Guixols",
+        "provincia": "Gerona",
+        "poblacion": 22751
+      },
+      {
+        "nombre": "Esparraguera",
+        "provincia": "Barcelona",
+        "poblacion": 22442
+      },
+      {
+        "nombre": "Amposta",
+        "provincia": "Tarragona",
+        "poblacion": 22270
+      },
+      {
+        "nombre": "Manlleu",
+        "provincia": "Barcelona",
+        "poblacion": 21172
+      },
+      {
+        "nombre": "Vilasar de Mar",
+        "provincia": "Barcelona",
+        "poblacion": 21055
+      },
+      {
+        "nombre": "Las Franquesas del Vallés",
+        "provincia": "Barcelona",
+        "poblacion": 20522
+      },
+      {
+        "nombre": "Bañolas",
+        "provincia": "Gerona",
+        "poblacion": 20506
+      },
+      {
+        "nombre": "San Justo Desvern",
+        "provincia": "Barcelona",
+        "poblacion": 20462
+      },
+      {
+        "nombre": "San Quirce del Vallés",
+        "provincia": "Barcelona",
+        "poblacion": 20241
+      },
+      {
+        "nombre": "Rosas",
+        "provincia": "Gerona",
+        "poblacion": 20140
+      },
+      {
+        "nombre": "Calella",
+        "provincia": "Barcelona",
+        "poblacion": 19862
+      },
+      {
+        "nombre": "Malgrat de Mar",
+        "provincia": "Barcelona",
+        "poblacion": 19213
+      },
+      {
+        "nombre": "Cardedeu",
+        "provincia": "Barcelona",
+        "poblacion": 19023
+      },
+      {
+        "nombre": "Parets",
+        "provincia": "Barcelona",
+        "poblacion": 18893
+      },
+      {
+        "nombre": "San Celoni",
+        "provincia": "Barcelona",
+        "poblacion": 18479
+      },
+      {
+        "nombre": "Tordera",
+        "provincia": "Barcelona",
+        "poblacion": 18409
+      },
+      {
+        "nombre": "Palamós",
+        "provincia": "Gerona",
+        "poblacion": 18293
+      },
+      {
+        "nombre": "Tárrega",
+        "provincia": "Lérida",
+        "poblacion": 18268
+      },
+      {
+        "nombre": "Caldas de Montbuy",
+        "provincia": "Barcelona",
+        "poblacion": 18109
+      },
+      {
+        "nombre": "Torredembarra",
+        "provincia": "Tarragona",
+        "poblacion": 17670
+      },
+      {
+        "nombre": "Balaguer",
+        "provincia": "Lérida",
+        "poblacion": 17649
+      },
+      {
+        "nombre": "Piera",
+        "provincia": "Barcelona",
+        "poblacion": 17203
+      },
+      {
+        "nombre": "La Garriga",
+        "provincia": "Barcelona",
+        "poblacion": 17052
+      },
+      {
+        "nombre": "Canovellas",
+        "provincia": "Barcelona",
+        "poblacion": 17051
+      },
+      {
+        "nombre": "Berga",
+        "provincia": "Barcelona",
+        "poblacion": 16959
+      },
+      {
+        "nombre": "Cubellas",
+        "provincia": "Barcelona",
+        "poblacion": 16914
+      },
+      {
+        "nombre": "Montornés del Vallés",
+        "provincia": "Barcelona",
+        "poblacion": 16800
+      },
+      {
+        "nombre": "Arenys de Mar",
+        "provincia": "Barcelona",
+        "poblacion": 16342
+      },
+      {
+        "nombre": "Llissá de Munt",
+        "provincia": "Barcelona",
+        "poblacion": 16092
+      },
+      {
+        "nombre": "Vallirana",
+        "provincia": "Barcelona",
+        "poblacion": 15823
+      },
+      {
+        "nombre": "Corbera de Llobregat",
+        "provincia": "Barcelona",
+        "poblacion": 15466
+      },
+      {
+        "nombre": "Cunit",
+        "provincia": "Tarragona",
+        "poblacion": 15278
+      },
+      {
+        "nombre": "Palau-solità i Plegamans",
+        "provincia": "Barcelona",
+        "poblacion": 15130
+      },
+      {
+        "nombre": "San Carlos de la Rápita",
+        "provincia": "Tarragona",
+        "poblacion": 15046
+      },
+      {
+        "nombre": "Mollerusa",
+        "provincia": "Lérida",
+        "poblacion": 15037
+      },
+      {
+        "nombre": "Canet de Mar",
+        "provincia": "Barcelona",
+        "poblacion": 15010
+      },
+      {
+        "nombre": "Torelló",
+        "provincia": "Barcelona",
+        "poblacion": 14902
+      },
+      {
+        "nombre": "Santa Coloma de Farnés",
+        "provincia": "Gerona",
+        "poblacion": 13634
+      },
+      {
+        "nombre": "Montroig",
+        "provincia": "Tarragona",
+        "poblacion": 13592
+      },
+      {
+        "nombre": "La Llagosta",
+        "provincia": "Barcelona",
+        "poblacion": 13169
+      },
+      {
+        "nombre": "Badía del Vallés",
+        "provincia": "Barcelona",
+        "poblacion": 13074
+      },
+      {
+        "nombre": "San Sadurní de Noya",
+        "provincia": "Barcelona",
+        "poblacion": 12945
+      },
+      {
+        "nombre": "Abrera",
+        "provincia": "Barcelona",
+        "poblacion": 12848
+      },
+      {
+        "nombre": "Argentona",
+        "provincia": "Barcelona",
+        "poblacion": 12846
+      },
+      {
+        "nombre": "Castellbisbal",
+        "provincia": "Barcelona",
+        "poblacion": 12813
+      },
+      {
+        "nombre": "Vilanova del Camí",
+        "provincia": "Barcelona",
+        "poblacion": 12758
+      },
+      {
+        "nombre": "Seo de Urgel",
+        "provincia": "Lérida",
+        "poblacion": 12568
+      },
+      {
+        "nombre": "Castillo de Aro",
+        "provincia": "Gerona",
+        "poblacion": 12566
+      },
+      {
+        "nombre": "Montgat",
+        "provincia": "Barcelona",
+        "poblacion": 12462
+      },
+      {
+        "nombre": "Torroella de Montgrí",
+        "provincia": "Gerona",
+        "poblacion": 12356
+      },
+      {
+        "nombre": "Calonge",
+        "provincia": "Gerona",
+        "poblacion": 12043
+      },
+      {
+        "nombre": "San Andrés de Llavaneras",
+        "provincia": "Barcelona",
+        "poblacion": 11831
+      },
+      {
+        "nombre": "Deltebre",
+        "provincia": "Tarragona",
+        "poblacion": 11818
+      },
+      {
+        "nombre": "Pallejá",
+        "provincia": "Barcelona",
+        "poblacion": 11736
+      },
+      {
+        "nombre": "Castellón de Ampurias",
+        "provincia": "Gerona",
+        "poblacion": 11731
+      },
+      {
+        "nombre": "La Bisbal del Ampurdán",
+        "provincia": "Gerona",
+        "poblacion": 11383
+      },
+      {
+        "nombre": "San Juan de Torruella",
+        "provincia": "Barcelona",
+        "poblacion": 10959
+      },
+      {
+        "nombre": "La Roca del Vallés",
+        "provincia": "Barcelona",
+        "poblacion": 10913
+      },
+      {
+        "nombre": "Cassá de la Selva",
+        "provincia": "Gerona",
+        "poblacion": 10836
+      },
+      {
+        "nombre": "Ripoll",
+        "provincia": "Gerona",
+        "poblacion": 10731
+      },
+      {
+        "nombre": "Premiá de Dalt",
+        "provincia": "Barcelona",
+        "poblacion": 10532
+      },
+      {
+        "nombre": "Llinás del Vallés",
+        "provincia": "Barcelona",
+        "poblacion": 10499
+      },
+      {
+        "nombre": "La Escala",
+        "provincia": "Gerona",
+        "poblacion": 10478
+      },
+      {
+        "nombre": "Santa Margarita de Montbuy",
+        "provincia": "Barcelona",
+        "poblacion": 10456
+      },
+      {
+        "nombre": "Alella",
+        "provincia": "Barcelona",
+        "poblacion": 10139
+      },
+      {
+        "nombre": "San Vicente de Castellet",
+        "provincia": "Barcelona",
+        "poblacion": 10068
+      },
+      {
+        "nombre": "Bigas",
+        "provincia": "Barcelona",
+        "poblacion": 9949
+      },
+      {
+        "nombre": "Matadepera",
+        "provincia": "Barcelona",
+        "poblacion": 9899
+      },
+      {
+        "nombre": "Santa María de Palautordera",
+        "provincia": "Barcelona",
+        "poblacion": 9872
+      },
+      {
+        "nombre": "Masquefa",
+        "provincia": "Barcelona",
+        "poblacion": 9839
+      },
+      {
+        "nombre": "Alcanar",
+        "provincia": "Tarragona",
+        "poblacion": 9827
+      },
+      {
+        "nombre": "Palafolls",
+        "provincia": "Barcelona",
+        "poblacion": 9819
+      },
+      {
+        "nombre": "Alcarrás",
+        "provincia": "Lérida",
+        "poblacion": 9787
+      },
+      {
+        "nombre": "Puigcerdá",
+        "provincia": "Gerona",
+        "poblacion": 9764
+      },
+      {
+        "nombre": "Senmanat",
+        "provincia": "Barcelona",
+        "poblacion": 9474
+      },
+      {
+        "nombre": "Cervelló",
+        "provincia": "Barcelona",
+        "poblacion": 9469
+      },
+      {
+        "nombre": "Cervera",
+        "provincia": "Lérida",
+        "poblacion": 9453
+      },
+      {
+        "nombre": "Arenys de Munt",
+        "provincia": "Barcelona",
+        "poblacion": 9413
+      },
+      {
+        "nombre": "La Ametlla",
+        "provincia": "Barcelona",
+        "poblacion": 9296
+      },
+      {
+        "nombre": "Vilasar de Dalt",
+        "provincia": "Barcelona",
+        "poblacion": 9230
+      },
+      {
+        "nombre": "Llagostera",
+        "provincia": "Gerona",
+        "poblacion": 9208
+      },
+      {
+        "nombre": "Tiana",
+        "provincia": "Barcelona",
+        "poblacion": 9198
+      },
+      {
+        "nombre": "San Fausto de Campcentellas",
+        "provincia": "Barcelona",
+        "poblacion": 9197
+      },
+      {
+        "nombre": "Solsona",
+        "provincia": "Lérida",
+        "poblacion": 9171
+      },
+      {
+        "nombre": "San Fructuoso de Bages",
+        "provincia": "Barcelona",
+        "poblacion": 9156
+      },
+      {
+        "nombre": "Montmeló",
+        "provincia": "Barcelona",
+        "poblacion": 8825
+      },
+      {
+        "nombre": "Polinyá",
+        "provincia": "Barcelona",
+        "poblacion": 8482
+      },
+      {
+        "nombre": "Tona",
+        "provincia": "Barcelona",
+        "poblacion": 8455
+      },
+      {
+        "nombre": "Caldas de Malavella",
+        "provincia": "Gerona",
+        "poblacion": 8418
+      },
+      {
+        "nombre": "Santa Coloma de Cervelló",
+        "provincia": "Barcelona",
+        "poblacion": 8393
+      },
+      {
+        "nombre": "Vidreras",
+        "provincia": "Gerona",
+        "poblacion": 8339
+      },
+      {
+        "nombre": "Roquetas",
+        "provincia": "Tarragona",
+        "poblacion": 8302
+      },
+      {
+        "nombre": "Gélida",
+        "provincia": "Barcelona",
+        "poblacion": 7953
+      },
+      {
+        "nombre": "San Esteban de Sasroviras",
+        "provincia": "Barcelona",
+        "poblacion": 7906
+      },
+      {
+        "nombre": "Santa Eulalia de Ronsana",
+        "provincia": "Barcelona",
+        "poblacion": 7846
+      },
+      {
+        "nombre": "Roda de Bará",
+        "provincia": "Tarragona",
+        "poblacion": 7829
+      },
+      {
+        "nombre": "Massanet de la Selva",
+        "provincia": "Gerona",
+        "poblacion": 7823
+      },
+      {
+        "nombre": "Viladecaballs",
+        "provincia": "Barcelona",
+        "poblacion": 7809
+      },
+      {
+        "nombre": "Cabrils",
+        "provincia": "Barcelona",
+        "poblacion": 7799
+      },
+      {
+        "nombre": "Centellas",
+        "provincia": "Barcelona",
+        "poblacion": 7726
+      },
+      {
+        "nombre": "Sampedor",
+        "provincia": "Barcelona",
+        "poblacion": 7693
+      },
+      {
+        "nombre": "Santa Margarita y Monjós",
+        "provincia": "Barcelona",
+        "poblacion": 7650
+      },
+      {
+        "nombre": "Guisona",
+        "provincia": "Lérida",
+        "poblacion": 7603
+      },
+      {
+        "nombre": "Vacarisas",
+        "provincia": "Barcelona",
+        "poblacion": 7460
+      },
+      {
+        "nombre": "Montblanch",
+        "provincia": "Tarragona",
+        "poblacion": 7456
+      },
+      {
+        "nombre": "Begas",
+        "provincia": "Barcelona",
+        "poblacion": 7432
+      },
+      {
+        "nombre": "La Ametlla de Mar",
+        "provincia": "Tarragona",
+        "poblacion": 7325
+      },
+      {
+        "nombre": "Vandellós y Hospitalet del Infante",
+        "provincia": "Tarragona",
+        "poblacion": 6984
+      },
+      {
+        "nombre": "Almacellas",
+        "provincia": "Lérida",
+        "poblacion": 6847
+      },
+      {
+        "nombre": "Sallent de Llobregat",
+        "provincia": "Barcelona",
+        "poblacion": 6835
+      },
+      {
+        "nombre": "Riudoms",
+        "provincia": "Tarragona",
+        "poblacion": 6810
+      },
+      {
+        "nombre": "Taradell",
+        "provincia": "Barcelona",
+        "poblacion": 6809
+      },
+      {
+        "nombre": "Constantí",
+        "provincia": "Tarragona",
+        "poblacion": 6788
+      },
+      {
+        "nombre": "Llissá de Vall",
+        "provincia": "Barcelona",
+        "poblacion": 6714
+      },
+      {
+        "nombre": "San Vicente de Montalt",
+        "provincia": "Barcelona",
+        "poblacion": 6701
+      },
+      {
+        "nombre": "Teyá",
+        "provincia": "Barcelona",
+        "poblacion": 6696
+      },
+      {
+        "nombre": "Moyá",
+        "provincia": "Barcelona",
+        "poblacion": 6690
+      },
+      {
+        "nombre": "Roda de Ter",
+        "provincia": "Barcelona",
+        "poblacion": 6680
+      },
+      {
+        "nombre": "Sils",
+        "provincia": "Gerona",
+        "poblacion": 6624
+      },
+      {
+        "nombre": "San Antonio Vilamajor",
+        "provincia": "Barcelona",
+        "poblacion": 6577
+      },
+      {
+        "nombre": "Arbucias",
+        "provincia": "Gerona",
+        "poblacion": 6531
+      },
+      {
+        "nombre": "San Felíu de Codinas",
+        "provincia": "Barcelona",
+        "poblacion": 6527
+      },
+      {
+        "nombre": "Ulldecona",
+        "provincia": "Tarragona",
+        "poblacion": 6417
+      },
+      {
+        "nombre": "Alpicat",
+        "provincia": "Lérida",
+        "poblacion": 6394
+      },
+      {
+        "nombre": "Torrellas de Llobregat",
+        "provincia": "Barcelona",
+        "poblacion": 6225
+      },
+      {
+        "nombre": "Borjas Blancas",
+        "provincia": "Lérida",
+        "poblacion": 6215
+      },
+      {
+        "nombre": "Tosa de Mar",
+        "provincia": "Gerona",
+        "poblacion": 6206
+      },
+      {
+        "nombre": "Navás",
+        "provincia": "Barcelona",
+        "poblacion": 6150
+      },
+      {
+        "nombre": "Navarclés",
+        "provincia": "Barcelona",
+        "poblacion": 6109
+      },
+      {
+        "nombre": "Suria",
+        "provincia": "Barcelona",
+        "poblacion": 6046
+      },
+      {
+        "nombre": "Artés",
+        "provincia": "Barcelona",
+        "poblacion": 5994
+      },
+      {
+        "nombre": "Tremp",
+        "provincia": "Lérida",
+        "poblacion": 5961
+      },
+      {
+        "nombre": "La Canonja",
+        "provincia": "Tarragona",
+        "poblacion": 5922
+      },
+      {
+        "nombre": "San Hilario Sacalm",
+        "provincia": "Gerona",
+        "poblacion": 5913
+      },
+      {
+        "nombre": "Dosrius",
+        "provincia": "Barcelona",
+        "poblacion": 5910
+      },
+      {
+        "nombre": "Anglés",
+        "provincia": "Gerona",
+        "poblacion": 5884
+      },
+      {
+        "nombre": "San Pol de Mar",
+        "provincia": "Barcelona",
+        "poblacion": 5791
+      },
+      {
+        "nombre": "Viella y Medio Arán",
+        "provincia": "Lérida",
+        "poblacion": 5765
+      },
+      {
+        "nombre": "La Selva del Campo",
+        "provincia": "Tarragona",
+        "poblacion": 5736
+      },
+      {
+        "nombre": "Arbós",
+        "provincia": "Tarragona",
+        "poblacion": 5713
+      },
+      {
+        "nombre": "Altafulla",
+        "provincia": "Tarragona",
+        "poblacion": 5693
+      },
+      {
+        "nombre": "Santa Cristina de Aro",
+        "provincia": "Gerona",
+        "poblacion": 5664
+      },
+      {
+        "nombre": "Mora de Ebro",
+        "provincia": "Tarragona",
+        "poblacion": 5649
+      },
+      {
+        "nombre": "Vilafan",
+        "provincia": "Gerona",
+        "poblacion": 5642
+      },
+      {
+        "nombre": "Cenia",
+        "provincia": "Tarragona",
+        "poblacion": 5623
+      },
+      {
+        "nombre": "Vilanova del Vallés",
+        "provincia": "Barcelona",
+        "poblacion": 5600
+      },
+      {
+        "nombre": "Agramunt",
+        "provincia": "Lérida",
+        "poblacion": 5516
+      },
+      {
+        "nombre": "Celrá",
+        "provincia": "Gerona",
+        "poblacion": 5486
+      },
+      {
+        "nombre": "Capellades",
+        "provincia": "Barcelona",
+        "poblacion": 5417
+      },
+      {
+        "nombre": "Sarriá de Ter",
+        "provincia": "Gerona",
+        "poblacion": 5327
+      },
+      {
+        "nombre": "Alcover",
+        "provincia": "Tarragona",
+        "poblacion": 5278
+      },
+      {
+        "nombre": "Canyellas",
+        "provincia": "Barcelona",
+        "poblacion": 5218
+      },
+      {
+        "nombre": "Bescanó",
+        "provincia": "Gerona",
+        "poblacion": 5178
+      },
+      {
+        "nombre": "Bellpuig",
+        "provincia": "Lérida",
+        "poblacion": 5150
+      },
+      {
+        "nombre": "Catllar",
+        "provincia": "Tarragona",
+        "poblacion": 5115
+      }
+    ]
+  },
+  "Comunidad Valenciana": {
+    "provincias": [
+      "Alicante",
+      "Castellón",
+      "Valencia"
+    ],
+    "municipios": [
+      {
+        "nombre": "Valencia",
+        "provincia": "Valencia",
+        "poblacion": 840792
+      },
+      {
+        "nombre": "Alicante",
+        "provincia": "Alicante",
+        "poblacion": 366221
+      },
+      {
+        "nombre": "Elche",
+        "provincia": "Alicante",
+        "poblacion": 245557
+      },
+      {
+        "nombre": "Castellón de la Plana",
+        "provincia": "Castellón",
+        "poblacion": 183711
+      },
+      {
+        "nombre": "Torrevieja",
+        "provincia": "Alicante",
+        "poblacion": 98533
+      },
+      {
+        "nombre": "Torrente",
+        "provincia": "Valencia",
+        "poblacion": 90928
+      },
+      {
+        "nombre": "Orihuela",
+        "provincia": "Alicante",
+        "poblacion": 84560
+      },
+      {
+        "nombre": "Gandía",
+        "provincia": "Valencia",
+        "poblacion": 83135
+      },
+      {
+        "nombre": "Benidorm",
+        "provincia": "Alicante",
+        "poblacion": 77327
+      },
+      {
+        "nombre": "Paterna",
+        "provincia": "Valencia",
+        "poblacion": 76019
+      },
+      {
+        "nombre": "Sagunto",
+        "provincia": "Valencia",
+        "poblacion": 73031
+      },
+      {
+        "nombre": "Alcoy",
+        "provincia": "Alicante",
+        "poblacion": 61468
+      },
+      {
+        "nombre": "San Vicente del Raspeig",
+        "provincia": "Alicante",
+        "poblacion": 60247
+      },
+      {
+        "nombre": "Elda",
+        "provincia": "Alicante",
+        "poblacion": 55222
+      },
+      {
+        "nombre": "Villarreal",
+        "provincia": "Castellón",
+        "poblacion": 53623
+      },
+      {
+        "nombre": "Alcira",
+        "provincia": "Valencia",
+        "poblacion": 48236
+      },
+      {
+        "nombre": "Denia",
+        "provincia": "Alicante",
+        "poblacion": 47261
+      },
+      {
+        "nombre": "Mislata",
+        "provincia": "Valencia",
+        "poblacion": 47079
+      },
+      {
+        "nombre": "Burjasot",
+        "provincia": "Valencia",
+        "poblacion": 41299
+      },
+      {
+        "nombre": "Santa Pola",
+        "provincia": "Alicante",
+        "poblacion": 39709
+      },
+      {
+        "nombre": "Burriana",
+        "provincia": "Castellón",
+        "poblacion": 37915
+      },
+      {
+        "nombre": "Villajoyosa",
+        "provincia": "Alicante",
+        "poblacion": 37449
+      },
+      {
+        "nombre": "Onteniente",
+        "provincia": "Valencia",
+        "poblacion": 37012
+      },
+      {
+        "nombre": "Villena",
+        "provincia": "Alicante",
+        "poblacion": 34712
+      },
+      {
+        "nombre": "Aldaya",
+        "provincia": "Valencia",
+        "poblacion": 34630
+      },
+      {
+        "nombre": "Petrel",
+        "provincia": "Alicante",
+        "poblacion": 34022
+      },
+      {
+        "nombre": "Manises",
+        "provincia": "Valencia",
+        "poblacion": 32609
+      },
+      {
+        "nombre": "Vall de Uxó",
+        "provincia": "Castellón",
+        "poblacion": 32242
+      },
+      {
+        "nombre": "Chirivella",
+        "provincia": "Valencia",
+        "poblacion": 32093
+      },
+      {
+        "nombre": "Campello",
+        "provincia": "Alicante",
+        "poblacion": 31419
+      },
+      {
+        "nombre": "Játiva",
+        "provincia": "Valencia",
+        "poblacion": 31008
+      },
+      {
+        "nombre": "Crevillente",
+        "provincia": "Alicante",
+        "poblacion": 30921
+      },
+      {
+        "nombre": "Jávea",
+        "provincia": "Alicante",
+        "poblacion": 30642
+      },
+      {
+        "nombre": "Catarroja",
+        "provincia": "Valencia",
+        "poblacion": 30604
+      },
+      {
+        "nombre": "Vinaroz",
+        "provincia": "Castellón",
+        "poblacion": 30529
+      },
+      {
+        "nombre": "Benicarló",
+        "provincia": "Castellón",
+        "poblacion": 30296
+      },
+      {
+        "nombre": "Alacuás",
+        "provincia": "Valencia",
+        "poblacion": 30166
+      },
+      {
+        "nombre": "Sueca",
+        "provincia": "Valencia",
+        "poblacion": 29194
+      },
+      {
+        "nombre": "Almazora",
+        "provincia": "Castellón",
+        "poblacion": 29159
+      },
+      {
+        "nombre": "Muchamiel",
+        "provincia": "Alicante",
+        "poblacion": 28621
+      },
+      {
+        "nombre": "Bétera",
+        "provincia": "Valencia",
+        "poblacion": 28560
+      },
+      {
+        "nombre": "Algemesí",
+        "provincia": "Valencia",
+        "poblacion": 28306
+      },
+      {
+        "nombre": "Paiporta",
+        "provincia": "Valencia",
+        "poblacion": 28136
+      },
+      {
+        "nombre": "Calpe",
+        "provincia": "Alicante",
+        "poblacion": 27616
+      },
+      {
+        "nombre": "Puebla de Vallbona",
+        "provincia": "Valencia",
+        "poblacion": 27471
+      },
+      {
+        "nombre": "Cuart de Poblet",
+        "provincia": "Valencia",
+        "poblacion": 26967
+      },
+      {
+        "nombre": "San Juan de Alicante",
+        "provincia": "Alicante",
+        "poblacion": 26834
+      },
+      {
+        "nombre": "Oliva",
+        "provincia": "Valencia",
+        "poblacion": 26813
+      },
+      {
+        "nombre": "Novelda",
+        "provincia": "Alicante",
+        "poblacion": 26606
+      },
+      {
+        "nombre": "Alboraya",
+        "provincia": "Valencia",
+        "poblacion": 26273
+      },
+      {
+        "nombre": "Onda",
+        "provincia": "Castellón",
+        "poblacion": 26190
+      },
+      {
+        "nombre": "Liria",
+        "provincia": "Valencia",
+        "poblacion": 25333
+      },
+      {
+        "nombre": "Cullera",
+        "provincia": "Valencia",
+        "poblacion": 24702
+      },
+      {
+        "nombre": "Ribarroja del Turia",
+        "provincia": "Valencia",
+        "poblacion": 24616
+      },
+      {
+        "nombre": "Altea",
+        "provincia": "Alicante",
+        "poblacion": 24592
+      },
+      {
+        "nombre": "Ibi",
+        "provincia": "Alicante",
+        "poblacion": 24500
+      },
+      {
+        "nombre": "Pilar de la Horadada",
+        "provincia": "Alicante",
+        "poblacion": 24316
+      },
+      {
+        "nombre": "Picasent",
+        "provincia": "Valencia",
+        "poblacion": 22236
+      },
+      {
+        "nombre": "Moncada",
+        "provincia": "Valencia",
+        "poblacion": 22067
+      },
+      {
+        "nombre": "Alfafar",
+        "provincia": "Valencia",
+        "poblacion": 21879
+      },
+      {
+        "nombre": "Almoradí",
+        "provincia": "Alicante",
+        "poblacion": 21874
+      },
+      {
+        "nombre": "Aspe",
+        "provincia": "Alicante",
+        "poblacion": 21473
+      },
+      {
+        "nombre": "Carcagente",
+        "provincia": "Valencia",
+        "poblacion": 20777
+      },
+      {
+        "nombre": "Puzol",
+        "provincia": "Valencia",
+        "poblacion": 20731
+      },
+      {
+        "nombre": "Alfaz del Pi",
+        "provincia": "Alicante",
+        "poblacion": 20518
+      },
+      {
+        "nombre": "Requena",
+        "provincia": "Valencia",
+        "poblacion": 20387
+      },
+      {
+        "nombre": "Benicasim",
+        "provincia": "Castellón",
+        "poblacion": 19951
+      },
+      {
+        "nombre": "Silla",
+        "provincia": "Valencia",
+        "poblacion": 19683
+      },
+      {
+        "nombre": "Callosa de Segura",
+        "provincia": "Alicante",
+        "poblacion": 19484
+      },
+      {
+        "nombre": "La Eliana",
+        "provincia": "Valencia",
+        "poblacion": 19054
+      },
+      {
+        "nombre": "La Nucía",
+        "provincia": "Alicante",
+        "poblacion": 18970
+      },
+      {
+        "nombre": "Rojales",
+        "provincia": "Alicante",
+        "poblacion": 17451
+      },
+      {
+        "nombre": "Tabernes de Valldigna",
+        "provincia": "Valencia",
+        "poblacion": 17443
+      },
+      {
+        "nombre": "Guardamar del Segura",
+        "provincia": "Alicante",
+        "poblacion": 17328
+      },
+      {
+        "nombre": "Albal",
+        "provincia": "Valencia",
+        "poblacion": 17024
+      },
+      {
+        "nombre": "Masamagrell",
+        "provincia": "Valencia",
+        "poblacion": 16766
+      },
+      {
+        "nombre": "Chiva",
+        "provincia": "Valencia",
+        "poblacion": 16750
+      },
+      {
+        "nombre": "Carlet",
+        "provincia": "Valencia",
+        "poblacion": 16141
+      },
+      {
+        "nombre": "Benetúser",
+        "provincia": "Valencia",
+        "poblacion": 15879
+      },
+      {
+        "nombre": "Alginet",
+        "provincia": "Valencia",
+        "poblacion": 14442
+      },
+      {
+        "nombre": "Nules",
+        "provincia": "Castellón",
+        "poblacion": 13827
+      },
+      {
+        "nombre": "Godella",
+        "provincia": "Valencia",
+        "poblacion": 13414
+      },
+      {
+        "nombre": "Canals",
+        "provincia": "Valencia",
+        "poblacion": 13162
+      },
+      {
+        "nombre": "Albatera",
+        "provincia": "Alicante",
+        "poblacion": 13092
+      },
+      {
+        "nombre": "Monóvar",
+        "provincia": "Alicante",
+        "poblacion": 12542
+      },
+      {
+        "nombre": "Teulada",
+        "provincia": "Alicante",
+        "poblacion": 12515
+      },
+      {
+        "nombre": "Benisa",
+        "provincia": "Alicante",
+        "poblacion": 12279
+      },
+      {
+        "nombre": "La Alcudia",
+        "provincia": "Valencia",
+        "poblacion": 12197
+      },
+      {
+        "nombre": "Benifayó",
+        "provincia": "Valencia",
+        "poblacion": 11984
+      },
+      {
+        "nombre": "Benaguacil",
+        "provincia": "Valencia",
+        "poblacion": 11877
+      },
+      {
+        "nombre": "Picaña",
+        "provincia": "Valencia",
+        "poblacion": 11760
+      },
+      {
+        "nombre": "Utiel",
+        "provincia": "Valencia",
+        "poblacion": 11632
+      },
+      {
+        "nombre": "Castalla",
+        "provincia": "Alicante",
+        "poblacion": 11365
+      },
+      {
+        "nombre": "Cocentaina",
+        "provincia": "Alicante",
+        "poblacion": 11309
+      },
+      {
+        "nombre": "Oropesa del Mar",
+        "provincia": "Castellón",
+        "poblacion": 10958
+      },
+      {
+        "nombre": "Meliana",
+        "provincia": "Valencia",
+        "poblacion": 10918
+      },
+      {
+        "nombre": "Alberique",
+        "provincia": "Valencia",
+        "poblacion": 10815
+      },
+      {
+        "nombre": "Villamarchante",
+        "provincia": "Valencia",
+        "poblacion": 10772
+      },
+      {
+        "nombre": "Sedaví",
+        "provincia": "Valencia",
+        "poblacion": 10637
+      },
+      {
+        "nombre": "Alcácer",
+        "provincia": "Valencia",
+        "poblacion": 10575
+      },
+      {
+        "nombre": "Alcora",
+        "provincia": "Castellón",
+        "poblacion": 10526
+      },
+      {
+        "nombre": "Pego",
+        "provincia": "Alicante",
+        "poblacion": 10485
+      },
+      {
+        "nombre": "San Antonio de Benagéber",
+        "provincia": "Valencia",
+        "poblacion": 10200
+      },
+      {
+        "nombre": "Masanasa",
+        "provincia": "Valencia",
+        "poblacion": 10146
+      },
+      {
+        "nombre": "Sax",
+        "provincia": "Alicante",
+        "poblacion": 10072
+      },
+      {
+        "nombre": "Buñol",
+        "provincia": "Valencia",
+        "poblacion": 9579
+      },
+      {
+        "nombre": "Rafelbuñol",
+        "provincia": "Valencia",
+        "poblacion": 9467
+      },
+      {
+        "nombre": "Tabernes Blanques",
+        "provincia": "Valencia",
+        "poblacion": 9456
+      },
+      {
+        "nombre": "San Fulgencio",
+        "provincia": "Alicante",
+        "poblacion": 9443
+      },
+      {
+        "nombre": "Segorbe",
+        "provincia": "Castellón",
+        "poblacion": 9425
+      },
+      {
+        "nombre": "Monserrat",
+        "provincia": "Valencia",
+        "poblacion": 9312
+      },
+      {
+        "nombre": "Catral",
+        "provincia": "Alicante",
+        "poblacion": 9275
+      },
+      {
+        "nombre": "Muro de Alcoy",
+        "provincia": "Alicante",
+        "poblacion": 9253
+      },
+      {
+        "nombre": "Almusafes",
+        "provincia": "Valencia",
+        "poblacion": 8996
+      },
+      {
+        "nombre": "El Puig",
+        "provincia": "Valencia",
+        "poblacion": 8992
+      },
+      {
+        "nombre": "Cheste",
+        "provincia": "Valencia",
+        "poblacion": 8962
+      },
+      {
+        "nombre": "Finestrat",
+        "provincia": "Alicante",
+        "poblacion": 8836
+      },
+      {
+        "nombre": "Monforte del Cid",
+        "provincia": "Alicante",
+        "poblacion": 8777
+      },
+      {
+        "nombre": "Puebla de Farnals",
+        "provincia": "Valencia",
+        "poblacion": 8699
+      },
+      {
+        "nombre": "Pedreguer",
+        "provincia": "Alicante",
+        "poblacion": 8558
+      },
+      {
+        "nombre": "Peñíscola",
+        "provincia": "Castellón",
+        "poblacion": 8449
+      },
+      {
+        "nombre": "Ollería",
+        "provincia": "Valencia",
+        "poblacion": 8421
+      },
+      {
+        "nombre": "Pinoso",
+        "provincia": "Alicante",
+        "poblacion": 8281
+      },
+      {
+        "nombre": "Redován",
+        "provincia": "Alicante",
+        "poblacion": 8183
+      },
+      {
+        "nombre": "Náquera",
+        "provincia": "Valencia",
+        "poblacion": 8102
+      },
+      {
+        "nombre": "Dolores",
+        "provincia": "Alicante",
+        "poblacion": 7919
+      },
+      {
+        "nombre": "Onil",
+        "provincia": "Alicante",
+        "poblacion": 7763
+      },
+      {
+        "nombre": "Moncófar",
+        "provincia": "Castellón",
+        "poblacion": 7747
+      },
+      {
+        "nombre": "Callosa de Ensarriá",
+        "provincia": "Alicante",
+        "poblacion": 7708
+      },
+      {
+        "nombre": "Foyos",
+        "provincia": "Valencia",
+        "poblacion": 7641
+      },
+      {
+        "nombre": "Rocafort",
+        "provincia": "Valencia",
+        "poblacion": 7570
+      },
+      {
+        "nombre": "Cox",
+        "provincia": "Alicante",
+        "poblacion": 7513
+      },
+      {
+        "nombre": "Almácera",
+        "provincia": "Valencia",
+        "poblacion": 7504
+      },
+      {
+        "nombre": "Bigastro",
+        "provincia": "Alicante",
+        "poblacion": 7361
+      },
+      {
+        "nombre": "Ondara",
+        "provincia": "Alicante",
+        "poblacion": 7308
+      },
+      {
+        "nombre": "Canet de Berenguer",
+        "provincia": "Valencia",
+        "poblacion": 7265
+      },
+      {
+        "nombre": "Turís",
+        "provincia": "Valencia",
+        "poblacion": 7259
+      },
+      {
+        "nombre": "Bañeres",
+        "provincia": "Alicante",
+        "poblacion": 7255
+      },
+      {
+        "nombre": "Alcalá de Chivert",
+        "provincia": "Castellón",
+        "poblacion": 7160
+      },
+      {
+        "nombre": "Jijona",
+        "provincia": "Alicante",
+        "poblacion": 7032
+      },
+      {
+        "nombre": "Villanueva de Castellón",
+        "provincia": "Valencia",
+        "poblacion": 6891
+      },
+      {
+        "nombre": "San Miguel de Salinas",
+        "provincia": "Alicante",
+        "poblacion": 6798
+      },
+      {
+        "nombre": "Museros",
+        "provincia": "Valencia",
+        "poblacion": 6741
+      },
+      {
+        "nombre": "Almenara",
+        "provincia": "Castellón",
+        "poblacion": 6591
+      },
+      {
+        "nombre": "Gata de Gorgos",
+        "provincia": "Alicante",
+        "poblacion": 6515
+      },
+      {
+        "nombre": "Albaida",
+        "provincia": "Valencia",
+        "poblacion": 6102
+      },
+      {
+        "nombre": "Guadasuar",
+        "provincia": "Valencia",
+        "poblacion": 5961
+      },
+      {
+        "nombre": "Jaraco",
+        "provincia": "Valencia",
+        "poblacion": 5923
+      },
+      {
+        "nombre": "Borriol",
+        "provincia": "Castellón",
+        "poblacion": 5865
+      },
+      {
+        "nombre": "Benigánim",
+        "provincia": "Valencia",
+        "poblacion": 5716
+      },
+      {
+        "nombre": "Torreblanca",
+        "provincia": "Castellón",
+        "poblacion": 5630
+      },
+      {
+        "nombre": "Benejúzar",
+        "provincia": "Alicante",
+        "poblacion": 5625
+      },
+      {
+        "nombre": "Bechí",
+        "provincia": "Castellón",
+        "poblacion": 5580
+      },
+      {
+        "nombre": "Los Montesinos",
+        "provincia": "Alicante",
+        "poblacion": 5477
+      },
+      {
+        "nombre": "Alcudia de Crespins",
+        "provincia": "Valencia",
+        "poblacion": 5361
+      },
+      {
+        "nombre": "Polop",
+        "provincia": "Alicante",
+        "poblacion": 5339
+      },
+      {
+        "nombre": "Ayora",
+        "provincia": "Valencia",
+        "poblacion": 5223
+      },
+      {
+        "nombre": "Vergel",
+        "provincia": "Alicante",
+        "poblacion": 5101
+      },
+      {
+        "nombre": "Agost",
+        "provincia": "Alicante",
+        "poblacion": 5067
+      }
+    ]
+  },
+  "Aragón": {
+    "provincias": [
+      "Huesca",
+      "Teruel",
+      "Zaragoza"
+    ],
+    "municipios": [
+      {
+        "nombre": "Zaragoza",
+        "provincia": "Zaragoza",
+        "poblacion": 693091
+      },
+      {
+        "nombre": "Huesca",
+        "provincia": "Huesca",
+        "poblacion": 55454
+      },
+      {
+        "nombre": "Teruel",
+        "provincia": "Teruel",
+        "poblacion": 36655
+      },
+      {
+        "nombre": "Calatayud",
+        "provincia": "Zaragoza",
+        "poblacion": 19677
+      },
+      {
+        "nombre": "Utebo",
+        "provincia": "Zaragoza",
+        "poblacion": 18955
+      },
+      {
+        "nombre": "Monzón",
+        "provincia": "Huesca",
+        "poblacion": 17839
+      },
+      {
+        "nombre": "Barbastro",
+        "provincia": "Huesca",
+        "poblacion": 17295
+      },
+      {
+        "nombre": "Ejea de los Caballeros",
+        "provincia": "Zaragoza",
+        "poblacion": 17135
+      },
+      {
+        "nombre": "Alcañiz",
+        "provincia": "Teruel",
+        "poblacion": 16151
+      },
+      {
+        "nombre": "Fraga",
+        "provincia": "Huesca",
+        "poblacion": 15373
+      },
+      {
+        "nombre": "Cuarte de Huerva",
+        "provincia": "Zaragoza",
+        "poblacion": 14701
+      },
+      {
+        "nombre": "Jaca",
+        "provincia": "Huesca",
+        "poblacion": 13620
+      },
+      {
+        "nombre": "Tarazona",
+        "provincia": "Zaragoza",
+        "poblacion": 10720
+      },
+      {
+        "nombre": "Caspe",
+        "provincia": "Zaragoza",
+        "poblacion": 10336
+      },
+      {
+        "nombre": "Binéfar",
+        "provincia": "Huesca",
+        "poblacion": 10070
+      },
+      {
+        "nombre": "Sabiñánigo",
+        "provincia": "Huesca",
+        "poblacion": 9423
+      },
+      {
+        "nombre": "Zuera",
+        "provincia": "Zaragoza",
+        "poblacion": 8677
+      },
+      {
+        "nombre": "La Almunia de Doña Godina",
+        "provincia": "Zaragoza",
+        "poblacion": 7914
+      },
+      {
+        "nombre": "Alagón",
+        "provincia": "Zaragoza",
+        "poblacion": 7257
+      },
+      {
+        "nombre": "Andorra",
+        "provincia": "Teruel",
+        "poblacion": 7214
+      },
+      {
+        "nombre": "Tauste",
+        "provincia": "Zaragoza",
+        "poblacion": 6828
+      },
+      {
+        "nombre": "La Muela",
+        "provincia": "Zaragoza",
+        "poblacion": 6416
+      },
+      {
+        "nombre": "La Puebla de Alfindén",
+        "provincia": "Zaragoza",
+        "poblacion": 6414
+      },
+      {
+        "nombre": "María de Huerva",
+        "provincia": "Zaragoza",
+        "poblacion": 6335
+      },
+      {
+        "nombre": "Borja",
+        "provincia": "Zaragoza",
+        "poblacion": 5076
+      }
+    ]
+  },
+  "Andalucía": {
+    "provincias": [
+      "Almería",
+      "Cádiz",
+      "Córdoba",
+      "Granada",
+      "Huelva",
+      "Jaén",
+      "Málaga",
+      "Sevilla"
+    ],
+    "municipios": [
+      {
+        "nombre": "Sevilla",
+        "provincia": "Sevilla",
+        "poblacion": 689423
+      },
+      {
+        "nombre": "Málaga",
+        "provincia": "Málaga",
+        "poblacion": 599063
+      },
+      {
+        "nombre": "Córdoba",
+        "provincia": "Córdoba",
+        "poblacion": 323262
+      },
+      {
+        "nombre": "Granada",
+        "provincia": "Granada",
+        "poblacion": 233975
+      },
+      {
+        "nombre": "Jerez de la Frontera",
+        "provincia": "Cádiz",
+        "poblacion": 213634
+      },
+      {
+        "nombre": "Almería",
+        "provincia": "Almería",
+        "poblacion": 205468
+      },
+      {
+        "nombre": "Marbella",
+        "provincia": "Málaga",
+        "poblacion": 159786
+      },
+      {
+        "nombre": "Huelva",
+        "provincia": "Huelva",
+        "poblacion": 143215
+      },
+      {
+        "nombre": "Dos Hermanas",
+        "provincia": "Sevilla",
+        "poblacion": 142519
+      },
+      {
+        "nombre": "Algeciras",
+        "provincia": "Cádiz",
+        "poblacion": 126589
+      },
+      {
+        "nombre": "Jaén",
+        "provincia": "Jaén",
+        "poblacion": 112235
+      },
+      {
+        "nombre": "Roquetas de Mar",
+        "provincia": "Almería",
+        "poblacion": 111240
+      },
+      {
+        "nombre": "Cádiz",
+        "provincia": "Cádiz",
+        "poblacion": 109950
+      },
+      {
+        "nombre": "Mijas",
+        "provincia": "Málaga",
+        "poblacion": 95104
+      },
+      {
+        "nombre": "San Fernando",
+        "provincia": "Cádiz",
+        "poblacion": 93338
+      },
+      {
+        "nombre": "El Ejido",
+        "provincia": "Almería",
+        "poblacion": 91440
+      },
+      {
+        "nombre": "Chiclana de la Frontera",
+        "provincia": "Cádiz",
+        "poblacion": 90684
+      },
+      {
+        "nombre": "El Puerto de Santa María",
+        "provincia": "Cádiz",
+        "poblacion": 89983
+      },
+      {
+        "nombre": "Vélez-Málaga",
+        "provincia": "Málaga",
+        "poblacion": 86048
+      },
+      {
+        "nombre": "Fuengirola",
+        "provincia": "Málaga",
+        "poblacion": 85211
+      },
+      {
+        "nombre": "Estepona",
+        "provincia": "Málaga",
+        "poblacion": 79621
+      },
+      {
+        "nombre": "Benalmádena",
+        "provincia": "Málaga",
+        "poblacion": 78338
+      },
+      {
+        "nombre": "Alcalá de Guadaíra",
+        "provincia": "Sevilla",
+        "poblacion": 77474
+      },
+      {
+        "nombre": "Torremolinos",
+        "provincia": "Málaga",
+        "poblacion": 71329
+      },
+      {
+        "nombre": "Sanlúcar de Barrameda",
+        "provincia": "Cádiz",
+        "poblacion": 70012
+      },
+      {
+        "nombre": "La Línea de la Concepción",
+        "provincia": "Cádiz",
+        "poblacion": 64499
+      },
+      {
+        "nombre": "Motril",
+        "provincia": "Granada",
+        "poblacion": 59862
+      },
+      {
+        "nombre": "Linares",
+        "provincia": "Jaén",
+        "poblacion": 55633
+      },
+      {
+        "nombre": "Rincón de la Victoria",
+        "provincia": "Málaga",
+        "poblacion": 52454
+      },
+      {
+        "nombre": "Utrera",
+        "provincia": "Sevilla",
+        "poblacion": 52403
+      },
+      {
+        "nombre": "Mairena del Aljarafe",
+        "provincia": "Sevilla",
+        "poblacion": 48017
+      },
+      {
+        "nombre": "Alhaurín de la Torre",
+        "provincia": "Málaga",
+        "poblacion": 45066
+      },
+      {
+        "nombre": "Lucena",
+        "provincia": "Córdoba",
+        "poblacion": 43408
+      },
+      {
+        "nombre": "Puerto Real",
+        "provincia": "Cádiz",
+        "poblacion": 42527
+      },
+      {
+        "nombre": "Antequera",
+        "provincia": "Málaga",
+        "poblacion": 41849
+      },
+      {
+        "nombre": "La Rinconada",
+        "provincia": "Sevilla",
+        "poblacion": 40724
+      },
+      {
+        "nombre": "Écija",
+        "provincia": "Sevilla",
+        "poblacion": 39659
+      },
+      {
+        "nombre": "Los Palacios y Villafranca",
+        "provincia": "Sevilla",
+        "poblacion": 38761
+      },
+      {
+        "nombre": "Andújar",
+        "provincia": "Jaén",
+        "poblacion": 35610
+      },
+      {
+        "nombre": "San Roque",
+        "provincia": "Cádiz",
+        "poblacion": 34873
+      },
+      {
+        "nombre": "Ronda",
+        "provincia": "Málaga",
+        "poblacion": 33671
+      },
+      {
+        "nombre": "Úbeda",
+        "provincia": "Jaén",
+        "poblacion": 33588
+      },
+      {
+        "nombre": "Níjar",
+        "provincia": "Almería",
+        "poblacion": 33319
+      },
+      {
+        "nombre": "Coria del Río",
+        "provincia": "Sevilla",
+        "poblacion": 31278
+      },
+      {
+        "nombre": "Arcos de la Frontera",
+        "provincia": "Cádiz",
+        "poblacion": 31267
+      },
+      {
+        "nombre": "Puente Genil",
+        "provincia": "Córdoba",
+        "poblacion": 29963
+      },
+      {
+        "nombre": "Lepe",
+        "provincia": "Huelva",
+        "poblacion": 29677
+      },
+      {
+        "nombre": "Vícar",
+        "provincia": "Almería",
+        "poblacion": 29342
+      },
+      {
+        "nombre": "Cártama",
+        "provincia": "Málaga",
+        "poblacion": 29333
+      },
+      {
+        "nombre": "Rota",
+        "provincia": "Cádiz",
+        "poblacion": 29289
+      },
+      {
+        "nombre": "Carmona",
+        "provincia": "Sevilla",
+        "poblacion": 29279
+      },
+      {
+        "nombre": "Camas",
+        "provincia": "Sevilla",
+        "poblacion": 29089
+      },
+      {
+        "nombre": "Lebrija",
+        "provincia": "Sevilla",
+        "poblacion": 27788
+      },
+      {
+        "nombre": "Alhaurín el Grande",
+        "provincia": "Málaga",
+        "poblacion": 27552
+      },
+      {
+        "nombre": "Almuñécar",
+        "provincia": "Granada",
+        "poblacion": 27544
+      },
+      {
+        "nombre": "Morón de la Frontera",
+        "provincia": "Sevilla",
+        "poblacion": 27210
+      },
+      {
+        "nombre": "Coín",
+        "provincia": "Málaga",
+        "poblacion": 26574
+      },
+      {
+        "nombre": "Adra",
+        "provincia": "Almería",
+        "poblacion": 25501
+      },
+      {
+        "nombre": "Tomares",
+        "provincia": "Sevilla",
+        "poblacion": 25432
+      },
+      {
+        "nombre": "Armilla",
+        "provincia": "Granada",
+        "poblacion": 25300
+      },
+      {
+        "nombre": "Almonte",
+        "provincia": "Huelva",
+        "poblacion": 24864
+      },
+      {
+        "nombre": "Martos",
+        "provincia": "Jaén",
+        "poblacion": 24462
+      },
+      {
+        "nombre": "Los Barrios",
+        "provincia": "Cádiz",
+        "poblacion": 24449
+      },
+      {
+        "nombre": "Mairena del Alcor",
+        "provincia": "Sevilla",
+        "poblacion": 24339
+      },
+      {
+        "nombre": "Conil de la Frontera",
+        "provincia": "Cádiz",
+        "poblacion": 24192
+      },
+      {
+        "nombre": "Moguer",
+        "provincia": "Huelva",
+        "poblacion": 24083
+      },
+      {
+        "nombre": "Las Gabias",
+        "provincia": "Granada",
+        "poblacion": 22829
+      },
+      {
+        "nombre": "Barbate",
+        "provincia": "Cádiz",
+        "poblacion": 22811
+      },
+      {
+        "nombre": "Bormujos",
+        "provincia": "Sevilla",
+        "poblacion": 22780
+      },
+      {
+        "nombre": "San Juan de Aznalfarache",
+        "provincia": "Sevilla",
+        "poblacion": 22472
+      },
+      {
+        "nombre": "Montilla",
+        "provincia": "Córdoba",
+        "poblacion": 22298
+      },
+      {
+        "nombre": "Maracena",
+        "provincia": "Granada",
+        "poblacion": 22275
+      },
+      {
+        "nombre": "Aljaraque",
+        "provincia": "Huelva",
+        "poblacion": 22259
+      },
+      {
+        "nombre": "Priego de Córdoba",
+        "provincia": "Córdoba",
+        "poblacion": 22003
+      },
+      {
+        "nombre": "Nerja",
+        "provincia": "Málaga",
+        "poblacion": 21913
+      },
+      {
+        "nombre": "Ayamonte",
+        "provincia": "Huelva",
+        "poblacion": 21645
+      },
+      {
+        "nombre": "Isla Cristina",
+        "provincia": "Huelva",
+        "poblacion": 21603
+      },
+      {
+        "nombre": "Alcalá la Real",
+        "provincia": "Jaén",
+        "poblacion": 21587
+      },
+      {
+        "nombre": "Cartaya",
+        "provincia": "Huelva",
+        "poblacion": 21128
+      },
+      {
+        "nombre": "Torrox",
+        "provincia": "Málaga",
+        "poblacion": 20932
+      },
+      {
+        "nombre": "Palma del Río",
+        "provincia": "Córdoba",
+        "poblacion": 20688
+      },
+      {
+        "nombre": "Loja",
+        "provincia": "Granada",
+        "poblacion": 20580
+      },
+      {
+        "nombre": "Baza",
+        "provincia": "Granada",
+        "poblacion": 20579
+      },
+      {
+        "nombre": "Huércal-Overa",
+        "provincia": "Almería",
+        "poblacion": 20425
+      },
+      {
+        "nombre": "Cabra",
+        "provincia": "Córdoba",
+        "poblacion": 20070
+      },
+      {
+        "nombre": "Atarfe",
+        "provincia": "Granada",
+        "poblacion": 20024
+      },
+      {
+        "nombre": "La Zubia",
+        "provincia": "Granada",
+        "poblacion": 19885
+      },
+      {
+        "nombre": "Chipiona",
+        "provincia": "Cádiz",
+        "poblacion": 19649
+      },
+      {
+        "nombre": "Arahal",
+        "provincia": "Sevilla",
+        "poblacion": 19491
+      },
+      {
+        "nombre": "Vera",
+        "provincia": "Almería",
+        "poblacion": 19488
+      },
+      {
+        "nombre": "Albolote",
+        "provincia": "Granada",
+        "poblacion": 19474
+      },
+      {
+        "nombre": "Marchena",
+        "provincia": "Sevilla",
+        "poblacion": 19271
+      },
+      {
+        "nombre": "El Viso del Alcor",
+        "provincia": "Sevilla",
+        "poblacion": 19265
+      },
+      {
+        "nombre": "Tarifa",
+        "provincia": "Cádiz",
+        "poblacion": 18621
+      },
+      {
+        "nombre": "Baena",
+        "provincia": "Córdoba",
+        "poblacion": 18533
+      },
+      {
+        "nombre": "Guadix",
+        "provincia": "Granada",
+        "poblacion": 18527
+      },
+      {
+        "nombre": "Huércal de Almería",
+        "provincia": "Almería",
+        "poblacion": 18507
+      },
+      {
+        "nombre": "Lora del Río",
+        "provincia": "Sevilla",
+        "poblacion": 18316
+      },
+      {
+        "nombre": "Manilva",
+        "provincia": "Málaga",
+        "poblacion": 17857
+      },
+      {
+        "nombre": "Osuna",
+        "provincia": "Sevilla",
+        "poblacion": 17418
+      },
+      {
+        "nombre": "Bailén",
+        "provincia": "Jaén",
+        "poblacion": 17211
+      },
+      {
+        "nombre": "Castilleja de la Cuesta",
+        "provincia": "Sevilla",
+        "poblacion": 17167
+      },
+      {
+        "nombre": "Pozoblanco",
+        "provincia": "Córdoba",
+        "poblacion": 16946
+      },
+      {
+        "nombre": "La Algaba",
+        "provincia": "Sevilla",
+        "poblacion": 16618
+      },
+      {
+        "nombre": "Espartinas",
+        "provincia": "Sevilla",
+        "poblacion": 16505
+      },
+      {
+        "nombre": "Churriana de la Vega",
+        "provincia": "Granada",
+        "poblacion": 16445
+      },
+      {
+        "nombre": "Las Cabezas de San Juan",
+        "provincia": "Sevilla",
+        "poblacion": 16400
+      },
+      {
+        "nombre": "Ubrique",
+        "provincia": "Cádiz",
+        "poblacion": 16363
+      },
+      {
+        "nombre": "Punta Umbría",
+        "provincia": "Huelva",
+        "poblacion": 16069
+      },
+      {
+        "nombre": "Baeza",
+        "provincia": "Jaén",
+        "poblacion": 15723
+      },
+      {
+        "nombre": "Cuevas del Almanzora",
+        "provincia": "Almería",
+        "poblacion": 15246
+      },
+      {
+        "nombre": "Santa Fe",
+        "provincia": "Granada",
+        "poblacion": 15105
+      },
+      {
+        "nombre": "Ogíjares",
+        "provincia": "Granada",
+        "poblacion": 14803
+      },
+      {
+        "nombre": "La Carolina",
+        "provincia": "Jaén",
+        "poblacion": 14801
+      },
+      {
+        "nombre": "Bollullos Par del Condado",
+        "provincia": "Huelva",
+        "poblacion": 14263
+      },
+      {
+        "nombre": "La Carlota",
+        "provincia": "Córdoba",
+        "poblacion": 14258
+      },
+      {
+        "nombre": "Sanlúcar la Mayor",
+        "provincia": "Sevilla",
+        "poblacion": 14172
+      },
+      {
+        "nombre": "Pilas",
+        "provincia": "Sevilla",
+        "poblacion": 14052
+      },
+      {
+        "nombre": "Torredelcampo",
+        "provincia": "Jaén",
+        "poblacion": 13871
+      },
+      {
+        "nombre": "Guillena",
+        "provincia": "Sevilla",
+        "poblacion": 13682
+      },
+      {
+        "nombre": "Álora",
+        "provincia": "Málaga",
+        "poblacion": 13512
+      },
+      {
+        "nombre": "Gines",
+        "provincia": "Sevilla",
+        "poblacion": 13481
+      },
+      {
+        "nombre": "Torredonjimeno",
+        "provincia": "Jaén",
+        "poblacion": 13301
+      },
+      {
+        "nombre": "Aguilar de la Frontera",
+        "provincia": "Córdoba",
+        "poblacion": 13282
+      },
+      {
+        "nombre": "Gibraleón",
+        "provincia": "Huelva",
+        "poblacion": 12940
+      },
+      {
+        "nombre": "Berja",
+        "provincia": "Almería",
+        "poblacion": 12917
+      },
+      {
+        "nombre": "Vejer de la Frontera",
+        "provincia": "Cádiz",
+        "poblacion": 12864
+      },
+      {
+        "nombre": "Brenes",
+        "provincia": "Sevilla",
+        "poblacion": 12804
+      },
+      {
+        "nombre": "Valverde del Camino",
+        "provincia": "Huelva",
+        "poblacion": 12655
+      },
+      {
+        "nombre": "Salobreña",
+        "provincia": "Granada",
+        "poblacion": 12562
+      },
+      {
+        "nombre": "Palos de la Frontera",
+        "provincia": "Huelva",
+        "poblacion": 12537
+      },
+      {
+        "nombre": "Estepa",
+        "provincia": "Sevilla",
+        "poblacion": 12373
+      },
+      {
+        "nombre": "Albox",
+        "provincia": "Almería",
+        "poblacion": 12311
+      },
+      {
+        "nombre": "Alcalá del Río",
+        "provincia": "Sevilla",
+        "poblacion": 12288
+      },
+      {
+        "nombre": "Villamartín",
+        "provincia": "Cádiz",
+        "poblacion": 12165
+      },
+      {
+        "nombre": "Vegas del Genil",
+        "provincia": "Granada",
+        "poblacion": 12165
+      },
+      {
+        "nombre": "Huétor Vega",
+        "provincia": "Granada",
+        "poblacion": 12159
+      },
+      {
+        "nombre": "La Puebla del Río",
+        "provincia": "Sevilla",
+        "poblacion": 11862
+      },
+      {
+        "nombre": "Medina Sidonia",
+        "provincia": "Cádiz",
+        "poblacion": 11738
+      },
+      {
+        "nombre": "Peligros",
+        "provincia": "Granada",
+        "poblacion": 11676
+      },
+      {
+        "nombre": "Jódar",
+        "provincia": "Jaén",
+        "poblacion": 11449
+      },
+      {
+        "nombre": "Mancha Real",
+        "provincia": "Jaén",
+        "poblacion": 11375
+      },
+      {
+        "nombre": "Pulpí",
+        "provincia": "Almería",
+        "poblacion": 11247
+      },
+      {
+        "nombre": "Bollullos de la Mitación",
+        "provincia": "Sevilla",
+        "poblacion": 11160
+      },
+      {
+        "nombre": "La Puebla de Cazalla",
+        "provincia": "Sevilla",
+        "poblacion": 10884
+      },
+      {
+        "nombre": "Cantillana",
+        "provincia": "Sevilla",
+        "poblacion": 10782
+      },
+      {
+        "nombre": "La Palma del Condado",
+        "provincia": "Huelva",
+        "poblacion": 10726
+      },
+      {
+        "nombre": "Huétor Tájar",
+        "provincia": "Granada",
+        "poblacion": 10673
+      },
+      {
+        "nombre": "Gelves",
+        "provincia": "Sevilla",
+        "poblacion": 10388
+      },
+      {
+        "nombre": "Villacarrillo",
+        "provincia": "Jaén",
+        "poblacion": 10344
+      },
+      {
+        "nombre": "Garrucha",
+        "provincia": "Almería",
+        "poblacion": 10336
+      },
+      {
+        "nombre": "Peñarroya-Pueblonuevo",
+        "provincia": "Córdoba",
+        "poblacion": 10317
+      },
+      {
+        "nombre": "Alcaudete",
+        "provincia": "Jaén",
+        "poblacion": 10265
+      },
+      {
+        "nombre": "Alhendín",
+        "provincia": "Granada",
+        "poblacion": 10216
+      },
+      {
+        "nombre": "Mengíbar",
+        "provincia": "Jaén",
+        "poblacion": 10041
+      },
+      {
+        "nombre": "Íllora",
+        "provincia": "Granada",
+        "poblacion": 9951
+      },
+      {
+        "nombre": "Pizarra",
+        "provincia": "Málaga",
+        "poblacion": 9886
+      },
+      {
+        "nombre": "Fuente Palmera",
+        "provincia": "Córdoba",
+        "poblacion": 9850
+      },
+      {
+        "nombre": "Rute",
+        "provincia": "Córdoba",
+        "poblacion": 9779
+      },
+      {
+        "nombre": "Pinos Puente",
+        "provincia": "Granada",
+        "poblacion": 9664
+      },
+      {
+        "nombre": "San Juan del Puerto",
+        "provincia": "Huelva",
+        "poblacion": 9659
+      },
+      {
+        "nombre": "Fernán Núñez",
+        "provincia": "Córdoba",
+        "poblacion": 9611
+      },
+      {
+        "nombre": "Padul",
+        "provincia": "Granada",
+        "poblacion": 9436
+      },
+      {
+        "nombre": "Olivares",
+        "provincia": "Sevilla",
+        "poblacion": 9427
+      },
+      {
+        "nombre": "Tocina",
+        "provincia": "Sevilla",
+        "poblacion": 9420
+      },
+      {
+        "nombre": "Umbrete",
+        "provincia": "Sevilla",
+        "poblacion": 9376
+      },
+      {
+        "nombre": "Benahavís",
+        "provincia": "Málaga",
+        "poblacion": 9244
+      },
+      {
+        "nombre": "Palomares del Río",
+        "provincia": "Sevilla",
+        "poblacion": 9161
+      },
+      {
+        "nombre": "Montoro",
+        "provincia": "Córdoba",
+        "poblacion": 9125
+      },
+      {
+        "nombre": "La Mojonera",
+        "provincia": "Almería",
+        "poblacion": 8778
+      },
+      {
+        "nombre": "El Cuervo de Sevilla",
+        "provincia": "Sevilla",
+        "poblacion": 8635
+      },
+      {
+        "nombre": "Santiponce",
+        "provincia": "Sevilla",
+        "poblacion": 8539
+      },
+      {
+        "nombre": "Villanueva de Córdoba",
+        "provincia": "Córdoba",
+        "poblacion": 8460
+      },
+      {
+        "nombre": "Campillos",
+        "provincia": "Málaga",
+        "poblacion": 8435
+      },
+      {
+        "nombre": "Carboneras",
+        "provincia": "Almería",
+        "poblacion": 8375
+      },
+      {
+        "nombre": "Monachil",
+        "provincia": "Granada",
+        "poblacion": 8349
+      },
+      {
+        "nombre": "Aracena",
+        "provincia": "Huelva",
+        "poblacion": 8340
+      },
+      {
+        "nombre": "Cenes de la Vega",
+        "provincia": "Granada",
+        "poblacion": 8231
+      },
+      {
+        "nombre": "Casares",
+        "provincia": "Málaga",
+        "poblacion": 8111
+      },
+      {
+        "nombre": "Archidona",
+        "provincia": "Málaga",
+        "poblacion": 8050
+      },
+      {
+        "nombre": "Rociana del Condado",
+        "provincia": "Huelva",
+        "poblacion": 8048
+      },
+      {
+        "nombre": "Valencina de la Concepción",
+        "provincia": "Sevilla",
+        "poblacion": 8029
+      },
+      {
+        "nombre": "Almodóvar del Río",
+        "provincia": "Córdoba",
+        "poblacion": 7995
+      },
+      {
+        "nombre": "Trigueros",
+        "provincia": "Huelva",
+        "poblacion": 7989
+      },
+      {
+        "nombre": "Villanueva del Arzobispo",
+        "provincia": "Jaén",
+        "poblacion": 7933
+      },
+      {
+        "nombre": "Olvera",
+        "provincia": "Cádiz",
+        "poblacion": 7887
+      },
+      {
+        "nombre": "Gerena",
+        "provincia": "Sevilla",
+        "poblacion": 7833
+      },
+      {
+        "nombre": "Cúllar Vega",
+        "provincia": "Granada",
+        "poblacion": 7770
+      },
+      {
+        "nombre": "Villaverde del Río",
+        "provincia": "Sevilla",
+        "poblacion": 7700
+      },
+      {
+        "nombre": "Castro del Río",
+        "provincia": "Córdoba",
+        "poblacion": 7665
+      },
+      {
+        "nombre": "Bornos",
+        "provincia": "Cádiz",
+        "poblacion": 7559
+      },
+      {
+        "nombre": "La Rambla",
+        "provincia": "Córdoba",
+        "poblacion": 7473
+      },
+      {
+        "nombre": "Villa de Otura",
+        "provincia": "Granada",
+        "poblacion": 7466
+      },
+      {
+        "nombre": "Albuñol",
+        "provincia": "Granada",
+        "poblacion": 7391
+      },
+      {
+        "nombre": "Mojácar",
+        "provincia": "Almería",
+        "poblacion": 7386
+      },
+      {
+        "nombre": "Benacazón",
+        "provincia": "Sevilla",
+        "poblacion": 7324
+      },
+      {
+        "nombre": "Posadas",
+        "provincia": "Córdoba",
+        "poblacion": 7256
+      },
+      {
+        "nombre": "Dúrcal",
+        "provincia": "Granada",
+        "poblacion": 7233
+      },
+      {
+        "nombre": "Huéscar",
+        "provincia": "Granada",
+        "poblacion": 7220
+      },
+      {
+        "nombre": "Fuentes de Andalucía",
+        "provincia": "Sevilla",
+        "poblacion": 7217
+      },
+      {
+        "nombre": "Bujalance",
+        "provincia": "Córdoba",
+        "poblacion": 7186
+      },
+      {
+        "nombre": "Benalup-Casas Viejas",
+        "provincia": "Cádiz",
+        "poblacion": 7164
+      },
+      {
+        "nombre": "Torreperogil",
+        "provincia": "Jaén",
+        "poblacion": 7108
+      },
+      {
+        "nombre": "Burguillos",
+        "provincia": "Sevilla",
+        "poblacion": 7098
+      },
+      {
+        "nombre": "Cazorla",
+        "provincia": "Jaén",
+        "poblacion": 7067
+      },
+      {
+        "nombre": "Montellano",
+        "provincia": "Sevilla",
+        "poblacion": 7003
+      },
+      {
+        "nombre": "Trebujena",
+        "provincia": "Cádiz",
+        "poblacion": 7000
+      },
+      {
+        "nombre": "Puerto Serrano",
+        "provincia": "Cádiz",
+        "poblacion": 6929
+      },
+      {
+        "nombre": "Villa del Río",
+        "provincia": "Córdoba",
+        "poblacion": 6882
+      },
+      {
+        "nombre": "Villanueva del Ariscal",
+        "provincia": "Sevilla",
+        "poblacion": 6814
+      },
+      {
+        "nombre": "Paradas",
+        "provincia": "Sevilla",
+        "poblacion": 6798
+      },
+      {
+        "nombre": "Algarrobo",
+        "provincia": "Málaga",
+        "poblacion": 6773
+      },
+      {
+        "nombre": "Jimena de la Frontera",
+        "provincia": "Cádiz",
+        "poblacion": 6675
+      },
+      {
+        "nombre": "Marmolejo",
+        "provincia": "Jaén",
+        "poblacion": 6586
+      },
+      {
+        "nombre": "Hinojosa del Duque",
+        "provincia": "Córdoba",
+        "poblacion": 6579
+      },
+      {
+        "nombre": "Vélez-Rubio",
+        "provincia": "Almería",
+        "poblacion": 6558
+      },
+      {
+        "nombre": "Herrera",
+        "provincia": "Sevilla",
+        "poblacion": 6544
+      },
+      {
+        "nombre": "Almensilla",
+        "provincia": "Sevilla",
+        "poblacion": 6537
+      },
+      {
+        "nombre": "Olula del Río",
+        "provincia": "Almería",
+        "poblacion": 6354
+      },
+      {
+        "nombre": "Gójar",
+        "provincia": "Granada",
+        "poblacion": 6203
+      },
+      {
+        "nombre": "Viator",
+        "provincia": "Almería",
+        "poblacion": 6160
+      },
+      {
+        "nombre": "Bonares",
+        "provincia": "Huelva",
+        "poblacion": 6101
+      },
+      {
+        "nombre": "Los Villares",
+        "provincia": "Jaén",
+        "poblacion": 6079
+      },
+      {
+        "nombre": "Aznalcóllar",
+        "provincia": "Sevilla",
+        "poblacion": 6057
+      },
+      {
+        "nombre": "Porcuna",
+        "provincia": "Jaén",
+        "poblacion": 5975
+      },
+      {
+        "nombre": "Constantina",
+        "provincia": "Sevilla",
+        "poblacion": 5742
+      },
+      {
+        "nombre": "Isla Mayor",
+        "provincia": "Sevilla",
+        "poblacion": 5741
+      },
+      {
+        "nombre": "Órgiva",
+        "provincia": "Granada",
+        "poblacion": 5709
+      },
+      {
+        "nombre": "Alfacar",
+        "provincia": "Granada",
+        "poblacion": 5688
+      },
+      {
+        "nombre": "Chauchina",
+        "provincia": "Granada",
+        "poblacion": 5679
+      },
+      {
+        "nombre": "Alhama de Granada",
+        "provincia": "Granada",
+        "poblacion": 5655
+      },
+      {
+        "nombre": "Prado del Rey",
+        "provincia": "Cádiz",
+        "poblacion": 5634
+      },
+      {
+        "nombre": "Salteras",
+        "provincia": "Sevilla",
+        "poblacion": 5627
+      },
+      {
+        "nombre": "Huelma",
+        "provincia": "Jaén",
+        "poblacion": 5559
+      },
+      {
+        "nombre": "Pulianas",
+        "provincia": "Granada",
+        "poblacion": 5559
+      },
+      {
+        "nombre": "Algodonales",
+        "provincia": "Cádiz",
+        "poblacion": 5498
+      },
+      {
+        "nombre": "Cájar",
+        "provincia": "Granada",
+        "poblacion": 5447
+      },
+      {
+        "nombre": "Paterna de Rivera",
+        "provincia": "Cádiz",
+        "poblacion": 5441
+      },
+      {
+        "nombre": "Alameda",
+        "provincia": "Málaga",
+        "poblacion": 5434
+      },
+      {
+        "nombre": "Mollina",
+        "provincia": "Málaga",
+        "poblacion": 5413
+      },
+      {
+        "nombre": "Macael",
+        "provincia": "Almería",
+        "poblacion": 5381
+      },
+      {
+        "nombre": "Montefrío",
+        "provincia": "Granada",
+        "poblacion": 5376
+      },
+      {
+        "nombre": "Villanueva del Trabuco",
+        "provincia": "Málaga",
+        "poblacion": 5360
+      },
+      {
+        "nombre": "Arjona",
+        "provincia": "Jaén",
+        "poblacion": 5349
+      },
+      {
+        "nombre": "Peal de Becerro",
+        "provincia": "Jaén",
+        "poblacion": 5325
+      },
+      {
+        "nombre": "Nueva Carteya",
+        "provincia": "Córdoba",
+        "poblacion": 5317
+      },
+      {
+        "nombre": "Gualchos",
+        "provincia": "Granada",
+        "poblacion": 5308
+      },
+      {
+        "nombre": "Casariche",
+        "provincia": "Sevilla",
+        "poblacion": 5305
+      },
+      {
+        "nombre": "Alcalá de los Gazules",
+        "provincia": "Cádiz",
+        "poblacion": 5205
+      },
+      {
+        "nombre": "La Guardia de Jaén",
+        "provincia": "Jaén",
+        "poblacion": 5175
+      },
+      {
+        "nombre": "Iznalloz",
+        "provincia": "Granada",
+        "poblacion": 5161
+      },
+      {
+        "nombre": "La Campana",
+        "provincia": "Sevilla",
+        "poblacion": 5137
+      },
+      {
+        "nombre": "Castilblanco de los Arroyos",
+        "provincia": "Sevilla",
+        "poblacion": 5107
+      },
+      {
+        "nombre": "Pedrera",
+        "provincia": "Sevilla",
+        "poblacion": 5104
+      },
+      {
+        "nombre": "Nerva",
+        "provincia": "Huelva",
+        "poblacion": 5081
+      },
+      {
+        "nombre": "Quesada",
+        "provincia": "Jaén",
+        "poblacion": 5015
+      }
+    ]
+  },
+  "Región de Murcia": {
+    "provincias": [
+      "Murcia"
+    ],
+    "municipios": [
+      {
+        "nombre": "Murcia",
+        "provincia": "Murcia",
+        "poblacion": 479405
+      },
+      {
+        "nombre": "Cartagena",
+        "provincia": "Murcia",
+        "poblacion": 220704
+      },
+      {
+        "nombre": "Lorca",
+        "provincia": "Murcia",
+        "poblacion": 98969
+      },
+      {
+        "nombre": "Molina de Segura",
+        "provincia": "Murcia",
+        "poblacion": 78458
+      },
+      {
+        "nombre": "Alcantarilla",
+        "provincia": "Murcia",
+        "poblacion": 43876
+      },
+      {
+        "nombre": "Torre-Pacheco",
+        "provincia": "Murcia",
+        "poblacion": 41479
+      },
+      {
+        "nombre": "Águilas",
+        "provincia": "Murcia",
+        "poblacion": 37811
+      },
+      {
+        "nombre": "San Javier",
+        "provincia": "Murcia",
+        "poblacion": 36524
+      },
+      {
+        "nombre": "Yecla",
+        "provincia": "Murcia",
+        "poblacion": 36453
+      },
+      {
+        "nombre": "Cieza",
+        "provincia": "Murcia",
+        "poblacion": 35577
+      },
+      {
+        "nombre": "Mazarrón",
+        "provincia": "Murcia",
+        "poblacion": 35449
+      },
+      {
+        "nombre": "Totana",
+        "provincia": "Murcia",
+        "poblacion": 33358
+      },
+      {
+        "nombre": "San Pedro del Pinatar",
+        "provincia": "Murcia",
+        "poblacion": 29674
+      },
+      {
+        "nombre": "Jumilla",
+        "provincia": "Murcia",
+        "poblacion": 27574
+      },
+      {
+        "nombre": "Caravaca de la Cruz",
+        "provincia": "Murcia",
+        "poblacion": 26126
+      },
+      {
+        "nombre": "Alhama de Murcia",
+        "provincia": "Murcia",
+        "poblacion": 24163
+      },
+      {
+        "nombre": "Las Torres de Cotillas",
+        "provincia": "Murcia",
+        "poblacion": 22183
+      },
+      {
+        "nombre": "La Unión",
+        "provincia": "Murcia",
+        "poblacion": 20897
+      },
+      {
+        "nombre": "Archena",
+        "provincia": "Murcia",
+        "poblacion": 20110
+      },
+      {
+        "nombre": "Los Alcázares",
+        "provincia": "Murcia",
+        "poblacion": 18598
+      },
+      {
+        "nombre": "Fuente Álamo de Murcia",
+        "provincia": "Murcia",
+        "poblacion": 18063
+      },
+      {
+        "nombre": "Mula",
+        "provincia": "Murcia",
+        "poblacion": 17382
+      },
+      {
+        "nombre": "Puerto Lumbreras",
+        "provincia": "Murcia",
+        "poblacion": 17346
+      },
+      {
+        "nombre": "Santomera",
+        "provincia": "Murcia",
+        "poblacion": 16245
+      },
+      {
+        "nombre": "Cehegín",
+        "provincia": "Murcia",
+        "poblacion": 14485
+      },
+      {
+        "nombre": "Abarán",
+        "provincia": "Murcia",
+        "poblacion": 12964
+      },
+      {
+        "nombre": "Ceutí",
+        "provincia": "Murcia",
+        "poblacion": 12668
+      },
+      {
+        "nombre": "Bullas",
+        "provincia": "Murcia",
+        "poblacion": 11664
+      },
+      {
+        "nombre": "Beniel",
+        "provincia": "Murcia",
+        "poblacion": 11501
+      },
+      {
+        "nombre": "Fortuna",
+        "provincia": "Murcia",
+        "poblacion": 11094
+      },
+      {
+        "nombre": "Alguazas",
+        "provincia": "Murcia",
+        "poblacion": 10218
+      },
+      {
+        "nombre": "Calasparra",
+        "provincia": "Murcia",
+        "poblacion": 10161
+      },
+      {
+        "nombre": "Lorquí",
+        "provincia": "Murcia",
+        "poblacion": 7706
+      },
+      {
+        "nombre": "Moratalla",
+        "provincia": "Murcia",
+        "poblacion": 7588
+      },
+      {
+        "nombre": "Blanca",
+        "provincia": "Murcia",
+        "poblacion": 6756
+      },
+      {
+        "nombre": "Abanilla",
+        "provincia": "Murcia",
+        "poblacion": 6216
+      },
+      {
+        "nombre": "Librilla",
+        "provincia": "Murcia",
+        "poblacion": 5729
+      }
+    ]
+  },
+  "Islas Baleares": {
+    "provincias": [
+      "Baleares"
+    ],
+    "municipios": [
+      {
+        "nombre": "Palma de Mallorca",
+        "provincia": "Baleares",
+        "poblacion": 434786
+      },
+      {
+        "nombre": "Ibiza",
+        "provincia": "Baleares",
+        "poblacion": 55337
+      },
+      {
+        "nombre": "Calviá",
+        "provincia": "Baleares",
+        "poblacion": 53793
+      },
+      {
+        "nombre": "Manacor",
+        "provincia": "Baleares",
+        "poblacion": 49153
+      },
+      {
+        "nombre": "Santa Eulalia del Río",
+        "provincia": "Baleares",
+        "poblacion": 42479
+      },
+      {
+        "nombre": "Llucmajor",
+        "provincia": "Baleares",
+        "poblacion": 40502
+      },
+      {
+        "nombre": "Marrachí",
+        "provincia": "Baleares",
+        "poblacion": 40422
+      },
+      {
+        "nombre": "Inca",
+        "provincia": "Baleares",
+        "poblacion": 36262
+      },
+      {
+        "nombre": "Ciudadela",
+        "provincia": "Baleares",
+        "poblacion": 32431
+      },
+      {
+        "nombre": "Mahón",
+        "provincia": "Baleares",
+        "poblacion": 30666
+      },
+      {
+        "nombre": "San José",
+        "provincia": "Baleares",
+        "poblacion": 29761
+      },
+      {
+        "nombre": "San Antonio Abad",
+        "provincia": "Baleares",
+        "poblacion": 29132
+      },
+      {
+        "nombre": "Alcudia",
+        "provincia": "Baleares",
+        "poblacion": 21322
+      },
+      {
+        "nombre": "Felanich",
+        "provincia": "Baleares",
+        "poblacion": 18592
+      },
+      {
+        "nombre": "Pollensa",
+        "provincia": "Baleares",
+        "poblacion": 17279
+      },
+      {
+        "nombre": "La Puebla",
+        "provincia": "Baleares",
+        "poblacion": 14164
+      },
+      {
+        "nombre": "Sóller",
+        "provincia": "Baleares",
+        "poblacion": 13610
+      },
+      {
+        "nombre": "Santa Margarita",
+        "provincia": "Baleares",
+        "poblacion": 13160
+      },
+      {
+        "nombre": "Santañí",
+        "provincia": "Baleares",
+        "poblacion": 12480
+      },
+      {
+        "nombre": "Capdepera",
+        "provincia": "Baleares",
+        "poblacion": 12340
+      },
+      {
+        "nombre": "Son Servera",
+        "provincia": "Baleares",
+        "poblacion": 11932
+      },
+      {
+        "nombre": "Andrach",
+        "provincia": "Baleares",
+        "poblacion": 11833
+      },
+      {
+        "nombre": "Campos",
+        "provincia": "Baleares",
+        "poblacion": 11763
+      },
+      {
+        "nombre": "Formentera",
+        "provincia": "Baleares",
+        "poblacion": 11171
+      },
+      {
+        "nombre": "Alayor",
+        "provincia": "Baleares",
+        "poblacion": 9748
+      },
+      {
+        "nombre": "San Lorenzo del Cardezar",
+        "provincia": "Baleares",
+        "poblacion": 9227
+      },
+      {
+        "nombre": "Binisalem",
+        "provincia": "Baleares",
+        "poblacion": 9172
+      },
+      {
+        "nombre": "Artá",
+        "provincia": "Baleares",
+        "poblacion": 8208
+      },
+      {
+        "nombre": "Muro",
+        "provincia": "Baleares",
+        "poblacion": 7825
+      },
+      {
+        "nombre": "Villacarlos",
+        "provincia": "Baleares",
+        "poblacion": 7670
+      },
+      {
+        "nombre": "Santa María del Camino",
+        "provincia": "Baleares",
+        "poblacion": 7552
+      },
+      {
+        "nombre": "Buñola",
+        "provincia": "Baleares",
+        "poblacion": 7286
+      },
+      {
+        "nombre": "San Luis",
+        "provincia": "Baleares",
+        "poblacion": 7019
+      },
+      {
+        "nombre": "San Juan de Labritja",
+        "provincia": "Baleares",
+        "poblacion": 6838
+      },
+      {
+        "nombre": "Lloseta",
+        "provincia": "Baleares",
+        "poblacion": 6378
+      },
+      {
+        "nombre": "Algaida",
+        "provincia": "Baleares",
+        "poblacion": 6170
+      },
+      {
+        "nombre": "Mercadal",
+        "provincia": "Baleares",
+        "poblacion": 5939
+      },
+      {
+        "nombre": "Alaró",
+        "provincia": "Baleares",
+        "poblacion": 5909
+      },
+      {
+        "nombre": "Porreras",
+        "provincia": "Baleares",
+        "poblacion": 5741
+      },
+      {
+        "nombre": "Esporlas",
+        "provincia": "Baleares",
+        "poblacion": 5236
+      },
+      {
+        "nombre": "Ferrerías",
+        "provincia": "Baleares",
+        "poblacion": 5051
+      },
+      {
+        "nombre": "Las Salinas",
+        "provincia": "Baleares",
+        "poblacion": 5044
+      }
+    ]
+  },
+  "Canarias": {
+    "provincias": [
+      "Las Palmas",
+      "Santa Cruz de Tenerife"
+    ],
+    "municipios": [
+      {
+        "nombre": "Las Palmas de Gran Canaria",
+        "provincia": "Las Palmas",
+        "poblacion": 381868
+      },
+      {
+        "nombre": "Santa Cruz de Tenerife",
+        "provincia": "Santa Cruz de Tenerife",
+        "poblacion": 211957
+      },
+      {
+        "nombre": "San Cristóbal de La Laguna",
+        "provincia": "Santa Cruz de Tenerife",
+        "poblacion": 161108
+      },
+      {
+        "nombre": "Telde",
+        "provincia": "Las Palmas",
+        "poblacion": 104168
+      },
+      {
+        "nombre": "Arona",
+        "provincia": "Santa Cruz de Tenerife",
+        "poblacion": 87793
+      },
+      {
+        "nombre": "Santa Lucía de Tirajana",
+        "provincia": "Las Palmas",
+        "poblacion": 78584
+      },
+      {
+        "nombre": "Arrecife",
+        "provincia": "Las Palmas",
+        "poblacion": 70811
+      },
+      {
+        "nombre": "Granadilla de Abona",
+        "provincia": "Santa Cruz de Tenerife",
+        "poblacion": 58752
+      },
+      {
+        "nombre": "San Bartolomé de Tirajana",
+        "provincia": "Las Palmas",
+        "poblacion": 54291
+      },
+      {
+        "nombre": "Adeje",
+        "provincia": "Santa Cruz de Tenerife",
+        "poblacion": 50021
+      },
+      {
+        "nombre": "Puerto del Rosario",
+        "provincia": "Las Palmas",
+        "poblacion": 46150
+      },
+      {
+        "nombre": "La Orotava",
+        "provincia": "Santa Cruz de Tenerife",
+        "poblacion": 42514
+      },
+      {
+        "nombre": "Arucas",
+        "provincia": "Las Palmas",
+        "poblacion": 39232
+      },
+      {
+        "nombre": "Los Realejos",
+        "provincia": "Santa Cruz de Tenerife",
+        "poblacion": 37867
+      },
+      {
+        "nombre": "Agüimes",
+        "provincia": "Las Palmas",
+        "poblacion": 33800
+      },
+      {
+        "nombre": "Ingenio",
+        "provincia": "Las Palmas",
+        "poblacion": 32905
+      },
+      {
+        "nombre": "Puerto de la Cruz",
+        "provincia": "Santa Cruz de Tenerife",
+        "poblacion": 31137
+      },
+      {
+        "nombre": "La Oliva",
+        "provincia": "Las Palmas",
+        "poblacion": 30022
+      },
+      {
+        "nombre": "Candelaria",
+        "provincia": "Santa Cruz de Tenerife",
+        "poblacion": 29023
+      },
+      {
+        "nombre": "Gáldar",
+        "provincia": "Las Palmas",
+        "poblacion": 25108
+      },
+      {
+        "nombre": "Tacoronte",
+        "provincia": "Santa Cruz de Tenerife",
+        "poblacion": 24619
+      },
+      {
+        "nombre": "Icod de los Vinos",
+        "provincia": "Santa Cruz de Tenerife",
+        "poblacion": 24616
+      },
+      {
+        "nombre": "Teguise",
+        "provincia": "Las Palmas",
+        "poblacion": 24027
+      },
+      {
+        "nombre": "San Miguel de Abona",
+        "provincia": "Santa Cruz de Tenerife",
+        "poblacion": 22606
+      },
+      {
+        "nombre": "Guía de Isora",
+        "provincia": "Santa Cruz de Tenerife",
+        "poblacion": 22301
+      },
+      {
+        "nombre": "Güímar",
+        "provincia": "Santa Cruz de Tenerife",
+        "poblacion": 21536
+      },
+      {
+        "nombre": "Tías",
+        "provincia": "Las Palmas",
+        "poblacion": 21433
+      },
+      {
+        "nombre": "Pájara",
+        "provincia": "Las Palmas",
+        "poblacion": 21271
+      },
+      {
+        "nombre": "Mogán",
+        "provincia": "Las Palmas",
+        "poblacion": 20845
+      },
+      {
+        "nombre": "Los Llanos de Aridane",
+        "provincia": "Santa Cruz de Tenerife",
+        "poblacion": 20189
+      },
+      {
+        "nombre": "San Bartolomé",
+        "provincia": "Las Palmas",
+        "poblacion": 19200
+      },
+      {
+        "nombre": "Santa Brígida",
+        "provincia": "Las Palmas",
+        "poblacion": 18510
+      },
+      {
+        "nombre": "El Rosario",
+        "provincia": "Santa Cruz de Tenerife",
+        "poblacion": 17866
+      },
+      {
+        "nombre": "Yaiza",
+        "provincia": "Las Palmas",
+        "poblacion": 17415
+      },
+      {
+        "nombre": "Tuineje",
+        "provincia": "Las Palmas",
+        "poblacion": 15967
+      },
+      {
+        "nombre": "Santa Cruz de la Palma",
+        "provincia": "Santa Cruz de Tenerife",
+        "poblacion": 15441
+      },
+      {
+        "nombre": "Santa Úrsula",
+        "provincia": "Santa Cruz de Tenerife",
+        "poblacion": 15285
+      },
+      {
+        "nombre": "Santa María de Guía de Gran Canaria",
+        "provincia": "Las Palmas",
+        "poblacion": 13948
+      },
+      {
+        "nombre": "Antigua",
+        "provincia": "Las Palmas",
+        "poblacion": 13523
+      },
+      {
+        "nombre": "Teror",
+        "provincia": "Las Palmas",
+        "poblacion": 12799
+      },
+      {
+        "nombre": "Santiago del Teide",
+        "provincia": "Santa Cruz de Tenerife",
+        "poblacion": 11972
+      },
+      {
+        "nombre": "Tegueste",
+        "provincia": "Santa Cruz de Tenerife",
+        "poblacion": 11344
+      },
+      {
+        "nombre": "Valsequillo de Gran Canaria",
+        "provincia": "Las Palmas",
+        "poblacion": 9667
+      },
+      {
+        "nombre": "San Sebastián de La Gomera",
+        "provincia": "Santa Cruz de Tenerife",
+        "poblacion": 9501
+      },
+      {
+        "nombre": "La Victoria de Acentejo",
+        "provincia": "Santa Cruz de Tenerife",
+        "poblacion": 9228
+      },
+      {
+        "nombre": "El Sauzal",
+        "provincia": "Santa Cruz de Tenerife",
+        "poblacion": 9145
+      },
+      {
+        "nombre": "La Matanza de Acentejo",
+        "provincia": "Santa Cruz de Tenerife",
+        "poblacion": 9092
+      },
+      {
+        "nombre": "Arico",
+        "provincia": "Santa Cruz de Tenerife",
+        "poblacion": 9020
+      },
+      {
+        "nombre": "El Paso",
+        "provincia": "Santa Cruz de Tenerife",
+        "poblacion": 7967
+      },
+      {
+        "nombre": "Moya",
+        "provincia": "Las Palmas",
+        "poblacion": 7889
+      },
+      {
+        "nombre": "Vega de San Mateo",
+        "provincia": "Las Palmas",
+        "poblacion": 7782
+      },
+      {
+        "nombre": "Firgas",
+        "provincia": "Las Palmas",
+        "poblacion": 7669
+      },
+      {
+        "nombre": "La Aldea de San Nicolás",
+        "provincia": "Las Palmas",
+        "poblacion": 7506
+      },
+      {
+        "nombre": "Breña Alta",
+        "provincia": "Santa Cruz de Tenerife",
+        "poblacion": 7305
+      },
+      {
+        "nombre": "Tinajo",
+        "provincia": "Las Palmas",
+        "poblacion": 6759
+      },
+      {
+        "nombre": "Breña Baja",
+        "provincia": "Santa Cruz de Tenerife",
+        "poblacion": 5963
+      },
+      {
+        "nombre": "Arafo",
+        "provincia": "Santa Cruz de Tenerife",
+        "poblacion": 5712
+      },
+      {
+        "nombre": "Agaete",
+        "provincia": "Las Palmas",
+        "poblacion": 5568
+      },
+      {
+        "nombre": "La Guancha",
+        "provincia": "Santa Cruz de Tenerife",
+        "poblacion": 5562
+      },
+      {
+        "nombre": "Haría",
+        "provincia": "Las Palmas",
+        "poblacion": 5507
+      },
+      {
+        "nombre": "Valverde",
+        "provincia": "Santa Cruz de Tenerife",
+        "poblacion": 5165
+      }
+    ]
+  },
+  "País Vasco": {
+    "provincias": [
+      "Guipúzcoa",
+      "Vizcaya",
+      "Álava"
+    ],
+    "municipios": [
+      {
+        "nombre": "Bilbao",
+        "provincia": "Vizcaya",
+        "poblacion": 351124
+      },
+      {
+        "nombre": "Vitoria",
+        "provincia": "Álava",
+        "poblacion": 260699
+      },
+      {
+        "nombre": "San Sebastián",
+        "provincia": "Guipúzcoa",
+        "poblacion": 189866
+      },
+      {
+        "nombre": "Baracaldo",
+        "provincia": "Vizcaya",
+        "poblacion": 102986
+      },
+      {
+        "nombre": "Guecho",
+        "provincia": "Vizcaya",
+        "poblacion": 75752
+      },
+      {
+        "nombre": "Irún",
+        "provincia": "Guipúzcoa",
+        "poblacion": 63835
+      },
+      {
+        "nombre": "Santurce",
+        "provincia": "Vizcaya",
+        "poblacion": 46442
+      },
+      {
+        "nombre": "Portugalete",
+        "provincia": "Vizcaya",
+        "poblacion": 44843
+      },
+      {
+        "nombre": "Basauri",
+        "provincia": "Vizcaya",
+        "poblacion": 40274
+      },
+      {
+        "nombre": "Rentería",
+        "provincia": "Guipúzcoa",
+        "poblacion": 39363
+      },
+      {
+        "nombre": "Lejona",
+        "provincia": "Vizcaya",
+        "poblacion": 32748
+      },
+      {
+        "nombre": "Durango",
+        "provincia": "Vizcaya",
+        "poblacion": 30192
+      },
+      {
+        "nombre": "Sestao",
+        "provincia": "Vizcaya",
+        "poblacion": 28512
+      },
+      {
+        "nombre": "Éibar",
+        "provincia": "Guipúzcoa",
+        "poblacion": 27484
+      },
+      {
+        "nombre": "Galdácano",
+        "provincia": "Vizcaya",
+        "poblacion": 24776
+      },
+      {
+        "nombre": "Erandio",
+        "provincia": "Vizcaya",
+        "poblacion": 24659
+      },
+      {
+        "nombre": "Zarauz",
+        "provincia": "Guipúzcoa",
+        "poblacion": 23496
+      },
+      {
+        "nombre": "Mondragón",
+        "provincia": "Guipúzcoa",
+        "poblacion": 21867
+      },
+      {
+        "nombre": "Hernani",
+        "provincia": "Guipúzcoa",
+        "poblacion": 20527
+      },
+      {
+        "nombre": "Tolosa",
+        "provincia": "Guipúzcoa",
+        "poblacion": 20065
+      },
+      {
+        "nombre": "Amorebieta-Echano",
+        "provincia": "Vizcaya",
+        "poblacion": 19570
+      },
+      {
+        "nombre": "Lasarte-Oria",
+        "provincia": "Guipúzcoa",
+        "poblacion": 19133
+      },
+      {
+        "nombre": "Llodio",
+        "provincia": "Álava",
+        "poblacion": 17917
+      },
+      {
+        "nombre": "Munguía",
+        "provincia": "Vizcaya",
+        "poblacion": 17882
+      },
+      {
+        "nombre": "Guernica y Luno",
+        "provincia": "Vizcaya",
+        "poblacion": 17050
+      },
+      {
+        "nombre": "Fuenterrabía",
+        "provincia": "Guipúzcoa",
+        "poblacion": 16887
+      },
+      {
+        "nombre": "Bermeo",
+        "provincia": "Vizcaya",
+        "poblacion": 16878
+      },
+      {
+        "nombre": "Pasajes",
+        "provincia": "Guipúzcoa",
+        "poblacion": 15857
+      },
+      {
+        "nombre": "Ermua",
+        "provincia": "Vizcaya",
+        "poblacion": 15599
+      },
+      {
+        "nombre": "Azpeitia",
+        "provincia": "Guipúzcoa",
+        "poblacion": 15183
+      },
+      {
+        "nombre": "Sopelana",
+        "provincia": "Vizcaya",
+        "poblacion": 14872
+      },
+      {
+        "nombre": "Andoáin",
+        "provincia": "Guipúzcoa",
+        "poblacion": 14555
+      },
+      {
+        "nombre": "Vergara",
+        "provincia": "Guipúzcoa",
+        "poblacion": 14487
+      },
+      {
+        "nombre": "Beasáin",
+        "provincia": "Guipúzcoa",
+        "poblacion": 13970
+      },
+      {
+        "nombre": "Echévarri",
+        "provincia": "Vizcaya",
+        "poblacion": 11975
+      },
+      {
+        "nombre": "Arrigorriaga",
+        "provincia": "Vizcaya",
+        "poblacion": 11954
+      },
+      {
+        "nombre": "Valle de Trápaga",
+        "provincia": "Vizcaya",
+        "poblacion": 11911
+      },
+      {
+        "nombre": "Azcoitia",
+        "provincia": "Guipúzcoa",
+        "poblacion": 11636
+      },
+      {
+        "nombre": "Oñate",
+        "provincia": "Guipúzcoa",
+        "poblacion": 11567
+      },
+      {
+        "nombre": "Elgóibar",
+        "provincia": "Guipúzcoa",
+        "poblacion": 11500
+      },
+      {
+        "nombre": "Villafranca de Ordizia",
+        "provincia": "Guipúzcoa",
+        "poblacion": 10641
+      },
+      {
+        "nombre": "Oyarzun",
+        "provincia": "Guipúzcoa",
+        "poblacion": 10331
+      },
+      {
+        "nombre": "Amurrio",
+        "provincia": "Álava",
+        "poblacion": 10313
+      },
+      {
+        "nombre": "Zumaya",
+        "provincia": "Guipúzcoa",
+        "poblacion": 10211
+      },
+      {
+        "nombre": "Zumárraga",
+        "provincia": "Guipúzcoa",
+        "poblacion": 9681
+      },
+      {
+        "nombre": "Abanto y Ciérvana",
+        "provincia": "Vizcaya",
+        "poblacion": 9402
+      },
+      {
+        "nombre": "Ortuella",
+        "provincia": "Vizcaya",
+        "poblacion": 8536
+      },
+      {
+        "nombre": "Legazpia",
+        "provincia": "Guipúzcoa",
+        "poblacion": 8341
+      },
+      {
+        "nombre": "Zalla",
+        "provincia": "Vizcaya",
+        "poblacion": 8319
+      },
+      {
+        "nombre": "Ondárroa",
+        "provincia": "Vizcaya",
+        "poblacion": 8179
+      },
+      {
+        "nombre": "Abadiano",
+        "provincia": "Vizcaya",
+        "poblacion": 7708
+      },
+      {
+        "nombre": "Astigarraga",
+        "provincia": "Guipúzcoa",
+        "poblacion": 7666
+      },
+      {
+        "nombre": "Valmaseda",
+        "provincia": "Vizcaya",
+        "poblacion": 7593
+      },
+      {
+        "nombre": "Berango",
+        "provincia": "Vizcaya",
+        "poblacion": 7454
+      },
+      {
+        "nombre": "Musques",
+        "provincia": "Vizcaya",
+        "poblacion": 7342
+      },
+      {
+        "nombre": "Elorrio",
+        "provincia": "Vizcaya",
+        "poblacion": 7292
+      },
+      {
+        "nombre": "Arechavaleta",
+        "provincia": "Guipúzcoa",
+        "poblacion": 7155
+      },
+      {
+        "nombre": "Lequeitio",
+        "provincia": "Vizcaya",
+        "poblacion": 7143
+      },
+      {
+        "nombre": "Derio",
+        "provincia": "Vizcaya",
+        "poblacion": 7071
+      },
+      {
+        "nombre": "Güeñes",
+        "provincia": "Vizcaya",
+        "poblacion": 6740
+      },
+      {
+        "nombre": "Villarreal de Urrechua",
+        "provincia": "Guipúzcoa",
+        "poblacion": 6739
+      },
+      {
+        "nombre": "Usúrbil",
+        "provincia": "Guipúzcoa",
+        "poblacion": 6345
+      },
+      {
+        "nombre": "Urnieta",
+        "provincia": "Guipúzcoa",
+        "poblacion": 6200
+      },
+      {
+        "nombre": "Orio",
+        "provincia": "Guipúzcoa",
+        "poblacion": 6125
+      },
+      {
+        "nombre": "Górliz",
+        "provincia": "Vizcaya",
+        "poblacion": 6058
+      },
+      {
+        "nombre": "Lazcano",
+        "provincia": "Guipúzcoa",
+        "poblacion": 6013
+      },
+      {
+        "nombre": "Lezo",
+        "provincia": "Guipúzcoa",
+        "poblacion": 6008
+      },
+      {
+        "nombre": "Villabona",
+        "provincia": "Guipúzcoa",
+        "poblacion": 5826
+      },
+      {
+        "nombre": "Urdúliz",
+        "provincia": "Vizcaya",
+        "poblacion": 5469
+      },
+      {
+        "nombre": "Deva",
+        "provincia": "Guipúzcoa",
+        "poblacion": 5393
+      },
+      {
+        "nombre": "Motrico",
+        "provincia": "Guipúzcoa",
+        "poblacion": 5313
+      },
+      {
+        "nombre": "Salvatierra",
+        "provincia": "Álava",
+        "poblacion": 5085
+      },
+      {
+        "nombre": "Marquina-Jeméin",
+        "provincia": "Vizcaya",
+        "poblacion": 5037
+      }
+    ]
+  },
+  "Castilla y León": {
+    "provincias": [
+      "Burgos",
+      "León",
+      "Palencia",
+      "Salamanca",
+      "Segovia",
+      "Soria",
+      "Valladolid",
+      "Zamora",
+      "Ávila"
+    ],
+    "municipios": [
+      {
+        "nombre": "Valladolid",
+        "provincia": "Valladolid",
+        "poblacion": 302614
+      },
+      {
+        "nombre": "Burgos",
+        "provincia": "Burgos",
+        "poblacion": 177402
+      },
+      {
+        "nombre": "Salamanca",
+        "provincia": "Salamanca",
+        "poblacion": 146110
+      },
+      {
+        "nombre": "León",
+        "provincia": "León",
+        "poblacion": 123446
+      },
+      {
+        "nombre": "Palencia",
+        "provincia": "Palencia",
+        "poblacion": 77466
+      },
+      {
+        "nombre": "Ponferrada",
+        "provincia": "León",
+        "poblacion": 63186
+      },
+      {
+        "nombre": "Zamora",
+        "provincia": "Zamora",
+        "poblacion": 59815
+      },
+      {
+        "nombre": "Ávila",
+        "provincia": "Ávila",
+        "poblacion": 59107
+      },
+      {
+        "nombre": "Segovia",
+        "provincia": "Segovia",
+        "poblacion": 52375
+      },
+      {
+        "nombre": "Soria",
+        "provincia": "Soria",
+        "poblacion": 41025
+      },
+      {
+        "nombre": "Miranda de Ebro",
+        "provincia": "Burgos",
+        "poblacion": 36622
+      },
+      {
+        "nombre": "Aranda de Duero",
+        "provincia": "Burgos",
+        "poblacion": 33956
+      },
+      {
+        "nombre": "San Andrés del Rabanedo",
+        "provincia": "León",
+        "poblacion": 29944
+      },
+      {
+        "nombre": "Laguna de Duero",
+        "provincia": "Valladolid",
+        "poblacion": 22672
+      },
+      {
+        "nombre": "Arroyo de la Encomienda",
+        "provincia": "Valladolid",
+        "poblacion": 21946
+      },
+      {
+        "nombre": "Medina del Campo",
+        "provincia": "Valladolid",
+        "poblacion": 20090
+      },
+      {
+        "nombre": "Villaquilambre",
+        "provincia": "León",
+        "poblacion": 18765
+      },
+      {
+        "nombre": "Benavente",
+        "provincia": "Zamora",
+        "poblacion": 17261
+      },
+      {
+        "nombre": "Santa Marta de Tormes",
+        "provincia": "Salamanca",
+        "poblacion": 14683
+      },
+      {
+        "nombre": "Béjar",
+        "provincia": "Salamanca",
+        "poblacion": 12021
+      },
+      {
+        "nombre": "Ciudad Rodrigo",
+        "provincia": "Salamanca",
+        "poblacion": 11810
+      },
+      {
+        "nombre": "Astorga",
+        "provincia": "León",
+        "poblacion": 10321
+      },
+      {
+        "nombre": "La Bañeza",
+        "provincia": "León",
+        "poblacion": 10047
+      },
+      {
+        "nombre": "El Espinar",
+        "provincia": "Segovia",
+        "poblacion": 9814
+      },
+      {
+        "nombre": "Cuéllar",
+        "provincia": "Segovia",
+        "poblacion": 9608
+      },
+      {
+        "nombre": "Cisterniga",
+        "provincia": "Valladolid",
+        "poblacion": 9182
+      },
+      {
+        "nombre": "Tudela de Duero",
+        "provincia": "Valladolid",
+        "poblacion": 8780
+      },
+      {
+        "nombre": "Tordesillas",
+        "provincia": "Valladolid",
+        "poblacion": 8681
+      },
+      {
+        "nombre": "Toro",
+        "provincia": "Zamora",
+        "poblacion": 8349
+      },
+      {
+        "nombre": "Bembibre",
+        "provincia": "León",
+        "poblacion": 8196
+      },
+      {
+        "nombre": "Villablino",
+        "provincia": "León",
+        "poblacion": 7845
+      },
+      {
+        "nombre": "Arévalo",
+        "provincia": "Ávila",
+        "poblacion": 7768
+      },
+      {
+        "nombre": "Valverde de la Virgen",
+        "provincia": "León",
+        "poblacion": 7687
+      },
+      {
+        "nombre": "Carbajosa de la Sagrada",
+        "provincia": "Salamanca",
+        "poblacion": 7555
+      },
+      {
+        "nombre": "Villamayor",
+        "provincia": "Salamanca",
+        "poblacion": 7539
+      },
+      {
+        "nombre": "Aguilar de Campoo",
+        "provincia": "Palencia",
+        "poblacion": 6733
+      },
+      {
+        "nombre": "Villares de la Reina",
+        "provincia": "Salamanca",
+        "poblacion": 6576
+      },
+      {
+        "nombre": "Arenas de San Pedro",
+        "provincia": "Ávila",
+        "poblacion": 6464
+      },
+      {
+        "nombre": "Villamuriel de Cerrato",
+        "provincia": "Palencia",
+        "poblacion": 6459
+      },
+      {
+        "nombre": "Briviesca",
+        "provincia": "Burgos",
+        "poblacion": 6414
+      },
+      {
+        "nombre": "Zaratán",
+        "provincia": "Valladolid",
+        "poblacion": 6342
+      },
+      {
+        "nombre": "Íscar",
+        "provincia": "Valladolid",
+        "poblacion": 6326
+      },
+      {
+        "nombre": "Venta de Baños",
+        "provincia": "Palencia",
+        "poblacion": 6284
+      },
+      {
+        "nombre": "Peñaranda de Bracamonte",
+        "provincia": "Salamanca",
+        "poblacion": 6079
+      },
+      {
+        "nombre": "Aldeamayor de San Martín",
+        "provincia": "Valladolid",
+        "poblacion": 6035
+      },
+      {
+        "nombre": "Medina de Pomar",
+        "provincia": "Burgos",
+        "poblacion": 5866
+      },
+      {
+        "nombre": "Palazuelos de Eresma",
+        "provincia": "Segovia",
+        "poblacion": 5830
+      },
+      {
+        "nombre": "Guardo",
+        "provincia": "Palencia",
+        "poblacion": 5653
+      },
+      {
+        "nombre": "Simancas",
+        "provincia": "Valladolid",
+        "poblacion": 5493
+      },
+      {
+        "nombre": "Guijuelo",
+        "provincia": "Salamanca",
+        "poblacion": 5484
+      },
+      {
+        "nombre": "Almazán",
+        "provincia": "Soria",
+        "poblacion": 5426
+      },
+      {
+        "nombre": "Sariegos",
+        "provincia": "León",
+        "poblacion": 5413
+      },
+      {
+        "nombre": "Las Navas del Marqués",
+        "provincia": "Ávila",
+        "poblacion": 5362
+      },
+      {
+        "nombre": "Cigales",
+        "provincia": "Valladolid",
+        "poblacion": 5360
+      },
+      {
+        "nombre": "Valencia de Don Juan",
+        "provincia": "León",
+        "poblacion": 5185
+      },
+      {
+        "nombre": "La Granja de San Ildefonso",
+        "provincia": "Segovia",
+        "poblacion": 5183
+      },
+      {
+        "nombre": "Peñafiel",
+        "provincia": "Valladolid",
+        "poblacion": 5172
+      },
+      {
+        "nombre": "El Burgo de Osma",
+        "provincia": "Soria",
+        "poblacion": 5166
+      },
+      {
+        "nombre": "Alba de Tormes",
+        "provincia": "Salamanca",
+        "poblacion": 5058
+      },
+      {
+        "nombre": "Candeleda",
+        "provincia": "Ávila",
+        "poblacion": 5001
+      }
+    ]
+  },
+  "Galicia": {
+    "provincias": [
+      "La Coruña",
+      "Lugo",
+      "Orense",
+      "Pontevedra"
+    ],
+    "municipios": [
+      {
+        "nombre": "Vigo",
+        "provincia": "Pontevedra",
+        "poblacion": 294489
+      },
+      {
+        "nombre": "La Coruña",
+        "provincia": "La Coruña",
+        "poblacion": 251543
+      },
+      {
+        "nombre": "Orense",
+        "provincia": "Orense",
+        "poblacion": 105769
+      },
+      {
+        "nombre": "Santiago de Compostela",
+        "provincia": "La Coruña",
+        "poblacion": 100965
+      },
+      {
+        "nombre": "Lugo",
+        "provincia": "Lugo",
+        "poblacion": 100143
+      },
+      {
+        "nombre": "Pontevedra",
+        "provincia": "Pontevedra",
+        "poblacion": 83316
+      },
+      {
+        "nombre": "Ferrol",
+        "provincia": "La Coruña",
+        "poblacion": 64367
+      },
+      {
+        "nombre": "Narón",
+        "provincia": "La Coruña",
+        "poblacion": 39953
+      },
+      {
+        "nombre": "Oleiros",
+        "provincia": "La Coruña",
+        "poblacion": 38793
+      },
+      {
+        "nombre": "Villagarcía de Arosa",
+        "provincia": "Pontevedra",
+        "poblacion": 37888
+      },
+      {
+        "nombre": "Arteijo",
+        "provincia": "La Coruña",
+        "poblacion": 34403
+      },
+      {
+        "nombre": "Ames",
+        "provincia": "La Coruña",
+        "poblacion": 33276
+      },
+      {
+        "nombre": "Carballo",
+        "provincia": "La Coruña",
+        "poblacion": 32120
+      },
+      {
+        "nombre": "Culleredo",
+        "provincia": "La Coruña",
+        "poblacion": 31254
+      },
+      {
+        "nombre": "Redondela",
+        "provincia": "Pontevedra",
+        "poblacion": 28874
+      },
+      {
+        "nombre": "Ribeira",
+        "provincia": "La Coruña",
+        "poblacion": 27102
+      },
+      {
+        "nombre": "Cangas de Morrazo",
+        "provincia": "Pontevedra",
+        "poblacion": 26832
+      },
+      {
+        "nombre": "Cambre",
+        "provincia": "La Coruña",
+        "poblacion": 24765
+      },
+      {
+        "nombre": "Marín",
+        "provincia": "Pontevedra",
+        "poblacion": 23991
+      },
+      {
+        "nombre": "Puenteareas",
+        "provincia": "Pontevedra",
+        "poblacion": 23211
+      },
+      {
+        "nombre": "Porriño",
+        "provincia": "Pontevedra",
+        "poblacion": 20562
+      },
+      {
+        "nombre": "Lalín",
+        "provincia": "Pontevedra",
+        "poblacion": 20282
+      },
+      {
+        "nombre": "La Estrada",
+        "provincia": "Pontevedra",
+        "poblacion": 20081
+      },
+      {
+        "nombre": "Moaña",
+        "provincia": "Pontevedra",
+        "poblacion": 19315
+      },
+      {
+        "nombre": "Teo",
+        "provincia": "La Coruña",
+        "poblacion": 19034
+      },
+      {
+        "nombre": "Boiro",
+        "provincia": "La Coruña",
+        "poblacion": 18984
+      },
+      {
+        "nombre": "Monforte de Lemos",
+        "provincia": "Lugo",
+        "poblacion": 18234
+      },
+      {
+        "nombre": "Nigrán",
+        "provincia": "Pontevedra",
+        "poblacion": 18045
+      },
+      {
+        "nombre": "Sangenjo",
+        "provincia": "Pontevedra",
+        "poblacion": 17854
+      },
+      {
+        "nombre": "Tuy",
+        "provincia": "Pontevedra",
+        "poblacion": 17327
+      },
+      {
+        "nombre": "Poyo",
+        "provincia": "Pontevedra",
+        "poblacion": 17297
+      },
+      {
+        "nombre": "Sada",
+        "provincia": "La Coruña",
+        "poblacion": 16874
+      },
+      {
+        "nombre": "Vivero",
+        "provincia": "Lugo",
+        "poblacion": 15221
+      },
+      {
+        "nombre": "Mos",
+        "provincia": "Pontevedra",
+        "poblacion": 15076
+      },
+      {
+        "nombre": "Gondomar",
+        "provincia": "Pontevedra",
+        "poblacion": 15043
+      },
+      {
+        "nombre": "Noya",
+        "provincia": "La Coruña",
+        "poblacion": 14115
+      },
+      {
+        "nombre": "Carballino",
+        "provincia": "Orense",
+        "poblacion": 13968
+      },
+      {
+        "nombre": "Villalba",
+        "provincia": "Lugo",
+        "poblacion": 13870
+      },
+      {
+        "nombre": "Tomiño",
+        "provincia": "Pontevedra",
+        "poblacion": 13836
+      },
+      {
+        "nombre": "Cambados",
+        "provincia": "Pontevedra",
+        "poblacion": 13681
+      },
+      {
+        "nombre": "Verín",
+        "provincia": "Orense",
+        "poblacion": 13612
+      },
+      {
+        "nombre": "El Barco de Valdeorras",
+        "provincia": "Orense",
+        "poblacion": 13277
+      },
+      {
+        "nombre": "Sarria",
+        "provincia": "Lugo",
+        "poblacion": 13221
+      },
+      {
+        "nombre": "Betanzos",
+        "provincia": "La Coruña",
+        "poblacion": 13082
+      },
+      {
+        "nombre": "Órdenes",
+        "provincia": "La Coruña",
+        "poblacion": 12669
+      },
+      {
+        "nombre": "Fene",
+        "provincia": "La Coruña",
+        "poblacion": 12561
+      },
+      {
+        "nombre": "Bayona",
+        "provincia": "Pontevedra",
+        "poblacion": 12407
+      },
+      {
+        "nombre": "Bueu",
+        "provincia": "Pontevedra",
+        "poblacion": 11922
+      },
+      {
+        "nombre": "Laracha",
+        "provincia": "La Coruña",
+        "poblacion": 11543
+      },
+      {
+        "nombre": "Barbadanes",
+        "provincia": "Orense",
+        "poblacion": 11140
+      },
+      {
+        "nombre": "Rianjo",
+        "provincia": "La Coruña",
+        "poblacion": 10854
+      },
+      {
+        "nombre": "El Grove",
+        "provincia": "Pontevedra",
+        "poblacion": 10828
+      },
+      {
+        "nombre": "Salvatierra de Miño",
+        "provincia": "Pontevedra",
+        "poblacion": 10274
+      },
+      {
+        "nombre": "Villanueva de Arosa",
+        "provincia": "Pontevedra",
+        "poblacion": 10225
+      },
+      {
+        "nombre": "Foz",
+        "provincia": "Lugo",
+        "poblacion": 10163
+      },
+      {
+        "nombre": "La Guardia",
+        "provincia": "Pontevedra",
+        "poblacion": 9998
+      },
+      {
+        "nombre": "Puentes de García Rodríguez",
+        "provincia": "La Coruña",
+        "poblacion": 9867
+      },
+      {
+        "nombre": "Ribadeo",
+        "provincia": "Lugo",
+        "poblacion": 9828
+      },
+      {
+        "nombre": "Caldas de Reyes",
+        "provincia": "Pontevedra",
+        "poblacion": 9620
+      },
+      {
+        "nombre": "Ginzo de Limia",
+        "provincia": "Orense",
+        "poblacion": 9529
+      },
+      {
+        "nombre": "Burela",
+        "provincia": "Lugo",
+        "poblacion": 9454
+      },
+      {
+        "nombre": "Salceda de Caselas",
+        "provincia": "Pontevedra",
+        "poblacion": 9421
+      },
+      {
+        "nombre": "Santa Comba",
+        "provincia": "La Coruña",
+        "poblacion": 9342
+      },
+      {
+        "nombre": "Puebla del Caramiñal",
+        "provincia": "La Coruña",
+        "poblacion": 9227
+      },
+      {
+        "nombre": "Puerto del Son",
+        "provincia": "La Coruña",
+        "poblacion": 9125
+      },
+      {
+        "nombre": "Silleda",
+        "provincia": "Pontevedra",
+        "poblacion": 8876
+      },
+      {
+        "nombre": "Padrón",
+        "provincia": "La Coruña",
+        "poblacion": 8355
+      },
+      {
+        "nombre": "Muros",
+        "provincia": "La Coruña",
+        "poblacion": 8251
+      },
+      {
+        "nombre": "Brión",
+        "provincia": "La Coruña",
+        "poblacion": 8145
+      },
+      {
+        "nombre": "Chantada",
+        "provincia": "Lugo",
+        "poblacion": 8006
+      },
+      {
+        "nombre": "Cee",
+        "provincia": "La Coruña",
+        "poblacion": 7660
+      },
+      {
+        "nombre": "Oroso",
+        "provincia": "La Coruña",
+        "poblacion": 7622
+      },
+      {
+        "nombre": "Sotomayor",
+        "provincia": "Pontevedra",
+        "poblacion": 7603
+      },
+      {
+        "nombre": "Mellid",
+        "provincia": "La Coruña",
+        "poblacion": 7553
+      },
+      {
+        "nombre": "Puentedeume",
+        "provincia": "La Coruña",
+        "poblacion": 7520
+      },
+      {
+        "nombre": "Bergondo",
+        "provincia": "La Coruña",
+        "poblacion": 6951
+      },
+      {
+        "nombre": "Negreira",
+        "provincia": "La Coruña",
+        "poblacion": 6901
+      },
+      {
+        "nombre": "Valdoviño",
+        "provincia": "La Coruña",
+        "poblacion": 6889
+      },
+      {
+        "nombre": "Vimianzo",
+        "provincia": "La Coruña",
+        "poblacion": 6840
+      },
+      {
+        "nombre": "Miño",
+        "provincia": "La Coruña",
+        "poblacion": 6753
+      },
+      {
+        "nombre": "Carral",
+        "provincia": "La Coruña",
+        "poblacion": 6700
+      },
+      {
+        "nombre": "Pereiro de Aguiar",
+        "provincia": "Orense",
+        "poblacion": 6647
+      },
+      {
+        "nombre": "Cedeira",
+        "provincia": "La Coruña",
+        "poblacion": 6529
+      },
+      {
+        "nombre": "El Rosal",
+        "provincia": "Pontevedra",
+        "poblacion": 6431
+      },
+      {
+        "nombre": "Allariz",
+        "provincia": "Orense",
+        "poblacion": 6378
+      },
+      {
+        "nombre": "Ares",
+        "provincia": "La Coruña",
+        "poblacion": 6132
+      },
+      {
+        "nombre": "Outes",
+        "provincia": "La Coruña",
+        "poblacion": 6082
+      },
+      {
+        "nombre": "Vilaboa",
+        "provincia": "Pontevedra",
+        "poblacion": 5950
+      },
+      {
+        "nombre": "Arzúa",
+        "provincia": "La Coruña",
+        "poblacion": 5901
+      },
+      {
+        "nombre": "Coristanco",
+        "provincia": "La Coruña",
+        "poblacion": 5779
+      },
+      {
+        "nombre": "Celanova",
+        "provincia": "Orense",
+        "poblacion": 5709
+      },
+      {
+        "nombre": "Valga",
+        "provincia": "Pontevedra",
+        "poblacion": 5704
+      },
+      {
+        "nombre": "Cerdedo-Cotobad",
+        "provincia": "Pontevedra",
+        "poblacion": 5687
+      },
+      {
+        "nombre": "San Ciprián de Viñas",
+        "provincia": "Orense",
+        "poblacion": 5675
+      },
+      {
+        "nombre": "Abegondo",
+        "provincia": "La Coruña",
+        "poblacion": 5584
+      },
+      {
+        "nombre": "Puentecaldelas",
+        "provincia": "Pontevedra",
+        "poblacion": 5553
+      },
+      {
+        "nombre": "Ortigueira",
+        "provincia": "La Coruña",
+        "poblacion": 5477
+      },
+      {
+        "nombre": "Puenteceso",
+        "provincia": "La Coruña",
+        "poblacion": 5399
+      },
+      {
+        "nombre": "Otero de Rey",
+        "provincia": "Lugo",
+        "poblacion": 5359
+      },
+      {
+        "nombre": "Meaño",
+        "provincia": "Pontevedra",
+        "poblacion": 5258
+      },
+      {
+        "nombre": "Malpica de Bergantiños",
+        "provincia": "La Coruña",
+        "poblacion": 5241
+      },
+      {
+        "nombre": "Mugardos",
+        "provincia": "La Coruña",
+        "poblacion": 5228
+      },
+      {
+        "nombre": "Oza-Cesuras",
+        "provincia": "La Coruña",
+        "poblacion": 5203
+      },
+      {
+        "nombre": "Guitiriz",
+        "provincia": "Lugo",
+        "poblacion": 5194
+      },
+      {
+        "nombre": "Ribadumia",
+        "provincia": "Pontevedra",
+        "poblacion": 5189
+      },
+      {
+        "nombre": "Camariñas",
+        "provincia": "La Coruña",
+        "poblacion": 5151
+      },
+      {
+        "nombre": "La Cañiza",
+        "provincia": "Pontevedra",
+        "poblacion": 5090
+      },
+      {
+        "nombre": "Villa de Cruces",
+        "provincia": "Pontevedra",
+        "poblacion": 5082
+      },
+      {
+        "nombre": "Cerceda",
+        "provincia": "La Coruña",
+        "poblacion": 5058
+      },
+      {
+        "nombre": "Vedra",
+        "provincia": "La Coruña",
+        "poblacion": 5019
+      },
+      {
+        "nombre": "Castro de Rey",
+        "provincia": "Lugo",
+        "poblacion": 5015
+      }
+    ]
+  },
+  "Principado de Asturias": {
+    "provincias": [
+      "Asturias"
+    ],
+    "municipios": [
+      {
+        "nombre": "Gijón",
+        "provincia": "Asturias",
+        "poblacion": 269894
+      },
+      {
+        "nombre": "Oviedo",
+        "provincia": "Asturias",
+        "poblacion": 223968
+      },
+      {
+        "nombre": "Avilés",
+        "provincia": "Asturias",
+        "poblacion": 75517
+      },
+      {
+        "nombre": "Siero",
+        "provincia": "Asturias",
+        "poblacion": 53049
+      },
+      {
+        "nombre": "Langreo",
+        "provincia": "Asturias",
+        "poblacion": 38612
+      },
+      {
+        "nombre": "Mieres",
+        "provincia": "Asturias",
+        "poblacion": 36373
+      },
+      {
+        "nombre": "Castrillón",
+        "provincia": "Asturias",
+        "poblacion": 22103
+      },
+      {
+        "nombre": "Corvera de Asturias",
+        "provincia": "Asturias",
+        "poblacion": 15612
+      },
+      {
+        "nombre": "San Martín del Rey Aurelio",
+        "provincia": "Asturias",
+        "poblacion": 15431
+      },
+      {
+        "nombre": "Villaviciosa",
+        "provincia": "Asturias",
+        "poblacion": 15000
+      },
+      {
+        "nombre": "Llanera",
+        "provincia": "Asturias",
+        "poblacion": 13948
+      },
+      {
+        "nombre": "Llanes",
+        "provincia": "Asturias",
+        "poblacion": 13524
+      },
+      {
+        "nombre": "Laviana",
+        "provincia": "Asturias",
+        "poblacion": 12355
+      },
+      {
+        "nombre": "Cangas del Narcea",
+        "provincia": "Asturias",
+        "poblacion": 11596
+      },
+      {
+        "nombre": "Valdés",
+        "provincia": "Asturias",
+        "poblacion": 10958
+      },
+      {
+        "nombre": "Gozón",
+        "provincia": "Asturias",
+        "poblacion": 10470
+      },
+      {
+        "nombre": "Lena",
+        "provincia": "Asturias",
+        "poblacion": 10312
+      },
+      {
+        "nombre": "Carreño",
+        "provincia": "Asturias",
+        "poblacion": 10177
+      },
+      {
+        "nombre": "Aller",
+        "provincia": "Asturias",
+        "poblacion": 10076
+      },
+      {
+        "nombre": "Grado",
+        "provincia": "Asturias",
+        "poblacion": 9616
+      },
+      {
+        "nombre": "Tineo",
+        "provincia": "Asturias",
+        "poblacion": 8857
+      },
+      {
+        "nombre": "Navia",
+        "provincia": "Asturias",
+        "poblacion": 8136
+      },
+      {
+        "nombre": "Pravia",
+        "provincia": "Asturias",
+        "poblacion": 7830
+      },
+      {
+        "nombre": "Piloña",
+        "provincia": "Asturias",
+        "poblacion": 6822
+      },
+      {
+        "nombre": "Cangas de Onís",
+        "provincia": "Asturias",
+        "poblacion": 6362
+      },
+      {
+        "nombre": "Ribadesella",
+        "provincia": "Asturias",
+        "poblacion": 5548
+      },
+      {
+        "nombre": "Parres",
+        "provincia": "Asturias",
+        "poblacion": 5208
+      },
+      {
+        "nombre": "Nava",
+        "provincia": "Asturias",
+        "poblacion": 5186
+      },
+      {
+        "nombre": "Noreña",
+        "provincia": "Asturias",
+        "poblacion": 5058
+      }
+    ]
+  },
+  "Navarra": {
+    "provincias": [
+      "Navarra"
+    ],
+    "municipios": [
+      {
+        "nombre": "Pamplona",
+        "provincia": "Navarra",
+        "poblacion": 209094
+      },
+      {
+        "nombre": "Tudela",
+        "provincia": "Navarra",
+        "poblacion": 38903
+      },
+      {
+        "nombre": "Valle de Egüés",
+        "provincia": "Navarra",
+        "poblacion": 22121
+      },
+      {
+        "nombre": "Burlada",
+        "provincia": "Navarra",
+        "poblacion": 20865
+      },
+      {
+        "nombre": "Barañáin",
+        "provincia": "Navarra",
+        "poblacion": 19575
+      },
+      {
+        "nombre": "Zizur Mayor",
+        "provincia": "Navarra",
+        "poblacion": 15715
+      },
+      {
+        "nombre": "Estella",
+        "provincia": "Navarra",
+        "poblacion": 14195
+      },
+      {
+        "nombre": "Aranguren",
+        "provincia": "Navarra",
+        "poblacion": 12517
+      },
+      {
+        "nombre": "Berriozar",
+        "provincia": "Navarra",
+        "poblacion": 10919
+      },
+      {
+        "nombre": "Tafalla",
+        "provincia": "Navarra",
+        "poblacion": 10698
+      },
+      {
+        "nombre": "Ansoáin",
+        "provincia": "Navarra",
+        "poblacion": 10608
+      },
+      {
+        "nombre": "Villava",
+        "provincia": "Navarra",
+        "poblacion": 10067
+      },
+      {
+        "nombre": "Corella",
+        "provincia": "Navarra",
+        "poblacion": 8629
+      },
+      {
+        "nombre": "Noáin (Valle de Elorz)",
+        "provincia": "Navarra",
+        "poblacion": 8429
+      },
+      {
+        "nombre": "Cintruénigo",
+        "provincia": "Navarra",
+        "poblacion": 8265
+      },
+      {
+        "nombre": "Baztán",
+        "provincia": "Navarra",
+        "poblacion": 7831
+      },
+      {
+        "nombre": "Alsasua",
+        "provincia": "Navarra",
+        "poblacion": 7590
+      },
+      {
+        "nombre": "Huarte",
+        "provincia": "Navarra",
+        "poblacion": 7562
+      },
+      {
+        "nombre": "Berrioplano",
+        "provincia": "Navarra",
+        "poblacion": 7541
+      },
+      {
+        "nombre": "San Adrián",
+        "provincia": "Navarra",
+        "poblacion": 6429
+      },
+      {
+        "nombre": "Peralta",
+        "provincia": "Navarra",
+        "poblacion": 5979
+      }
+    ]
+  },
+  "Cantabria": {
+    "provincias": [
+      "Cantabria"
+    ],
+    "municipios": [
+      {
+        "nombre": "Santander",
+        "provincia": "Cantabria",
+        "poblacion": 175425
+      },
+      {
+        "nombre": "Torrelavega",
+        "provincia": "Cantabria",
+        "poblacion": 51796
+      },
+      {
+        "nombre": "Castro-Urdiales",
+        "provincia": "Cantabria",
+        "poblacion": 33450
+      },
+      {
+        "nombre": "Camargo",
+        "provincia": "Cantabria",
+        "poblacion": 30577
+      },
+      {
+        "nombre": "Piélagos",
+        "provincia": "Cantabria",
+        "poblacion": 26901
+      },
+      {
+        "nombre": "El Astillero",
+        "provincia": "Cantabria",
+        "poblacion": 18220
+      },
+      {
+        "nombre": "Santa Cruz de Bezana",
+        "provincia": "Cantabria",
+        "poblacion": 13689
+      },
+      {
+        "nombre": "Santoña",
+        "provincia": "Cantabria",
+        "poblacion": 10892
+      },
+      {
+        "nombre": "Laredo",
+        "provincia": "Cantabria",
+        "poblacion": 10849
+      },
+      {
+        "nombre": "Los Corrales de Buelna",
+        "provincia": "Cantabria",
+        "poblacion": 10785
+      },
+      {
+        "nombre": "Santa María de Cayón",
+        "provincia": "Cantabria",
+        "poblacion": 9316
+      },
+      {
+        "nombre": "Suances",
+        "provincia": "Cantabria",
+        "poblacion": 9091
+      },
+      {
+        "nombre": "Reinosa",
+        "provincia": "Cantabria",
+        "poblacion": 8570
+      },
+      {
+        "nombre": "Colindres",
+        "provincia": "Cantabria",
+        "poblacion": 8549
+      },
+      {
+        "nombre": "Reocín",
+        "provincia": "Cantabria",
+        "poblacion": 8422
+      },
+      {
+        "nombre": "Cabezón de la Sal",
+        "provincia": "Cantabria",
+        "poblacion": 8181
+      },
+      {
+        "nombre": "Medio Cudeyo",
+        "provincia": "Cantabria",
+        "poblacion": 7696
+      },
+      {
+        "nombre": "Polanco",
+        "provincia": "Cantabria",
+        "poblacion": 6175
+      },
+      {
+        "nombre": "Cartes",
+        "provincia": "Cantabria",
+        "poblacion": 5800
+      },
+      {
+        "nombre": "Entrambasaguas",
+        "provincia": "Cantabria",
+        "poblacion": 5568
+      },
+      {
+        "nombre": "Miengo",
+        "provincia": "Cantabria",
+        "poblacion": 5199
+      },
+      {
+        "nombre": "Marina de Cudeyo",
+        "provincia": "Cantabria",
+        "poblacion": 5148
+      }
+    ]
+  },
+  "Castilla-La Mancha": {
+    "provincias": [
+      "Albacete",
+      "Ciudad Real",
+      "Cuenca",
+      "Guadalajara",
+      "Toledo"
+    ],
+    "municipios": [
+      {
+        "nombre": "Albacete",
+        "provincia": "Albacete",
+        "poblacion": 175400
+      },
+      {
+        "nombre": "Guadalajara",
+        "provincia": "Guadalajara",
+        "poblacion": 92834
+      },
+      {
+        "nombre": "Toledo",
+        "provincia": "Toledo",
+        "poblacion": 87216
+      },
+      {
+        "nombre": "Talavera de la Reina",
+        "provincia": "Toledo",
+        "poblacion": 83803
+      },
+      {
+        "nombre": "Ciudad Real",
+        "provincia": "Ciudad Real",
+        "poblacion": 76217
+      },
+      {
+        "nombre": "Cuenca",
+        "provincia": "Cuenca",
+        "poblacion": 53600
+      },
+      {
+        "nombre": "Puertollano",
+        "provincia": "Ciudad Real",
+        "poblacion": 45565
+      },
+      {
+        "nombre": "Tomelloso",
+        "provincia": "Ciudad Real",
+        "poblacion": 37060
+      },
+      {
+        "nombre": "Azuqueca de Henares",
+        "provincia": "Guadalajara",
+        "poblacion": 35924
+      },
+      {
+        "nombre": "Illescas",
+        "provincia": "Toledo",
+        "poblacion": 33301
+      },
+      {
+        "nombre": "Alcázar de San Juan",
+        "provincia": "Ciudad Real",
+        "poblacion": 31914
+      },
+      {
+        "nombre": "Seseña",
+        "provincia": "Toledo",
+        "poblacion": 30907
+      },
+      {
+        "nombre": "Hellín",
+        "provincia": "Albacete",
+        "poblacion": 30836
+      },
+      {
+        "nombre": "Valdepeñas",
+        "provincia": "Ciudad Real",
+        "poblacion": 30782
+      },
+      {
+        "nombre": "Villarrobledo",
+        "provincia": "Albacete",
+        "poblacion": 25400
+      },
+      {
+        "nombre": "Almansa",
+        "provincia": "Albacete",
+        "poblacion": 24615
+      },
+      {
+        "nombre": "Manzanares",
+        "provincia": "Ciudad Real",
+        "poblacion": 17732
+      },
+      {
+        "nombre": "Daimiel",
+        "provincia": "Ciudad Real",
+        "poblacion": 17629
+      },
+      {
+        "nombre": "Tarancón",
+        "provincia": "Cuenca",
+        "poblacion": 16257
+      },
+      {
+        "nombre": "Miguelturra",
+        "provincia": "Ciudad Real",
+        "poblacion": 15769
+      },
+      {
+        "nombre": "La Roda",
+        "provincia": "Albacete",
+        "poblacion": 15542
+      },
+      {
+        "nombre": "La Solana",
+        "provincia": "Ciudad Real",
+        "poblacion": 15242
+      },
+      {
+        "nombre": "Torrijos",
+        "provincia": "Toledo",
+        "poblacion": 13885
+      },
+      {
+        "nombre": "Ocaña",
+        "provincia": "Toledo",
+        "poblacion": 13868
+      },
+      {
+        "nombre": "Alovera",
+        "provincia": "Guadalajara",
+        "poblacion": 13407
+      },
+      {
+        "nombre": "El Casar",
+        "provincia": "Guadalajara",
+        "poblacion": 13327
+      },
+      {
+        "nombre": "Campo de Criptana",
+        "provincia": "Ciudad Real",
+        "poblacion": 12960
+      },
+      {
+        "nombre": "Fuensalida",
+        "provincia": "Toledo",
+        "poblacion": 12329
+      },
+      {
+        "nombre": "Socuéllamos",
+        "provincia": "Ciudad Real",
+        "poblacion": 12123
+      },
+      {
+        "nombre": "Bolaños de Calatrava",
+        "provincia": "Ciudad Real",
+        "poblacion": 11991
+      },
+      {
+        "nombre": "Yuncos",
+        "provincia": "Toledo",
+        "poblacion": 11762
+      },
+      {
+        "nombre": "Sonseca",
+        "provincia": "Toledo",
+        "poblacion": 11205
+      },
+      {
+        "nombre": "Quintanar de la Orden",
+        "provincia": "Toledo",
+        "poblacion": 11119
+      },
+      {
+        "nombre": "Cabanillas del Campo",
+        "provincia": "Guadalajara",
+        "poblacion": 11034
+      },
+      {
+        "nombre": "Bargas",
+        "provincia": "Toledo",
+        "poblacion": 10978
+      },
+      {
+        "nombre": "Madridejos",
+        "provincia": "Toledo",
+        "poblacion": 10169
+      },
+      {
+        "nombre": "Caudete",
+        "provincia": "Albacete",
+        "poblacion": 10146
+      },
+      {
+        "nombre": "Consuegra",
+        "provincia": "Toledo",
+        "poblacion": 9805
+      },
+      {
+        "nombre": "Mora",
+        "provincia": "Toledo",
+        "poblacion": 9782
+      },
+      {
+        "nombre": "Villarrubia de los Ojos",
+        "provincia": "Ciudad Real",
+        "poblacion": 9667
+      },
+      {
+        "nombre": "Villacañas",
+        "provincia": "Toledo",
+        "poblacion": 9511
+      },
+      {
+        "nombre": "Almagro",
+        "provincia": "Ciudad Real",
+        "poblacion": 8958
+      },
+      {
+        "nombre": "Olias del Rey",
+        "provincia": "Toledo",
+        "poblacion": 8705
+      },
+      {
+        "nombre": "Herencia",
+        "provincia": "Ciudad Real",
+        "poblacion": 8385
+      },
+      {
+        "nombre": "Marchamalo",
+        "provincia": "Guadalajara",
+        "poblacion": 8273
+      },
+      {
+        "nombre": "La Puebla de Montalbán",
+        "provincia": "Toledo",
+        "poblacion": 7885
+      },
+      {
+        "nombre": "Tobarra",
+        "provincia": "Albacete",
+        "poblacion": 7824
+      },
+      {
+        "nombre": "Malagón",
+        "provincia": "Ciudad Real",
+        "poblacion": 7745
+      },
+      {
+        "nombre": "Quintanar del Rey",
+        "provincia": "Cuenca",
+        "poblacion": 7554
+      },
+      {
+        "nombre": "Pedro Muñoz",
+        "provincia": "Ciudad Real",
+        "poblacion": 7480
+      },
+      {
+        "nombre": "Argés",
+        "provincia": "Toledo",
+        "poblacion": 6961
+      },
+      {
+        "nombre": "Argamasilla de Alba",
+        "provincia": "Ciudad Real",
+        "poblacion": 6888
+      },
+      {
+        "nombre": "San Clemente",
+        "provincia": "Cuenca",
+        "poblacion": 6776
+      },
+      {
+        "nombre": "Casarrubios del Monte",
+        "provincia": "Toledo",
+        "poblacion": 6671
+      },
+      {
+        "nombre": "Las Pedroñeras",
+        "provincia": "Cuenca",
+        "poblacion": 6638
+      },
+      {
+        "nombre": "Villanueva de la Torre",
+        "provincia": "Guadalajara",
+        "poblacion": 6603
+      },
+      {
+        "nombre": "Torrejón del Rey",
+        "provincia": "Guadalajara",
+        "poblacion": 6210
+      },
+      {
+        "nombre": "Yeles",
+        "provincia": "Toledo",
+        "poblacion": 6176
+      },
+      {
+        "nombre": "Tarazona de la Mancha",
+        "provincia": "Albacete",
+        "poblacion": 6138
+      },
+      {
+        "nombre": "Motilla del Palancar",
+        "provincia": "Cuenca",
+        "poblacion": 6119
+      },
+      {
+        "nombre": "Mota del Cuervo",
+        "provincia": "Cuenca",
+        "poblacion": 6108
+      },
+      {
+        "nombre": "Méntrida",
+        "provincia": "Toledo",
+        "poblacion": 6019
+      },
+      {
+        "nombre": "El Viso de San Juan",
+        "provincia": "Toledo",
+        "poblacion": 5970
+      },
+      {
+        "nombre": "Membrilla",
+        "provincia": "Ciudad Real",
+        "poblacion": 5825
+      },
+      {
+        "nombre": "Argamasilla de Calatrava",
+        "provincia": "Ciudad Real",
+        "poblacion": 5801
+      },
+      {
+        "nombre": "Almodóvar del Campo",
+        "provincia": "Ciudad Real",
+        "poblacion": 5788
+      },
+      {
+        "nombre": "Esquivias",
+        "provincia": "Toledo",
+        "poblacion": 5778
+      },
+      {
+        "nombre": "Ugena",
+        "provincia": "Toledo",
+        "poblacion": 5723
+      },
+      {
+        "nombre": "Los Yébenes",
+        "provincia": "Toledo",
+        "poblacion": 5717
+      },
+      {
+        "nombre": "Numancia de la Sagra",
+        "provincia": "Toledo",
+        "poblacion": 5455
+      },
+      {
+        "nombre": "Yepes",
+        "provincia": "Toledo",
+        "poblacion": 5397
+      },
+      {
+        "nombre": "Carranque",
+        "provincia": "Toledo",
+        "poblacion": 5274
+      },
+      {
+        "nombre": "Yebes",
+        "provincia": "Guadalajara",
+        "poblacion": 5220
+      },
+      {
+        "nombre": "Corral de Almaguer",
+        "provincia": "Toledo",
+        "poblacion": 5219
+      },
+      {
+        "nombre": "Añover de Tajo",
+        "provincia": "Toledo",
+        "poblacion": 5215
+      },
+      {
+        "nombre": "Nambroca",
+        "provincia": "Toledo",
+        "poblacion": 5151
+      },
+      {
+        "nombre": "Pioz",
+        "provincia": "Guadalajara",
+        "poblacion": 5131
+      },
+      {
+        "nombre": "Moral de Calatrava",
+        "provincia": "Ciudad Real",
+        "poblacion": 5109
+      },
+      {
+        "nombre": "Mocejón",
+        "provincia": "Toledo",
+        "poblacion": 5069
+      }
+    ]
+  },
+  "La Rioja": {
+    "provincias": [
+      "La Rioja"
+    ],
+    "municipios": [
+      {
+        "nombre": "Logroño",
+        "provincia": "La Rioja",
+        "poblacion": 152150
+      },
+      {
+        "nombre": "Calahorra",
+        "provincia": "La Rioja",
+        "poblacion": 25367
+      },
+      {
+        "nombre": "Arnedo",
+        "provincia": "La Rioja",
+        "poblacion": 15201
+      },
+      {
+        "nombre": "Haro",
+        "provincia": "La Rioja",
+        "poblacion": 11763
+      },
+      {
+        "nombre": "Lardero",
+        "provincia": "La Rioja",
+        "poblacion": 11321
+      },
+      {
+        "nombre": "Alfaro",
+        "provincia": "La Rioja",
+        "poblacion": 9823
+      },
+      {
+        "nombre": "Villamediana de Iregua",
+        "provincia": "La Rioja",
+        "poblacion": 8954
+      },
+      {
+        "nombre": "Nájera",
+        "provincia": "La Rioja",
+        "poblacion": 8059
+      },
+      {
+        "nombre": "Santo Domingo de la Calzada",
+        "provincia": "La Rioja",
+        "poblacion": 6283
+      }
+    ]
+  },
+  "Extremadura": {
+    "provincias": [
+      "Badajoz",
+      "Cáceres"
+    ],
+    "municipios": [
+      {
+        "nombre": "Badajoz",
+        "provincia": "Badajoz",
+        "poblacion": 150209
+      },
+      {
+        "nombre": "Cáceres",
+        "provincia": "Cáceres",
+        "poblacion": 96651
+      },
+      {
+        "nombre": "Mérida",
+        "provincia": "Badajoz",
+        "poblacion": 60225
+      },
+      {
+        "nombre": "Plasencia",
+        "provincia": "Cáceres",
+        "poblacion": 40132
+      },
+      {
+        "nombre": "Don Benito",
+        "provincia": "Badajoz",
+        "poblacion": 37986
+      },
+      {
+        "nombre": "Almendralejo",
+        "provincia": "Badajoz",
+        "poblacion": 34587
+      },
+      {
+        "nombre": "Villanueva de la Serena",
+        "provincia": "Badajoz",
+        "poblacion": 25773
+      },
+      {
+        "nombre": "Navalmoral de la Mata",
+        "provincia": "Cáceres",
+        "poblacion": 16895
+      },
+      {
+        "nombre": "Zafra",
+        "provincia": "Badajoz",
+        "poblacion": 16672
+      },
+      {
+        "nombre": "Montijo",
+        "provincia": "Badajoz",
+        "poblacion": 15312
+      },
+      {
+        "nombre": "Villafranca de los Barros",
+        "provincia": "Badajoz",
+        "poblacion": 12366
+      },
+      {
+        "nombre": "Coria",
+        "provincia": "Cáceres",
+        "poblacion": 12166
+      },
+      {
+        "nombre": "Olivenza",
+        "provincia": "Badajoz",
+        "poblacion": 11776
+      },
+      {
+        "nombre": "Miajadas",
+        "provincia": "Cáceres",
+        "poblacion": 9359
+      },
+      {
+        "nombre": "Jerez de los Caballeros",
+        "provincia": "Badajoz",
+        "poblacion": 9147
+      },
+      {
+        "nombre": "Trujillo",
+        "provincia": "Cáceres",
+        "poblacion": 8605
+      },
+      {
+        "nombre": "Los Santos de Maimona",
+        "provincia": "Badajoz",
+        "poblacion": 8096
+      },
+      {
+        "nombre": "Azuaga",
+        "provincia": "Badajoz",
+        "poblacion": 7624
+      },
+      {
+        "nombre": "Talayuela",
+        "provincia": "Cáceres",
+        "poblacion": 7273
+      },
+      {
+        "nombre": "Guareña",
+        "provincia": "Badajoz",
+        "poblacion": 6668
+      },
+      {
+        "nombre": "Jaraíz de la Vera",
+        "provincia": "Cáceres",
+        "poblacion": 6664
+      },
+      {
+        "nombre": "Fuente del Maestre",
+        "provincia": "Badajoz",
+        "poblacion": 6626
+      },
+      {
+        "nombre": "Moraleja",
+        "provincia": "Cáceres",
+        "poblacion": 6585
+      },
+      {
+        "nombre": "Calamonte",
+        "provincia": "Badajoz",
+        "poblacion": 6095
+      },
+      {
+        "nombre": "Puebla de la Calzada",
+        "provincia": "Badajoz",
+        "poblacion": 5812
+      },
+      {
+        "nombre": "Llerena",
+        "provincia": "Badajoz",
+        "poblacion": 5650
+      },
+      {
+        "nombre": "Montehermoso",
+        "provincia": "Cáceres",
+        "poblacion": 5619
+      },
+      {
+        "nombre": "Castuera",
+        "provincia": "Badajoz",
+        "poblacion": 5567
+      },
+      {
+        "nombre": "Arroyo de la Luz",
+        "provincia": "Cáceres",
+        "poblacion": 5565
+      },
+      {
+        "nombre": "Aceuchal",
+        "provincia": "Badajoz",
+        "poblacion": 5446
+      },
+      {
+        "nombre": "Talavera la Real",
+        "provincia": "Badajoz",
+        "poblacion": 5282
+      },
+      {
+        "nombre": "San Vicente de Alcántara",
+        "provincia": "Badajoz",
+        "poblacion": 5262
+      },
+      {
+        "nombre": "Valencia de Alcántara",
+        "provincia": "Cáceres",
+        "poblacion": 5236
+      },
+      {
+        "nombre": "Alburquerque",
+        "provincia": "Badajoz",
+        "poblacion": 5063
+      }
+    ]
+  }
+}
