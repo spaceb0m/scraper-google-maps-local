@@ -25,13 +25,15 @@ def load_municipios(
     dataset_path: Optional[str] = None,
 ) -> List[Dict]:
     """Devuelve municipios de la comunidad con población >= min_poblacion,
-    ordenados de mayor a menor población."""
+    ordenados de menor a mayor población (los pequeños primero — encajan mejor
+    con los avatares de cabecera comarcal y permiten validar resultados rápido
+    antes de afrontar las grandes urbes)."""
     data = _read_dataset(dataset_path)
     if comunidad not in data:
         raise KeyError(f"Comunidad desconocida: {comunidad}")
     municipios = data[comunidad].get("municipios", [])
     filtered = [m for m in municipios if int(m.get("poblacion", 0)) >= min_poblacion]
-    filtered.sort(key=lambda m: int(m.get("poblacion", 0)), reverse=True)
+    filtered.sort(key=lambda m: int(m.get("poblacion", 0)))
     return filtered
 
 

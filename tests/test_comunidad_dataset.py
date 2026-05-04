@@ -47,10 +47,11 @@ def test_load_municipios_filters_by_min_poblacion(dataset_path):
     assert "Aldea" not in nombres
 
 
-def test_load_municipios_sorted_by_poblacion_desc(dataset_path):
+def test_load_municipios_sorted_by_poblacion_asc(dataset_path):
+    """Los pequeños primero: encajan con avatares de cabecera comarcal."""
     result = load_municipios("Galicia", 5000, dataset_path=dataset_path)
-    assert result[0]["nombre"] == "Vigo"
-    assert result[1]["nombre"] == "Carballo"
+    assert result[0]["nombre"] == "Carballo"
+    assert result[-1]["nombre"] == "Vigo"
 
 
 def test_load_municipios_unknown_raises(dataset_path):

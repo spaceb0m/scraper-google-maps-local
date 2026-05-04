@@ -1,8 +1,8 @@
 from __future__ import annotations
 
 import logging
-from dataclasses import dataclass
-from typing import Optional
+from dataclasses import dataclass, field
+from typing import Optional, Tuple
 
 LOGGER = logging.getLogger(__name__)
 
@@ -12,13 +12,19 @@ class Sector:
     lat: float
     lon: float
     zoom: int
-    cell_deg: float = 0.01  # tamaño de la celda en grados; usado para subdivisión adaptativa
+    cell_deg: float = 0.003  # tamaño de la celda en grados (~330 m); usado para subdivisión adaptativa
+
+    def bbox(self, buffer: float = 0.1) -> Tuple[float, float, float, float]:
+        """Devuelve (min_lat, max_lat, min_lon, max_lon) con un buffer proporcional al tamaño de celda.
+        El buffer del 10% evita rechazar negocios en el borde exacto de la celda."""
+        half = self.cell_deg / 2 * (1 + buffer)
+        return (self.lat - half, self.lat + half, self.lon - half, self.lon + half)
 
 
 def build_sector_grid(
     bbox: tuple,
-    cell_deg: float = 0.01,
-    zoom: int = 14,
+    cell_deg: float = 0.003,
+    zoom: int = 16,
 ) -> list:
     """Divide el bounding box en una cuadrícula de sectores."""
     min_lat, max_lat, min_lon, max_lon = bbox

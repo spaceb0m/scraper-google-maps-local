@@ -11,6 +11,7 @@ from typing import Any
 from playwright.async_api import async_playwright
 
 from src.browser.pool import ContextPool, PooledContext
+from src.geo.coords import coords_from_maps_url
 from src.geo.grid import Sector, build_sector_grid, filter_by_polygon
 from src.geo.nominatim import fetch_city_geodata
 from src.pipeline.csv_writer import StreamingCsvWriter
@@ -68,15 +69,19 @@ async def _process_refs(
     query: str,
     slow_ms: int,
     sector_label: str,
+    sector: Sector,
     csv_writer: StreamingCsvWriter,
     metrics: dict,
     municipio_origen: str = "",
 ) -> None:
     """Procesa una lista de refs escribiendo cada registro al CSV inmediatamente.
     Actualiza metrics en tiempo real y emite STATS cada 10 registros.
+    Los registros cuyas coordenadas caen fuera del bbox del sector se descartan
+    (aparecerán capturados por el sector vecino, eliminando solapamiento).
     """
     local_processed = 0
     local_errors = 0
+    bbox = sector.bbox()
 
     for ref in refs:
         # Cap global: parar tan pronto como el CSV alcance --max-results
@@ -103,6 +108,18 @@ async def _process_refs(
                 metrics["errors"] += 1
                 LOGGER.warning("[%s] Sin nombre (omitido): %s", sector_label, url)
                 continue
+
+            # Filtrado geográfico: descartar registros fuera del bbox del sector
+            blat, blon = coords_from_maps_url(record.maps_url)
+            if blat is not None:
+                min_lat, max_lat, min_lon, max_lon = bbox
+                if not (min_lat <= blat <= max_lat and min_lon <= blon <= max_lon):
+                    metrics["filtered_out_of_bbox"] += 1
+                    LOGGER.debug(
+                        "[%s] Filtrado fuera de bbox: %s (%.5f, %.5f)",
+                        sector_label, record.nombre, blat, blon,
+                    )
+                    continue
 
             if municipio_origen:
                 record.municipio_origen = municipio_origen
@@ -201,6 +218,7 @@ async def _process_sector(
             query=query,
             slow_ms=args.slow_ms,
             sector_label=label,
+            sector=sector,
             csv_writer=csv_writer,
             metrics=metrics,
             municipio_origen=municipio_origen,
@@ -263,7 +281,7 @@ async def _build_sectors_for_city(args: argparse.Namespace, city: str) -> list:
 
     LOGGER.info("Consultando Nominatim para: %s", city)
     geodata = await fetch_city_geodata(city)
-    raw_sectors = build_sector_grid(geodata.bbox, cell_deg=0.01, zoom=14)
+    raw_sectors = build_sector_grid(geodata.bbox, cell_deg=0.003, zoom=16)
     sectors = filter_by_polygon(raw_sectors, geodata.polygon_geojson)
     LOGGER.info(
         "Grid generado: %d sectores (de %d en bbox) para %s",
@@ -329,7 +347,7 @@ async def _run(args: argparse.Namespace) -> None:
         args.output, args.max_results if args.max_results > 0 else "sin límite",
     )
 
-    metrics = {"discovered": 0, "processed": 0, "errors": 0, "heuristic_stops": 0}
+    metrics = {"discovered": 0, "processed": 0, "errors": 0, "heuristic_stops": 0, "filtered_out_of_bbox": 0}
 
     pw = await async_playwright().start()
     browser = await pw.chromium.launch(headless=args.headless)
@@ -357,14 +375,20 @@ async def _run(args: argparse.Namespace) -> None:
     elapsed = time.perf_counter() - start_ts
     LOGGER.info("── Resumen final ──")
     LOGGER.info(
-        "discover=%d processed=%d valid=%d duplicates=%d errors=%d elapsed_s=%.2f",
+        "discover=%d processed=%d valid=%d duplicates=%d filtered_bbox=%d errors=%d elapsed_s=%.2f",
         metrics["discovered"],
         metrics["processed"],
         csv_writer.total_written,
         metrics["processed"] - csv_writer.total_written,
+        metrics["filtered_out_of_bbox"],
         metrics["errors"],
         elapsed,
     )
+    if metrics["filtered_out_of_bbox"] > 0:
+        LOGGER.info(
+            "↳ %d registro(s) filtrados por estar fuera del bbox de su sector (sin pérdida — los captura el sector vecino)",
+            metrics["filtered_out_of_bbox"],
+        )
     if metrics["heuristic_stops"] > 0:
         LOGGER.warning(
             "⚠ %d sector(es) se detuvieron por heurística — puede haber resultados fuera del viewport",

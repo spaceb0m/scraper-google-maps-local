@@ -2,8 +2,10 @@ from __future__ import annotations
 
 import asyncio
 import json
+import os
 import platform
 import re
+import signal
 import subprocess
 import sys
 import unicodedata
@@ -262,11 +264,15 @@ async def run_scraper(
         cmd += ["--city", city]
 
     async def run() -> None:
+        # start_new_session=True crea un process group propio (PGID == PID).
+        # Esto permite matar TODO el árbol (Python + Playwright driver + Chromium
+        # + helpers) con os.killpg() desde /stop, sin dejar huérfanos.
         proc = await asyncio.create_subprocess_exec(
             *cmd,
             stdout=asyncio.subprocess.PIPE,
             stderr=asyncio.subprocess.STDOUT,
             cwd=str(BASE_DIR),
+            start_new_session=True,
         )
         jobs[job_id]["proc"] = proc
         assert proc.stdout is not None
@@ -329,9 +335,32 @@ async def stop_job(job_id: str) -> dict:
     job["status"] = "stopped"
     proc = job.get("proc")
     if proc and proc.returncode is None:
-        proc.terminate()
+        # Matar TODO el process group: Python CLI + Playwright driver + Chromium
+        # + helpers. proc.terminate() solo señala al padre, lo cual es insuficiente
+        # cuando hay tareas asyncio activas y procesos hijo que no responden.
+        try:
+            pgid = os.getpgid(proc.pid)
+            os.killpg(pgid, signal.SIGTERM)
+            # Fallback: si tras 3s el proceso sigue vivo, SIGKILL al grupo entero.
+            asyncio.create_task(_force_kill_after(proc, pgid, delay=3.0))
+        except (ProcessLookupError, PermissionError) as exc:
+            # PGID ya muerto o sin permiso → último intento al proceso individual
+            try:
+                proc.kill()
+            except ProcessLookupError:
+                pass
     _save_history()
     return {"status": "stopped"}
+
+
+async def _force_kill_after(proc: asyncio.subprocess.Process, pgid: int, delay: float) -> None:
+    """SIGKILL al process group si el proceso sigue vivo tras `delay` segundos."""
+    await asyncio.sleep(delay)
+    if proc.returncode is None:
+        try:
+            os.killpg(pgid, signal.SIGKILL)
+        except ProcessLookupError:
+            pass
 
 
 @app.get("/history")
