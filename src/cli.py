@@ -79,6 +79,13 @@ async def _process_refs(
     local_errors = 0
 
     for ref in refs:
+        # Cap global: parar tan pronto como el CSV alcance --max-results
+        if csv_writer.is_full:
+            LOGGER.info(
+                "[%s] Cap global de %d alcanzado — saltando refs restantes",
+                sector_label, csv_writer.total_written,
+            )
+            return
         url = ref.maps_url
 
         async def go_to_detail() -> None:
@@ -153,6 +160,9 @@ async def _process_sector(
     Sin esto, con concurrency=N todos los slots quedan ocupados esperando
     sub-tareas que nunca pueden adquirir un slot → deadlock.
     """
+    if csv_writer.is_full:
+        LOGGER.debug("[%s] Cap global ya alcanzado, saltando sector", label)
+        return
     pooled: PooledContext = await pool.acquire()
     needs_subdivision = False
     try:
@@ -168,10 +178,12 @@ async def _process_sector(
             attempts=3,
         )
 
+        # max_results ya no se aplica a nivel de sector — actúa como cap global
+        # del CSV, comprobado vía csv_writer.is_full antes de procesar cada ref.
         result = await collect_result_refs(
             page=pooled.page,
             slow_ms=args.slow_ms,
-            max_results=args.max_results,
+            max_results=0,
         )
 
         discovered = len(result.refs)
@@ -309,9 +321,13 @@ async def _run(args: argparse.Namespace) -> None:
 
     start_ts = time.perf_counter()
 
-    # CSV compartido entre todas las ciudades (dedup global automático)
-    csv_writer = StreamingCsvWriter(args.output)
-    LOGGER.info("CSV: %s", args.output)
+    # CSV compartido entre todas las ciudades (dedup global automático).
+    # max_records: cap global. 0 = sin límite.
+    csv_writer = StreamingCsvWriter(args.output, max_records=args.max_results)
+    LOGGER.info(
+        "CSV: %s (cap=%s)",
+        args.output, args.max_results if args.max_results > 0 else "sin límite",
+    )
 
     metrics = {"discovered": 0, "processed": 0, "errors": 0, "heuristic_stops": 0}
 
@@ -328,7 +344,10 @@ async def _run(args: argparse.Namespace) -> None:
                     args, city_str, csv_writer, pool, metrics, municipio_origen,
                 )
 
-            await run_comunidad(args.comunidad, args.min_poblacion, process_city_fn)
+            await run_comunidad(
+                args.comunidad, args.min_poblacion, process_city_fn,
+                is_full=lambda: csv_writer.is_full,
+            )
         else:
             await _process_city_with_pool(args, args.city, csv_writer, pool, metrics)
     finally:

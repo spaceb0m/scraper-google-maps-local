@@ -524,10 +524,13 @@
       const { job_id, output } = await res.json();
       currentJobId = job_id;
 
-      // Añadir fila al historial inmediatamente
+      // Añadir fila al historial inmediatamente.
+      // En modo comunidad el campo `city` está deshabilitado/vacío — usa el
+      // nombre de la comunidad como label, igual que hace el backend.
+      const labelForHistory = (data.get('comunidad') || data.get('city') || '').trim() || '—';
       const newEntry = {
         job_id,
-        city: data.get('city'),
+        city: labelForHistory,
         category: data.get('category'),
         started_at: new Date().toISOString(),
         status: 'running',

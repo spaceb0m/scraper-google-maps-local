@@ -23,9 +23,11 @@ async def run_comunidad(
     comunidad: str,
     min_poblacion: int,
     process_city: Callable[[str, str], Awaitable[int]],
+    is_full: Callable[[], bool] = lambda: False,
 ) -> int:
     """Ejecuta `process_city(city_str, municipio_origen)` para cada municipio de la CCAA.
 
+    Si `is_full()` devuelve True después de un municipio, el bucle se detiene.
     Devuelve el total acumulado de registros válidos. process_city debe encargarse
     de escribir al CSV (compartido) — este runner sólo orquesta el bucle secuencial.
     """
@@ -34,6 +36,12 @@ async def run_comunidad(
     total_records = 0
 
     for idx, m in enumerate(municipios, start=1):
+        if is_full():
+            LOGGER.info(
+                "Cap global alcanzado tras %d/%d municipios — parando.",
+                idx - 1, total_municipios,
+            )
+            break
         city_str = f"{m['nombre']}, {m['provincia']}, España"
         LOGGER.info(
             "[Municipio %d/%d] %s (%d hab) ─────────────────",

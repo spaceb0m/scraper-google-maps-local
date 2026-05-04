@@ -29,13 +29,14 @@ class StreamingCsvWriter:
     - Llama a gc.collect() cada 20 sectores para mantener la RAM estable.
     """
 
-    def __init__(self, path: str) -> None:
+    def __init__(self, path: str, max_records: int = 0) -> None:
         self._path = Path(path)
         self._path.parent.mkdir(parents=True, exist_ok=True)
         self._lock = asyncio.Lock()
         self._seen: set = set()
         self._sector_count = 0
         self._total_written = 0
+        self._max_records = int(max_records or 0)
 
         # Escribir cabecera al inicio
         with self._path.open("w", newline="", encoding="utf-8") as fh:
@@ -83,6 +84,8 @@ class StreamingCsvWriter:
         url_key = f"url:{normalize_maps_url(record.maps_url)}" if record.maps_url else None
         fallback_key = f"fallback:{make_fallback_key(record)}"
         async with self._lock:
+            if self._max_records > 0 and self._total_written >= self._max_records:
+                return False
             if (url_key and url_key in self._seen) or fallback_key in self._seen:
                 return False
             if url_key:
@@ -103,3 +106,8 @@ class StreamingCsvWriter:
     @property
     def duplicates_skipped(self) -> int:
         return len(self._seen) - self._total_written
+
+    @property
+    def is_full(self) -> bool:
+        """True si max_records > 0 y ya se ha alcanzado el cupo global."""
+        return self._max_records > 0 and self._total_written >= self._max_records
