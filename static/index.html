@@ -191,7 +191,7 @@
   </style>
 </head>
 <body>
-  <h1>Google Maps Scraper <span style="font-size:0.55em; color:#64748b; font-weight:500; vertical-align:middle;">v0.8.3</span></h1>
+  <h1>Google Maps Scraper <span style="font-size:0.55em; color:#64748b; font-weight:500; vertical-align:middle;">v0.8.4</span></h1>
 
   <div class="card">
     <form id="form">
@@ -454,6 +454,41 @@
       loadHistory();
     }
 
+    function attachStream(jobId, output) {
+      if (es) { es.close(); es = null; }
+      logEl.innerHTML = '';
+      lineNum = 0;
+      lineCount.textContent = '0 líneas';
+      btnRun.disabled = true;
+      btnDl.style.display = 'none';
+      setStatus('running');
+      resetStats();
+      currentJobId = jobId;
+      currentHistoryRow = historyBody.querySelector(`tr[data-job-id="${jobId}"]`);
+
+      es = new EventSource(`/stream/${jobId}`);
+      es.onmessage = (ev) => appendLine(ev.data);
+      es.addEventListener('done', (ev) => {
+        es.close();
+        const status = ev.data;
+        setStatus(status);
+        updateCurrentHistoryRow(statValid.textContent, status);
+        btnRun.disabled = false;
+        if (output && (status === 'done' || status === 'stopped' || status === 'partial')) {
+          btnDl.style.display = 'inline-block';
+          btnDl.onclick = () => { window.location = `/download/${jobId}`; };
+        }
+        loadHistory();
+      });
+      es.onerror = () => {
+        if (es.readyState === EventSource.CLOSED) return;
+        appendLine('[error de conexión con el servidor]');
+        es.close();
+        btnRun.disabled = false;
+        setStatus('error');
+      };
+    }
+
     async function handleResume(jobId) {
       const res = await fetch(`/resume/${jobId}`, { method: 'POST' });
       const data = await res.json();
@@ -461,23 +496,13 @@
         alert('No se pudo reanudar: ' + data.error);
         return;
       }
+      // Marcar la fila como running en la UI antes de iterar el historial.
       const row = historyBody.querySelector(`tr[data-job-id="${jobId}"]`);
       if (row) {
         const statusCell = row.querySelector('.status-cell');
         if (statusCell) statusCell.innerHTML = STATUS_LABELS.running;
       }
-      const stream = new EventSource(`/stream/${jobId}`);
-      stream.onmessage = (ev) => {
-        const m = ev.data.match(/valid=(\d+)/);
-        if (m && row) {
-          const validCell = row.querySelector('.valid-cell');
-          if (validCell) validCell.textContent = m[1];
-        }
-      };
-      stream.addEventListener('done', () => {
-        stream.close();
-        loadHistory();
-      });
+      attachStream(jobId, data.output);
     }
 
     async function handleDelete(jobId) {
